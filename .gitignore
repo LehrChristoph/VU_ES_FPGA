@@ -1,3 +1,9 @@
+# ignore files wihtout exentsion
+*
+!/**/
+!*.*
+!Makefile
+
 # Prerequisites
 *.d
 
@@ -30,3 +36,7 @@
 *.exe
 *.out
 *.app
+
+# ignore vcd files
+*.vcd
+
