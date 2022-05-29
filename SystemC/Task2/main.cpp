@@ -203,6 +203,7 @@ int sc_main(int, char*[]) { // entry point
     stim.clk(clk);
     
     sc_trace_file* file = sc_create_vcd_trace_file("task2_trace");
+    sc_trace(file, clk, "clk");
     sc_trace(file, a_sig, "a");
     sc_trace(file, b_sig, "b");
     sc_trace(file, sum_sig, "sum");

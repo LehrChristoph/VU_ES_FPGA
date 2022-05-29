@@ -112,6 +112,16 @@ int sc_main(int argc, char* argv[] ) { // entry point
     grayscaler.gray_g(gray_g);
     grayscaler.gray_b(gray_b);
 
+    sc_trace_file* file = sc_create_vcd_trace_file("task3_trace");
+    sc_trace(file, clk, "clk");
+    sc_trace(file, r, "r");
+    sc_trace(file, g, "g");
+    sc_trace(file, b, "b");
+
+    sc_trace(file, gray_r, "gray_r");
+    sc_trace(file, gray_g, "gray_g");
+    sc_trace(file, gray_b, "gray_b");
+
     for(int i=0; i<in_image.size(); i+=4)
     {
         r.write(in_image[i]);
@@ -126,6 +136,8 @@ int sc_main(int argc, char* argv[] ) { // entry point
         // add ignored alpha value
         out_image.push_back(in_image[i+3]);
     }
+
+    sc_close_vcd_trace_file(file);
 
     std::vector<unsigned char> png;
     lodepng::State state; //optionally customize this one

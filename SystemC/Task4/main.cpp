@@ -302,6 +302,30 @@ int sc_main(int argc, char* argv[] ) { // entry point
 
     file_in.write(input_file);
     file_out.write(output_file);
+
+    sc_trace_file* file = sc_create_vcd_trace_file("task4_trace");
+    sc_trace(file, clk, "clk");
+    sc_trace(file, r, "r");
+    sc_trace(file, g, "g");
+    sc_trace(file, b, "b");
+    sc_trace(file, alpha, "alpha");
+
+    sc_trace(file, gray_r, "gray_r");
+    sc_trace(file, gray_g, "gray_g");
+    sc_trace(file, gray_b, "gray_b");
+    sc_trace(file, gray_alpha, "gray_alpha");
+
+    sc_trace(file,pixel_fin, "pixel_fin");
+    sc_trace(file,pixel_fout, "pixel_fout");
+    
+    sc_trace(file,last_pixel_in, "last_pixel_in");
+    sc_trace(file,last_pixel_out, "last_pixel_out");
+
+    sc_trace(file,data_valid_in, "data_valid_in");
+    sc_trace(file,data_valid_out, "data_valid_out");
+
     sc_start(10, SC_SEC); 
+    sc_close_vcd_trace_file(file);
+    
     return 0;
 }
