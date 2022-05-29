@@ -1,4 +1,4 @@
-TARGET = out
+TARGET = task1
 
 IDIR = .
 SDIR = .
@@ -22,4 +22,4 @@ $(ODIR)/%.o: $(SDIR)/%.c
 	$(CXX) $(CXXFLAGS) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(TARGET)
+	$(RM) $(TARGET) $(ODIR)
