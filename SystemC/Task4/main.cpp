@@ -22,6 +22,8 @@ SC_MODULE(FileInput)
     sc_out<bool> last_pixel;
     sc_out<bool> data_valid;
     
+    sc_in<bool> processing_finished;
+
     sc_signal<int> cnt;
     std::vector<unsigned char> in_image;
     SC_CTOR(FileInput) {
@@ -30,7 +32,7 @@ SC_MODULE(FileInput)
         SC_METHOD(set_output)
         sensitive << clk.pos();
         SC_METHOD(read_file)
-        sensitive << file_name;
+        sensitive << file_name<< processing_finished.pos();
     }
 
     void set_output()
@@ -56,16 +58,23 @@ SC_MODULE(FileInput)
 
     void read_file()
     {
-        unsigned int width_int, height_int;
-        // Load the data
-        unsigned error = lodepng::decode(in_image, width_int, height_int, file_name.read());
-        if(error) 
+        if(processing_finished.posedge())
         {
-            printf("decoder error %u : %s\n", error, lodepng_error_text(error));
+            data_valid = 0;
         }
-        width.write(width_int);
-        height.write(height_int);
-        data_valid = 1;
+        else
+        {
+            unsigned int width_int, height_int;
+            // Load the data
+            unsigned error = lodepng::decode(in_image, width_int, height_int, file_name.read());
+            if(error) 
+            {
+                printf("decoder error %u : %s\n", error, lodepng_error_text(error));
+            }
+            width.write(width_int);
+            height.write(height_int);
+            data_valid = 1;
+        }
     }
 };
 
@@ -87,6 +96,7 @@ SC_MODULE(FileOutput)
     sc_in<bool> data_valid;
 
     sc_signal<bool> reception_finished;
+    sc_out<bool> processing_finished;
     std::vector<unsigned char> out_image;
 
     SC_CTOR(FileOutput) {
@@ -98,7 +108,7 @@ SC_MODULE(FileOutput)
 
     void handle_input()
     {
-        if(pixel < width*height)
+        if(pixel < width*height && data_valid == 1)
         {
             out_image.push_back(r.read().value());
             out_image.push_back(g.read().value());
@@ -109,10 +119,17 @@ SC_MODULE(FileOutput)
             {
                 reception_finished=1;
             }
+            else
+            {
+                reception_finished=0;
+            }
+        } else if (data_valid == 0)
+        {
+            reception_finished=0;
         }
     }
 
-     void file_write()
+    void file_write()
     {
         if(reception_finished)
         {
@@ -131,6 +148,11 @@ SC_MODULE(FileOutput)
                     printf("save_file %u : %s\n", error, lodepng_error_text(error));
                 }
             }
+            processing_finished=1;
+        }
+        else
+        {
+            processing_finished=0;
         }
     }
 };
@@ -156,6 +178,7 @@ SC_MODULE(Grayscale){
 
     sc_in<bool> data_valid_in;
     sc_out<bool> data_valid_out;
+    
 
     SC_CTOR(Grayscale) {
         SC_METHOD(grayify)
@@ -246,9 +269,10 @@ int sc_main(int argc, char* argv[] ) { // entry point
     sc_signal<bool> last_pixel_in;
     sc_signal<bool> last_pixel_out;
 
-
     sc_signal<bool> data_valid_in;
     sc_signal<bool> data_valid_out;
+
+    sc_signal<bool> processing_finished;
 
     FileInput fin("FileInput");
     fin.clk(clk);
@@ -263,6 +287,7 @@ int sc_main(int argc, char* argv[] ) { // entry point
     fin.alpha(alpha);
     fin.last_pixel(last_pixel_in);
     fin.data_valid(data_valid_in);
+    fin.processing_finished(processing_finished);
 
     Grayscale grayscaler("Grayscaler");
     grayscaler.clk(clk);
@@ -299,6 +324,7 @@ int sc_main(int argc, char* argv[] ) { // entry point
 
     fout.last_pixel(last_pixel_out);
     fout.data_valid(data_valid_out);
+    fout.processing_finished(processing_finished);
 
     file_in.write(input_file);
     file_out.write(output_file);
@@ -323,8 +349,20 @@ int sc_main(int argc, char* argv[] ) { // entry point
 
     sc_trace(file,data_valid_in, "data_valid_in");
     sc_trace(file,data_valid_out, "data_valid_out");
+    sc_trace(file,processing_finished, "processing_finished");
 
-    sc_start(10, SC_SEC); 
+    printf("Starting transformation\n");
+    // initialise transformation
+    sc_start(1, SC_US); /* code */
+    
+    while (processing_finished.read() == 0)
+    {
+        sc_start(1, SC_US); /* code */
+    }
+    // add some slack at the end to get all transitions
+    sc_start(5, SC_US);
+    printf("Finished transformation\n");
+
     sc_close_vcd_trace_file(file);
     
     return 0;
