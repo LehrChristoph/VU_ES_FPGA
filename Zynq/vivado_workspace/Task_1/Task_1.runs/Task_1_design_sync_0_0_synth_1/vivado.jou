@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Jun  5 18:08:36 2022
+# Process ID: 424748
+# Current directory: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/Task_1_design_sync_0_0_synth_1
+# Command line: vivado -log Task_1_design_sync_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Task_1_design_sync_0_0.tcl
+# Log file: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/Task_1_design_sync_0_0_synth_1/Task_1_design_sync_0_0.vds
+# Journal file: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/Task_1_design_sync_0_0_synth_1/vivado.jou
+# Running On: fedora, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 16, Host memory: 33643 MB
+#-----------------------------------------------------------
+source Task_1_design_sync_0_0.tcl -notrace
