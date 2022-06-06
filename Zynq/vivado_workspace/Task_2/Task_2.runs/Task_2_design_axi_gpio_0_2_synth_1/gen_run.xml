@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Task_2_design_axi_gpio_0_2_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1654444730">
+<GenRun Id="Task_2_design_axi_gpio_0_2_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1654506199">
+  <File Type="VDS-TIMING-PB" Name="Task_2_design_axi_gpio_0_2_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Task_2_design_axi_gpio_0_2_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="Task_2_design_axi_gpio_0_2.dcp"/>
   <File Type="RDS-UTIL-PB" Name="Task_2_design_axi_gpio_0_2_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="Task_2_design_axi_gpio_0_2.tcl"/>
   <File Type="RDS-UTIL" Name="Task_2_design_axi_gpio_0_2_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="Task_2_design_axi_gpio_0_2_reports.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Task_2_design_axi_gpio_0_2_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="Task_2_design_axi_gpio_0_2.vds"/>
+  <File Type="REPORTS-TCL" Name="Task_2_design_axi_gpio_0_2_reports.tcl"/>
+  <File Type="PA-TCL" Name="Task_2_design_axi_gpio_0_2.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Task_2_design_axi_gpio_0_2">
     <File Path="$PSRCDIR/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/Task_2_design_axi_gpio_0_2.xci">
       <FileInfo>

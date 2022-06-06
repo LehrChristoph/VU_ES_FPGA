@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-//Date        : Sun Jun  5 19:33:46 2022
+//Date        : Mon Jun  6 19:35:31 2022
 //Host        : fedora running 64-bit Fedora release 36 (Thirty Six)
 //Command     : generate_target Task_2_design_wrapper.bd
 //Design      : Task_2_design_wrapper

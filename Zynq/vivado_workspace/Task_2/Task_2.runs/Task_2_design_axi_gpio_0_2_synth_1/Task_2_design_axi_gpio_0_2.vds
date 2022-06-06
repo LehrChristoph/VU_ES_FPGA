@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sun Jun  5 17:58:54 2022
-# Process ID: 368696
+# Start of session at: Mon Jun  6 11:03:24 2022
+# Process ID: 271370
 # Current directory: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.runs/Task_2_design_axi_gpio_0_2_synth_1
 # Command line: vivado -log Task_2_design_axi_gpio_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Task_2_design_axi_gpio_0_2.tcl
 # Log file: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.runs/Task_2_design_axi_gpio_0_2_synth_1/Task_2_design_axi_gpio_0_2.vds
@@ -18,11 +18,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 368746
+INFO: [Synth 8-7075] Helper process launched with PID 271433
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2827.172 ; gain = 0.000 ; free physical = 5328 ; free virtual = 25240
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2822.926 ; gain = 0.000 ; free physical = 250 ; free virtual = 18628
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Task_2_design_axi_gpio_0_2' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/synth/Task_2_design_axi_gpio_0_2.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'Task_2_design_axi_gpio_0_2' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/synth/Task_2_design_axi_gpio_0_2.vhd:85]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -32,13 +32,13 @@ INFO: [Synth 8-638] synthesizing module 'Task_2_design_axi_gpio_0_2' [/home/chri
 	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
 	Parameter C_ALL_OUTPUTS bound to: 0 - type: integer 
 	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
-	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 1 - type: integer 
 	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
 	Parameter C_IS_DUAL bound to: 0 - type: integer 
 	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
 	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
-INFO: [Synth 8-3491] module 'axi_gpio' declared at '/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/synth/Task_2_design_axi_gpio_0_2.vhd:168]
+INFO: [Synth 8-3491] module 'axi_gpio' declared at '/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/synth/Task_2_design_axi_gpio_0_2.vhd:171]
 INFO: [Synth 8-638] synthesizing module 'axi_gpio' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
 INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
@@ -51,10 +51,48 @@ INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/chris
 INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized20' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized20' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 INFO: [Synth 8-226] default block is never used [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
 INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
 INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-226] default block is never used [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
@@ -73,7 +111,7 @@ INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
 INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:1351]
-INFO: [Synth 8-256] done synthesizing module 'Task_2_design_axi_gpio_0_2' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/synth/Task_2_design_axi_gpio_0_2.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'Task_2_design_axi_gpio_0_2' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/synth/Task_2_design_axi_gpio_0_2.vhd:85]
 WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLIN1_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ipshared/3ed9/hdl/axi_gpio_v2_0_vh_rfs.vhd:351]
 WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync is either unconnected or has no load
@@ -121,31 +159,74 @@ WARNING: [Synth 8-7129] Port GPIO2_IO_I[28] in module GPIO_Core is either unconn
 WARNING: [Synth 8-7129] Port GPIO2_IO_I[29] in module GPIO_Core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port GPIO2_IO_I[30] in module GPIO_Core is either unconnected or has no load
 WARNING: [Synth 8-7129] Port GPIO2_IO_I[31] in module GPIO_Core is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[0] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[1] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[2] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[3] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[4] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[7] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Address_In_Erly[8] in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_WSTRB[3] in module slave_attachment is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_WSTRB[2] in module slave_attachment is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_WSTRB[1] in module slave_attachment is either unconnected or has no load
-WARNING: [Synth 8-7129] Port S_AXI_WSTRB[0] in module slave_attachment is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[7] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[8] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[10] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[16] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[17] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[18] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[19] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[20] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[21] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[22] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[23] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[24] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[25] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[26] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[27] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[28] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[29] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_data[30] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bus2ip_be[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[9] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[11] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[12] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[13] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[14] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_rdce[15] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[0] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[1] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[2] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[3] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[4] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[5] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[6] in module interrupt_control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port interrupt_wrce[9] in module interrupt_control is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2827.172 ; gain = 0.000 ; free physical = 8618 ; free virtual = 28533
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2822.926 ; gain = 0.000 ; free physical = 3168 ; free virtual = 21566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2827.172 ; gain = 0.000 ; free physical = 8616 ; free virtual = 28530
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2822.926 ; gain = 0.000 ; free physical = 3165 ; free virtual = 21563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2827.172 ; gain = 0.000 ; free physical = 8616 ; free virtual = 28530
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2822.926 ; gain = 0.000 ; free physical = 3165 ; free virtual = 21563
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2827.172 ; gain = 0.000 ; free physical = 8610 ; free virtual = 28525
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2822.926 ; gain = 0.000 ; free physical = 3160 ; free virtual = 21558
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -162,29 +243,29 @@ Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/viv
 Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.runs/Task_2_design_axi_gpio_0_2_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2891.203 ; gain = 0.000 ; free physical = 8493 ; free virtual = 28407
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.957 ; gain = 0.000 ; free physical = 3079 ; free virtual = 21478
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   FDR => FDRE: 6 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2891.203 ; gain = 0.000 ; free physical = 8490 ; free virtual = 28404
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2886.957 ; gain = 0.000 ; free physical = 3077 ; free virtual = 21476
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8550 ; free virtual = 28473
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3230 ; free virtual = 21633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8550 ; free virtual = 28473
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3229 ; free virtual = 21633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.runs/Task_2_design_axi_gpio_0_2_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8550 ; free virtual = 28473
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3228 ; free virtual = 21632
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -197,7 +278,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8543 ; free virtual = 28467
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3272 ; free virtual = 21676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -205,22 +286,24 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
 	               32 Bit    Registers := 3     
 	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 21    
+	                1 Bit    Registers := 54    
 +---Muxes : 
+	   2 Input   32 Bit        Muxes := 4     
 	   5 Input   32 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 5     
 	   2 Input    2 Bit        Muxes := 3     
 	   3 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 31    
 	   4 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -238,64 +321,28 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port s_axi_wstrb[3] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_wstrb[2] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_wstrb[1] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[31] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[30] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[29] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[28] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[27] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[26] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[25] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[24] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[23] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[22] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[21] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[20] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[19] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[18] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[17] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[16] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[15] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[14] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[13] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[12] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[11] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[10] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[9] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[8] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[7] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[6] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[5] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[4] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[3] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[2] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[1] in module axi_gpio is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gpio2_io_i[0] in module axi_gpio is either unconnected or has no load
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d5[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5) is unused and will be removed from module axi_gpio.
 INFO: [Synth 8-3332] Sequential element (gpio_core_1/Not_Dual.INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d6[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6) is unused and will be removed from module axi_gpio.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8493 ; free virtual = 28420
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3261 ; free virtual = 21672
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8185 ; free virtual = 28113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3129 ; free virtual = 21545
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8179 ; free virtual = 28107
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3122 ; free virtual = 21537
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8179 ; free virtual = 28107
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3120 ; free virtual = 21536
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -313,37 +360,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8542 ; free virtual = 28470
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2980 ; free virtual = 21394
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8542 ; free virtual = 28470
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2980 ; free virtual = 21394
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8544 ; free virtual = 28472
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2979 ; free virtual = 21393
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8543 ; free virtual = 28471
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2979 ; free virtual = 21393
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8543 ; free virtual = 28471
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2979 ; free virtual = 21393
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8543 ; free virtual = 28471
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2979 ; free virtual = 21393
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -360,40 +407,40 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     2|
-|2     |LUT2 |     9|
-|3     |LUT3 |     9|
-|4     |LUT4 |     4|
-|5     |LUT5 |     9|
-|6     |LUT6 |    11|
+|2     |LUT2 |     5|
+|3     |LUT3 |    19|
+|4     |LUT4 |    13|
+|5     |LUT5 |    31|
+|6     |LUT6 |    14|
 |7     |FDR  |     4|
-|8     |FDRE |    35|
-|9     |FDSE |     2|
+|8     |FDRE |    71|
+|9     |FDSE |     4|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8543 ; free virtual = 28471
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 2979 ; free virtual = 21393
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2891.203 ; gain = 0.000 ; free physical = 8791 ; free virtual = 28719
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 8795 ; free virtual = 28723
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2886.957 ; gain = 0.000 ; free physical = 3030 ; free virtual = 21444
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3030 ; free virtual = 21444
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2891.203 ; gain = 0.000 ; free physical = 8791 ; free virtual = 28719
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.957 ; gain = 0.000 ; free physical = 3026 ; free virtual = 21440
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2891.203 ; gain = 0.000 ; free physical = 8834 ; free virtual = 28757
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.957 ; gain = 0.000 ; free physical = 3053 ; free virtual = 21469
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   FDR => FDRE: 4 instances
 
-Synth Design complete, checksum: 6b9bf7f3
+Synth Design complete, checksum: ce2fadc6
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
+91 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2891.203 ; gain = 64.031 ; free physical = 9048 ; free virtual = 28966
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2886.957 ; gain = 64.031 ; free physical = 3258 ; free virtual = 21673
 INFO: [Common 17-1381] The checkpoint '/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.runs/Task_2_design_axi_gpio_0_2_synth_1/Task_2_design_axi_gpio_0_2.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Task_2_design_axi_gpio_0_2, cache-ID = 8f6940bfa41a854f
-INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP Task_2_design_axi_gpio_0_2, cache-ID = 167dd29fd195d268
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.runs/Task_2_design_axi_gpio_0_2_synth_1/Task_2_design_axi_gpio_0_2.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Task_2_design_axi_gpio_0_2_utilization_synth.rpt -pb Task_2_design_axi_gpio_0_2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun  5 17:59:16 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  6 11:03:47 2022...

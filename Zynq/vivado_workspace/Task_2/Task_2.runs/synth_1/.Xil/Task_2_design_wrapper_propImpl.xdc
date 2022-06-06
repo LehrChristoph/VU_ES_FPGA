@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.srcs/constrs_1/imports/digilent-xdc-master/Zedboard-Master.xdc rfile:../../../Task_2.srcs/constrs_1/imports/digilent-xdc-master/Zedboard-Master.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:374 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN N15 [get_ports btn]
-set_property src_info {type:XDC file:1 line:375 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN R18 [get_ports rst]

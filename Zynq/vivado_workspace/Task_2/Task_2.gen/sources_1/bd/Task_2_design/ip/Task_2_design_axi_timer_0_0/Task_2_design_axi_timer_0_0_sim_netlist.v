@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-// Date        : Sun Jun  5 17:34:00 2022
+// Date        : Mon Jun  6 15:40:23 2022
 // Host        : fedora running 64-bit Fedora release 36 (Thirty Six)
 // Command     : write_verilog -force -mode funcsim
 //               /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2.gen/sources_1/bd/Task_2_design/ip/Task_2_design_axi_timer_0_0/Task_2_design_axi_timer_0_0_sim_netlist.v
@@ -105,7 +105,7 @@ module Task_2_design_axi_timer_0_0
   (* C_FAMILY = "zynq" *) 
   (* C_GEN0_ASSERT = "1'b1" *) 
   (* C_GEN1_ASSERT = "1'b1" *) 
-  (* C_ONE_TIMER_ONLY = "0" *) 
+  (* C_ONE_TIMER_ONLY = "1" *) 
   (* C_S_AXI_ADDR_WIDTH = "5" *) 
   (* C_S_AXI_DATA_WIDTH = "32" *) 
   (* C_TRIG0_ASSERT = "1'b1" *) 
@@ -142,17 +142,8 @@ endmodule
 
 (* ORIG_REF_NAME = "address_decoder" *) 
 module Task_2_design_axi_timer_0_0_address_decoder
-   (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
-    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
+   (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
     Bus_RNW_reg_reg_0,
-    is_write_reg,
-    is_read_reg,
-    D,
-    \FSM_onehot_state_reg[2] ,
-    pair0_Select,
-    s_axi_wdata_7_sp_1,
-    bus2ip_wrce,
-    \s_axi_wdata[7]_0 ,
     s_axi_wdata_0_sp_1,
     s_axi_wdata_1_sp_1,
     s_axi_wdata_2_sp_1,
@@ -160,7 +151,7 @@ module Task_2_design_axi_timer_0_0_address_decoder
     s_axi_wdata_4_sp_1,
     s_axi_wdata_5_sp_1,
     s_axi_wdata_6_sp_1,
-    \s_axi_wdata[7]_1 ,
+    s_axi_wdata_7_sp_1,
     s_axi_wdata_8_sp_1,
     s_axi_wdata_9_sp_1,
     s_axi_wdata_10_sp_1,
@@ -185,39 +176,14 @@ module Task_2_design_axi_timer_0_0_address_decoder
     s_axi_wdata_29_sp_1,
     s_axi_wdata_30_sp_1,
     D_0,
-    \s_axi_wdata[0]_0 ,
-    \s_axi_wdata[1]_0 ,
-    \s_axi_wdata[2]_0 ,
-    \s_axi_wdata[3]_0 ,
-    \s_axi_wdata[4]_0 ,
-    \s_axi_wdata[5]_0 ,
-    \s_axi_wdata[6]_0 ,
-    \s_axi_wdata[7]_2 ,
-    \s_axi_wdata[8]_0 ,
-    \s_axi_wdata[9]_0 ,
-    \s_axi_wdata[10]_0 ,
-    \s_axi_wdata[11]_0 ,
-    \s_axi_wdata[12]_0 ,
-    \s_axi_wdata[13]_0 ,
-    \s_axi_wdata[14]_0 ,
-    \s_axi_wdata[15]_0 ,
-    \s_axi_wdata[16]_0 ,
-    \s_axi_wdata[17]_0 ,
-    \s_axi_wdata[18]_0 ,
-    \s_axi_wdata[19]_0 ,
-    \s_axi_wdata[20]_0 ,
-    \s_axi_wdata[21]_0 ,
-    \s_axi_wdata[22]_0 ,
-    \s_axi_wdata[23]_0 ,
-    \s_axi_wdata[24]_0 ,
-    \s_axi_wdata[25]_0 ,
-    \s_axi_wdata[26]_0 ,
-    \s_axi_wdata[27]_0 ,
-    \s_axi_wdata[28]_0 ,
-    \s_axi_wdata[29]_0 ,
-    \s_axi_wdata[30]_0 ,
-    D_1,
-    Bus_RNW_reg_reg_1,
+    is_write_reg,
+    is_read_reg,
+    D,
+    \FSM_onehot_state_reg[2] ,
+    pair0_Select,
+    \s_axi_wdata[7]_0 ,
+    bus2ip_wrce,
+    \s_axi_wdata[7]_1 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 ,
@@ -239,19 +205,50 @@ module Task_2_design_axi_timer_0_0_address_decoder
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 ,
     \TCSR0_GENERATE[20].TCSR0_FF_I ,
+    Bus_RNW_reg_reg_1,
+    \INFERRED_GEN.icount_out_reg[31] ,
+    \INFERRED_GEN.icount_out_reg[30] ,
+    \INFERRED_GEN.icount_out_reg[29] ,
+    \INFERRED_GEN.icount_out_reg[28] ,
+    \INFERRED_GEN.icount_out_reg[27] ,
+    \INFERRED_GEN.icount_out_reg[26] ,
+    \INFERRED_GEN.icount_out_reg[25] ,
+    \INFERRED_GEN.icount_out_reg[24] ,
+    \INFERRED_GEN.icount_out_reg[23] ,
+    \INFERRED_GEN.icount_out_reg[22] ,
+    \INFERRED_GEN.icount_out_reg[21] ,
+    \INFERRED_GEN.icount_out_reg[20] ,
+    \INFERRED_GEN.icount_out_reg[19] ,
+    \INFERRED_GEN.icount_out_reg[18] ,
+    \INFERRED_GEN.icount_out_reg[17] ,
+    \INFERRED_GEN.icount_out_reg[16] ,
+    \INFERRED_GEN.icount_out_reg[15] ,
+    \INFERRED_GEN.icount_out_reg[14] ,
+    \INFERRED_GEN.icount_out_reg[13] ,
+    \INFERRED_GEN.icount_out_reg[12] ,
+    \INFERRED_GEN.icount_out_reg[11] ,
+    \INFERRED_GEN.icount_out_reg[10] ,
+    \INFERRED_GEN.icount_out_reg[9] ,
+    \INFERRED_GEN.icount_out_reg[8] ,
+    \INFERRED_GEN.icount_out_reg[7] ,
+    \INFERRED_GEN.icount_out_reg[6] ,
+    \INFERRED_GEN.icount_out_reg[5] ,
+    \INFERRED_GEN.icount_out_reg[4] ,
+    \INFERRED_GEN.icount_out_reg[3] ,
+    \INFERRED_GEN.icount_out_reg[2] ,
+    \INFERRED_GEN.icount_out_reg[1] ,
+    \INFERRED_GEN.icount_out_reg[0] ,
     Bus_RNW_reg_reg_2,
     Bus_RNW_reg_reg_3,
-    Bus_RNW_reg_reg_4,
-    Bus_RNW_reg_reg_5,
-    Bus_RNW_reg_reg_6,
     s_axi_rready_0,
     s_axi_bready_0,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_21 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
     \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ,
     Q,
     s_axi_aclk,
+    s_axi_wdata,
+    counterReg_DBus_32,
     s_axi_aresetn,
     s_axi_rvalid_i_reg,
     s_axi_arvalid,
@@ -260,34 +257,21 @@ module Task_2_design_axi_timer_0_0_address_decoder
     s_axi_wvalid,
     s_axi_awvalid,
     s_axi_awready,
-    s_axi_wdata,
     tCSR0_Reg,
     tCSR1_Reg,
-    counterReg_DBus_32,
-    counterReg_DBus_0,
+    loadReg_DBus_32,
     \state_reg[1] ,
     s_axi_arready,
-    loadReg_DBus_32,
     s_axi_arready_0,
     s_axi_rready,
     s_axi_rvalid_i_reg_0,
     s_axi_bready,
     s_axi_bvalid_i_reg,
     read_done0,
-    read_done1,
     bus2ip_rnw_i,
     \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]_0 );
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ;
   output Bus_RNW_reg_reg_0;
-  output is_write_reg;
-  output is_read_reg;
-  output [1:0]D;
-  output [2:0]\FSM_onehot_state_reg[2] ;
-  output pair0_Select;
-  output s_axi_wdata_7_sp_1;
-  output [1:0]bus2ip_wrce;
-  output \s_axi_wdata[7]_0 ;
   output s_axi_wdata_0_sp_1;
   output s_axi_wdata_1_sp_1;
   output s_axi_wdata_2_sp_1;
@@ -295,7 +279,7 @@ module Task_2_design_axi_timer_0_0_address_decoder
   output s_axi_wdata_4_sp_1;
   output s_axi_wdata_5_sp_1;
   output s_axi_wdata_6_sp_1;
-  output \s_axi_wdata[7]_1 ;
+  output s_axi_wdata_7_sp_1;
   output s_axi_wdata_8_sp_1;
   output s_axi_wdata_9_sp_1;
   output s_axi_wdata_10_sp_1;
@@ -320,39 +304,14 @@ module Task_2_design_axi_timer_0_0_address_decoder
   output s_axi_wdata_29_sp_1;
   output s_axi_wdata_30_sp_1;
   output D_0;
-  output \s_axi_wdata[0]_0 ;
-  output \s_axi_wdata[1]_0 ;
-  output \s_axi_wdata[2]_0 ;
-  output \s_axi_wdata[3]_0 ;
-  output \s_axi_wdata[4]_0 ;
-  output \s_axi_wdata[5]_0 ;
-  output \s_axi_wdata[6]_0 ;
-  output \s_axi_wdata[7]_2 ;
-  output \s_axi_wdata[8]_0 ;
-  output \s_axi_wdata[9]_0 ;
-  output \s_axi_wdata[10]_0 ;
-  output \s_axi_wdata[11]_0 ;
-  output \s_axi_wdata[12]_0 ;
-  output \s_axi_wdata[13]_0 ;
-  output \s_axi_wdata[14]_0 ;
-  output \s_axi_wdata[15]_0 ;
-  output \s_axi_wdata[16]_0 ;
-  output \s_axi_wdata[17]_0 ;
-  output \s_axi_wdata[18]_0 ;
-  output \s_axi_wdata[19]_0 ;
-  output \s_axi_wdata[20]_0 ;
-  output \s_axi_wdata[21]_0 ;
-  output \s_axi_wdata[22]_0 ;
-  output \s_axi_wdata[23]_0 ;
-  output \s_axi_wdata[24]_0 ;
-  output \s_axi_wdata[25]_0 ;
-  output \s_axi_wdata[26]_0 ;
-  output \s_axi_wdata[27]_0 ;
-  output \s_axi_wdata[28]_0 ;
-  output \s_axi_wdata[29]_0 ;
-  output \s_axi_wdata[30]_0 ;
-  output D_1;
-  output Bus_RNW_reg_reg_1;
+  output is_write_reg;
+  output is_read_reg;
+  output [1:0]D;
+  output [2:0]\FSM_onehot_state_reg[2] ;
+  output pair0_Select;
+  output \s_axi_wdata[7]_0 ;
+  output [1:0]bus2ip_wrce;
+  output \s_axi_wdata[7]_1 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 ;
@@ -374,19 +333,50 @@ module Task_2_design_axi_timer_0_0_address_decoder
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 ;
   output \TCSR0_GENERATE[20].TCSR0_FF_I ;
+  output Bus_RNW_reg_reg_1;
+  output \INFERRED_GEN.icount_out_reg[31] ;
+  output \INFERRED_GEN.icount_out_reg[30] ;
+  output \INFERRED_GEN.icount_out_reg[29] ;
+  output \INFERRED_GEN.icount_out_reg[28] ;
+  output \INFERRED_GEN.icount_out_reg[27] ;
+  output \INFERRED_GEN.icount_out_reg[26] ;
+  output \INFERRED_GEN.icount_out_reg[25] ;
+  output \INFERRED_GEN.icount_out_reg[24] ;
+  output \INFERRED_GEN.icount_out_reg[23] ;
+  output \INFERRED_GEN.icount_out_reg[22] ;
+  output \INFERRED_GEN.icount_out_reg[21] ;
+  output \INFERRED_GEN.icount_out_reg[20] ;
+  output \INFERRED_GEN.icount_out_reg[19] ;
+  output \INFERRED_GEN.icount_out_reg[18] ;
+  output \INFERRED_GEN.icount_out_reg[17] ;
+  output \INFERRED_GEN.icount_out_reg[16] ;
+  output \INFERRED_GEN.icount_out_reg[15] ;
+  output \INFERRED_GEN.icount_out_reg[14] ;
+  output \INFERRED_GEN.icount_out_reg[13] ;
+  output \INFERRED_GEN.icount_out_reg[12] ;
+  output \INFERRED_GEN.icount_out_reg[11] ;
+  output \INFERRED_GEN.icount_out_reg[10] ;
+  output \INFERRED_GEN.icount_out_reg[9] ;
+  output \INFERRED_GEN.icount_out_reg[8] ;
+  output \INFERRED_GEN.icount_out_reg[7] ;
+  output \INFERRED_GEN.icount_out_reg[6] ;
+  output \INFERRED_GEN.icount_out_reg[5] ;
+  output \INFERRED_GEN.icount_out_reg[4] ;
+  output \INFERRED_GEN.icount_out_reg[3] ;
+  output \INFERRED_GEN.icount_out_reg[2] ;
+  output \INFERRED_GEN.icount_out_reg[1] ;
+  output \INFERRED_GEN.icount_out_reg[0] ;
   output Bus_RNW_reg_reg_2;
   output Bus_RNW_reg_reg_3;
-  output Bus_RNW_reg_reg_4;
-  output Bus_RNW_reg_reg_5;
-  output Bus_RNW_reg_reg_6;
   output s_axi_rready_0;
   output s_axi_bready_0;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_21 ;
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ;
   output \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ;
   output \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ;
   input Q;
   input s_axi_aclk;
+  input [31:0]s_axi_wdata;
+  input [31:0]counterReg_DBus_32;
   input s_axi_aresetn;
   input [1:0]s_axi_rvalid_i_reg;
   input s_axi_arvalid;
@@ -395,21 +385,17 @@ module Task_2_design_axi_timer_0_0_address_decoder
   input s_axi_wvalid;
   input s_axi_awvalid;
   input s_axi_awready;
-  input [31:0]s_axi_wdata;
   input [1:0]tCSR0_Reg;
   input [0:0]tCSR1_Reg;
-  input [31:0]counterReg_DBus_32;
-  input [31:0]counterReg_DBus_0;
+  input [20:0]loadReg_DBus_32;
   input \state_reg[1] ;
   input s_axi_arready;
-  input [20:0]loadReg_DBus_32;
   input [5:0]s_axi_arready_0;
   input s_axi_rready;
   input s_axi_rvalid_i_reg_0;
   input s_axi_bready;
   input s_axi_bvalid_i_reg;
   input read_done0;
-  input read_done1;
   input bus2ip_rnw_i;
   input [2:0]\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]_0 ;
 
@@ -418,12 +404,8 @@ module Task_2_design_axi_timer_0_0_address_decoder
   wire Bus_RNW_reg_reg_1;
   wire Bus_RNW_reg_reg_2;
   wire Bus_RNW_reg_reg_3;
-  wire Bus_RNW_reg_reg_4;
-  wire Bus_RNW_reg_reg_5;
-  wire Bus_RNW_reg_reg_6;
   wire [1:0]D;
   wire D_0;
-  wire D_1;
   wire [2:0]\FSM_onehot_state_reg[2] ;
   wire [3:0]\FSM_onehot_state_reg[3] ;
   wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
@@ -453,11 +435,42 @@ module Task_2_design_axi_timer_0_0_address_decoder
   wire \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ;
+  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ;
   wire [2:0]\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]_0 ;
+  wire \INFERRED_GEN.icount_out_reg[0] ;
+  wire \INFERRED_GEN.icount_out_reg[10] ;
+  wire \INFERRED_GEN.icount_out_reg[11] ;
+  wire \INFERRED_GEN.icount_out_reg[12] ;
+  wire \INFERRED_GEN.icount_out_reg[13] ;
+  wire \INFERRED_GEN.icount_out_reg[14] ;
+  wire \INFERRED_GEN.icount_out_reg[15] ;
+  wire \INFERRED_GEN.icount_out_reg[16] ;
+  wire \INFERRED_GEN.icount_out_reg[17] ;
+  wire \INFERRED_GEN.icount_out_reg[18] ;
+  wire \INFERRED_GEN.icount_out_reg[19] ;
+  wire \INFERRED_GEN.icount_out_reg[1] ;
+  wire \INFERRED_GEN.icount_out_reg[20] ;
+  wire \INFERRED_GEN.icount_out_reg[21] ;
+  wire \INFERRED_GEN.icount_out_reg[22] ;
+  wire \INFERRED_GEN.icount_out_reg[23] ;
+  wire \INFERRED_GEN.icount_out_reg[24] ;
+  wire \INFERRED_GEN.icount_out_reg[25] ;
+  wire \INFERRED_GEN.icount_out_reg[26] ;
+  wire \INFERRED_GEN.icount_out_reg[27] ;
+  wire \INFERRED_GEN.icount_out_reg[28] ;
+  wire \INFERRED_GEN.icount_out_reg[29] ;
+  wire \INFERRED_GEN.icount_out_reg[2] ;
+  wire \INFERRED_GEN.icount_out_reg[30] ;
+  wire \INFERRED_GEN.icount_out_reg[31] ;
+  wire \INFERRED_GEN.icount_out_reg[3] ;
+  wire \INFERRED_GEN.icount_out_reg[4] ;
+  wire \INFERRED_GEN.icount_out_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[6] ;
+  wire \INFERRED_GEN.icount_out_reg[7] ;
+  wire \INFERRED_GEN.icount_out_reg[8] ;
+  wire \INFERRED_GEN.icount_out_reg[9] ;
   wire Q;
   wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire bus2ip_rnw_i;
@@ -469,7 +482,6 @@ module Task_2_design_axi_timer_0_0_address_decoder
   wire ce_expnd_i_5;
   wire ce_expnd_i_6;
   wire ce_expnd_i_7;
-  wire [31:0]counterReg_DBus_0;
   wire [31:0]counterReg_DBus_32;
   wire cs_ce_clr;
   wire is_read_reg;
@@ -477,13 +489,11 @@ module Task_2_design_axi_timer_0_0_address_decoder
   wire [20:0]loadReg_DBus_32;
   wire pair0_Select;
   wire read_done0;
-  wire read_done1;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire s_axi_arready;
   wire [5:0]s_axi_arready_0;
   wire s_axi_arready_INST_0_i_1_n_0;
-  wire s_axi_arready_INST_0_i_2_n_0;
   wire s_axi_arvalid;
   wire s_axi_awready;
   wire s_axi_awvalid;
@@ -495,39 +505,8 @@ module Task_2_design_axi_timer_0_0_address_decoder
   wire [1:0]s_axi_rvalid_i_reg;
   wire s_axi_rvalid_i_reg_0;
   wire [31:0]s_axi_wdata;
-  wire \s_axi_wdata[0]_0 ;
-  wire \s_axi_wdata[10]_0 ;
-  wire \s_axi_wdata[11]_0 ;
-  wire \s_axi_wdata[12]_0 ;
-  wire \s_axi_wdata[13]_0 ;
-  wire \s_axi_wdata[14]_0 ;
-  wire \s_axi_wdata[15]_0 ;
-  wire \s_axi_wdata[16]_0 ;
-  wire \s_axi_wdata[17]_0 ;
-  wire \s_axi_wdata[18]_0 ;
-  wire \s_axi_wdata[19]_0 ;
-  wire \s_axi_wdata[1]_0 ;
-  wire \s_axi_wdata[20]_0 ;
-  wire \s_axi_wdata[21]_0 ;
-  wire \s_axi_wdata[22]_0 ;
-  wire \s_axi_wdata[23]_0 ;
-  wire \s_axi_wdata[24]_0 ;
-  wire \s_axi_wdata[25]_0 ;
-  wire \s_axi_wdata[26]_0 ;
-  wire \s_axi_wdata[27]_0 ;
-  wire \s_axi_wdata[28]_0 ;
-  wire \s_axi_wdata[29]_0 ;
-  wire \s_axi_wdata[2]_0 ;
-  wire \s_axi_wdata[30]_0 ;
-  wire \s_axi_wdata[3]_0 ;
-  wire \s_axi_wdata[4]_0 ;
-  wire \s_axi_wdata[5]_0 ;
-  wire \s_axi_wdata[6]_0 ;
   wire \s_axi_wdata[7]_0 ;
   wire \s_axi_wdata[7]_1 ;
-  wire \s_axi_wdata[7]_2 ;
-  wire \s_axi_wdata[8]_0 ;
-  wire \s_axi_wdata[9]_0 ;
   wire s_axi_wdata_0_sn_1;
   wire s_axi_wdata_10_sn_1;
   wire s_axi_wdata_11_sn_1;
@@ -560,9 +539,8 @@ module Task_2_design_axi_timer_0_0_address_decoder
   wire s_axi_wdata_8_sn_1;
   wire s_axi_wdata_9_sn_1;
   wire s_axi_wready_INST_0_i_1_n_0;
+  wire s_axi_wready_INST_0_i_2_n_0;
   wire s_axi_wready_INST_0_i_3_n_0;
-  wire s_axi_wready_INST_0_i_4_n_0;
-  wire s_axi_wready_INST_0_i_5_n_0;
   wire s_axi_wvalid;
   wire \state_reg[0] ;
   wire \state_reg[1] ;
@@ -600,7 +578,7 @@ module Task_2_design_axi_timer_0_0_address_decoder
   assign s_axi_wdata_7_sp_1 = s_axi_wdata_7_sn_1;
   assign s_axi_wdata_8_sp_1 = s_axi_wdata_8_sn_1;
   assign s_axi_wdata_9_sp_1 = s_axi_wdata_9_sn_1;
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     Bus_RNW_reg_i_1
@@ -649,27 +627,13 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[20]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_2 
-       (.I0(Bus_RNW_reg_reg_0),
-        .I1(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
-        .O(Bus_RNW_reg_reg_5));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_3 
-       (.I0(Bus_RNW_reg_reg_0),
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[31]),
         .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
-        .O(Bus_RNW_reg_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_4 
-       (.I0(Bus_RNW_reg_reg_0),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .O(Bus_RNW_reg_reg_3));
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[31] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -679,11 +643,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_11 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[21]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[21] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[9]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_12 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[20]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[20] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -693,11 +671,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_13 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[19]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[19] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[7]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_14 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[18]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[18] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -707,11 +699,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_15 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[17]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[17] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[5]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_16 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[16]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[16] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -721,11 +727,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[15]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[15] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[3]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[14]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[14] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -735,6 +755,13 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[13]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[13] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
@@ -742,11 +769,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[12]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[12] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[19]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[30]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[30] ));
   LUT5 #(
     .INIT(32'h0F7F7F7F)) 
     \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -756,19 +797,26 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I3(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I4(loadReg_DBus_32[0]),
         .O(\TCSR0_GENERATE[20].TCSR0_FF_I ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[11]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[11] ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_2 
        (.I0(Bus_RNW_reg_reg_0),
-        .I1(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .O(Bus_RNW_reg_reg_6));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+        .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
+        .O(Bus_RNW_reg_reg_1));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_3 
        (.I0(Bus_RNW_reg_reg_0),
-        .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
+        .I1(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .O(Bus_RNW_reg_reg_2));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
@@ -776,7 +824,70 @@ module Task_2_design_axi_timer_0_0_address_decoder
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_4 
        (.I0(Bus_RNW_reg_reg_0),
         .I1(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .O(Bus_RNW_reg_reg_4));
+        .O(Bus_RNW_reg_reg_3));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[10]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[10] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[9]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[9] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[8]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[8] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[7]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[7] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[6]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[6] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[5]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[5] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[4]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[4] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[3]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[3] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[2]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[2] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -786,11 +897,39 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[29]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[29] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[1]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[1] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[0]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[0] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[17]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_4 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[28]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[28] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -800,11 +939,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_5 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[27]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[27] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[15]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_6 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[26]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[26] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -814,11 +967,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[25]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[25] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[13]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[24]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[24] ));
   LUT3 #(
     .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
@@ -828,11 +995,25 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ));
   LUT3 #(
     .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[23]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[23] ));
+  LUT3 #(
+    .INIT(8'h7F)) 
     \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(Bus_RNW_reg_reg_0),
         .I2(loadReg_DBus_32[11]),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_10 ));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
+       (.I0(counterReg_DBus_32[22]),
+        .I1(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
+        .I2(Bus_RNW_reg_reg_0),
+        .O(\INFERRED_GEN.icount_out_reg[22] ));
   FDRE \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] 
        (.C(s_axi_aclk),
         .CE(Q),
@@ -868,7 +1049,7 @@ module Task_2_design_axi_timer_0_0_address_decoder
        (.C(s_axi_aclk),
         .CE(Q),
         .D(ce_expnd_i_2),
-        .Q(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
+        .Q(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
         .R(cs_ce_clr));
   FDRE \GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg[6] 
        (.C(s_axi_aclk),
@@ -899,28 +1080,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(D_0));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_2__0 
-       (.I0(s_axi_wdata[31]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[31]),
-        .O(D_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[10].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[21]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[21]),
         .O(s_axi_wdata_21_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[10].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[21]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[21]),
-        .O(\s_axi_wdata[21]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[11].LOAD_REG_I_i_1 
@@ -931,28 +1096,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_20_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[11].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[20]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[20]),
-        .O(\s_axi_wdata[20]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[12].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[19]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[19]),
         .O(s_axi_wdata_19_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[12].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[19]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[19]),
-        .O(\s_axi_wdata[19]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[13].LOAD_REG_I_i_1 
@@ -963,28 +1112,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_18_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[13].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[18]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[18]),
-        .O(\s_axi_wdata[18]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[14].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[17]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[17]),
         .O(s_axi_wdata_17_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[14].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[17]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[17]),
-        .O(\s_axi_wdata[17]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[15].LOAD_REG_I_i_1 
@@ -995,28 +1128,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_16_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[15].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[16]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[16]),
-        .O(\s_axi_wdata[16]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[16].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[15]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[15]),
         .O(s_axi_wdata_15_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[16].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[15]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[15]),
-        .O(\s_axi_wdata[15]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[17].LOAD_REG_I_i_1 
@@ -1027,28 +1144,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_14_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[17].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[14]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[14]),
-        .O(\s_axi_wdata[14]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[18].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[13]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[13]),
         .O(s_axi_wdata_13_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[18].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[13]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[13]),
-        .O(\s_axi_wdata[13]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[19].LOAD_REG_I_i_1 
@@ -1059,28 +1160,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_12_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[19].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[12]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[12]),
-        .O(\s_axi_wdata[12]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[1].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[30]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[30]),
         .O(s_axi_wdata_30_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[1].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[30]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[30]),
-        .O(\s_axi_wdata[30]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[20].LOAD_REG_I_i_1 
@@ -1091,28 +1176,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_11_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[20].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[11]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[11]),
-        .O(\s_axi_wdata[11]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[21].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[10]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[10]),
         .O(s_axi_wdata_10_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[21].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[10]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[10]),
-        .O(\s_axi_wdata[10]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[22].LOAD_REG_I_i_1 
@@ -1123,14 +1192,6 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_9_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[22].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[9]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[9]),
-        .O(\s_axi_wdata[9]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[23].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[8]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
@@ -1139,30 +1200,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_8_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[23].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[8]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[8]),
-        .O(\s_axi_wdata[8]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[24].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[7]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[7]),
-        .O(\s_axi_wdata[7]_1 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[24].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[7]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[7]),
-        .O(\s_axi_wdata[7]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+        .O(s_axi_wdata_7_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[25].LOAD_REG_I_i_1 
@@ -1173,15 +1216,6 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_6_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[25].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[6]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[6]),
-        .O(\s_axi_wdata[6]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[26].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[5]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
@@ -1190,30 +1224,13 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_5_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[26].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[5]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[5]),
-        .O(\s_axi_wdata[5]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[27].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[4]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[4]),
         .O(s_axi_wdata_4_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[27].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[4]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[4]),
-        .O(\s_axi_wdata[4]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[28].LOAD_REG_I_i_1 
@@ -1222,15 +1239,7 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[3]),
         .O(s_axi_wdata_3_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[28].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[3]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[3]),
-        .O(\s_axi_wdata[3]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[29].LOAD_REG_I_i_1 
@@ -1241,29 +1250,13 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_2_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[29].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[2]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[2]),
-        .O(\s_axi_wdata[2]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[2].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[29]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[29]),
         .O(s_axi_wdata_29_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[2].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[29]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[29]),
-        .O(\s_axi_wdata[29]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[30].LOAD_REG_I_i_1 
@@ -1272,15 +1265,7 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[1]),
         .O(s_axi_wdata_1_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[30].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[1]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[1]),
-        .O(\s_axi_wdata[1]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[31].LOAD_REG_I_i_1 
@@ -1289,15 +1274,6 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[0]),
         .O(s_axi_wdata_0_sn_1));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[31].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[0]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[0]),
-        .O(\s_axi_wdata[0]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[3].LOAD_REG_I_i_1 
@@ -1308,28 +1284,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_28_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[3].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[28]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[28]),
-        .O(\s_axi_wdata[28]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[4].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[27]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[27]),
         .O(s_axi_wdata_27_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[4].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[27]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[27]),
-        .O(\s_axi_wdata[27]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[5].LOAD_REG_I_i_1 
@@ -1340,28 +1300,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_26_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[5].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[26]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[26]),
-        .O(\s_axi_wdata[26]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[6].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[25]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[25]),
         .O(s_axi_wdata_25_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[6].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[25]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[25]),
-        .O(\s_axi_wdata[25]_0 ));
   LUT4 #(
     .INIT(16'hFB08)) 
     \LOAD_REG_GEN[7].LOAD_REG_I_i_1 
@@ -1372,14 +1316,6 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_24_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[7].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[24]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[24]),
-        .O(\s_axi_wdata[24]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[8].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[23]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
@@ -1388,28 +1324,12 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .O(s_axi_wdata_23_sn_1));
   LUT4 #(
     .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[8].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[23]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[23]),
-        .O(\s_axi_wdata[23]_0 ));
-  LUT4 #(
-    .INIT(16'hFB08)) 
     \LOAD_REG_GEN[9].LOAD_REG_I_i_1 
        (.I0(s_axi_wdata[22]),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I2(Bus_RNW_reg_reg_0),
         .I3(counterReg_DBus_32[22]),
         .O(s_axi_wdata_22_sn_1));
-  LUT4 #(
-    .INIT(16'hFB08)) 
-    \LOAD_REG_GEN[9].LOAD_REG_I_i_1__0 
-       (.I0(s_axi_wdata[22]),
-        .I1(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I2(Bus_RNW_reg_reg_0),
-        .I3(counterReg_DBus_0[22]),
-        .O(\s_axi_wdata[22]_0 ));
   Task_2_design_axi_timer_0_0_pselect_f \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]_0 ),
         .ce_expnd_i_7(ce_expnd_i_7));
@@ -1428,28 +1348,29 @@ module Task_2_design_axi_timer_0_0_address_decoder
   Task_2_design_axi_timer_0_0_pselect_f__parameterized6 \MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I 
        (.\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7] (\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]_0 ),
         .ce_expnd_i_0(ce_expnd_i_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'hE)) 
     READ_DONE0_I_i_2
        (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
         .I1(read_done0),
         .O(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_21 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    READ_DONE1_I_i_2
-       (.I0(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I1(read_done1),
-        .O(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \TCSR0_GENERATE[20].TCSR0_FF_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .I1(Bus_RNW_reg_reg_0),
         .O(bus2ip_wrce[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'h32)) 
+    \TCSR0_GENERATE[21].TCSR0_FF_I_i_1 
+       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
+        .I1(Bus_RNW_reg_reg_0),
+        .I2(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+        .O(pair0_Select));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h20FF)) 
     \TCSR0_GENERATE[23].TCSR0_FF_I_i_1 
@@ -1467,15 +1388,15 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I2(Bus_RNW_reg_reg_0),
         .I3(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .I4(s_axi_wdata[10]),
-        .O(s_axi_wdata_7_sn_1));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+        .O(\s_axi_wdata[7]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \TCSR1_GENERATE[22].TCSR1_FF_I_i_1 
        (.I0(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
         .I1(Bus_RNW_reg_reg_0),
         .O(bus2ip_wrce[0]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h20FF)) 
     \TCSR1_GENERATE[23].TCSR1_FF_I_i_1 
@@ -1493,34 +1414,26 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I2(Bus_RNW_reg_reg_0),
         .I3(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
         .I4(s_axi_wdata[10]),
-        .O(\s_axi_wdata[7]_0 ));
-  LUT6 #(
-    .INIT(64'hFFF4FFF4FFF4F4F4)) 
+        .O(\s_axi_wdata[7]_1 ));
+  LUT5 #(
+    .INIT(32'hF4F4FFF4)) 
     s_axi_arready_INST_0
        (.I0(s_axi_wready_INST_0_i_1_n_0),
         .I1(s_axi_arready),
         .I2(s_axi_arready_INST_0_i_1_n_0),
         .I3(Bus_RNW_reg_reg_0),
-        .I4(s_axi_arready_INST_0_i_2_n_0),
-        .I5(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
+        .I4(s_axi_wready_INST_0_i_3_n_0),
         .O(is_read_reg));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hF0F0F0E0)) 
     s_axi_arready_INST_0_i_1
-       (.I0(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
+       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .I1(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
         .I2(Bus_RNW_reg_reg_0),
-        .I3(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
-        .I4(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
+        .I3(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
+        .I4(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
         .O(s_axi_arready_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    s_axi_arready_INST_0_i_2
-       (.I0(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
-        .I1(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
-        .O(s_axi_arready_INST_0_i_2_n_0));
   LUT5 #(
     .INIT(32'h5D550C00)) 
     s_axi_bvalid_i_i_1
@@ -1539,15 +1452,14 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I3(is_read_reg),
         .I4(s_axi_rvalid_i_reg_0),
         .O(s_axi_rready_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFF4)) 
+  LUT5 #(
+    .INIT(32'hF4F4F4FF)) 
     s_axi_wready_INST_0
        (.I0(s_axi_wready_INST_0_i_1_n_0),
         .I1(s_axi_awready),
-        .I2(pair0_Select),
-        .I3(s_axi_wready_INST_0_i_3_n_0),
-        .I4(s_axi_wready_INST_0_i_4_n_0),
-        .I5(s_axi_wready_INST_0_i_5_n_0),
+        .I2(s_axi_wready_INST_0_i_2_n_0),
+        .I3(Bus_RNW_reg_reg_0),
+        .I4(s_axi_wready_INST_0_i_3_n_0),
         .O(is_write_reg));
   LUT6 #(
     .INIT(64'hFFFFFFFEFFFFFFFF)) 
@@ -1559,37 +1471,23 @@ module Task_2_design_axi_timer_0_0_address_decoder
         .I4(s_axi_arready_0[4]),
         .I5(s_axi_arready_0[5]),
         .O(s_axi_wready_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'h32)) 
-    s_axi_wready_INST_0_i_2
-       (.I0(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
-        .I1(Bus_RNW_reg_reg_0),
-        .I2(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
-        .O(pair0_Select));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    s_axi_wready_INST_0_i_3
-       (.I0(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
-        .I1(Bus_RNW_reg_reg_0),
-        .O(s_axi_wready_INST_0_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    s_axi_wready_INST_0_i_4
-       (.I0(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
-        .I1(Bus_RNW_reg_reg_0),
-        .O(s_axi_wready_INST_0_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h00FE)) 
-    s_axi_wready_INST_0_i_5
-       (.I0(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
-        .I1(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
+  LUT5 #(
+    .INIT(32'h00FF00FE)) 
+    s_axi_wready_INST_0_i_2
+       (.I0(\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ),
         .I2(\GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ),
         .I3(Bus_RNW_reg_reg_0),
-        .O(s_axi_wready_INST_0_i_5_n_0));
+        .I4(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ),
+        .O(s_axi_wready_INST_0_i_2_n_0));
+  LUT3 #(
+    .INIT(8'h01)) 
+    s_axi_wready_INST_0_i_3
+       (.I0(\GEN_BKEND_CE_REGISTERS[6].ce_out_i_reg ),
+        .I1(\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg ),
+        .I2(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
+        .O(s_axi_wready_INST_0_i_3_n_0));
   LUT5 #(
     .INIT(32'h33B8FFB8)) 
     \state[0]_i_1 
@@ -1613,17 +1511,10 @@ endmodule
 
 (* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Task_2_design_axi_timer_0_0_axi_lite_ipif
-   (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
-    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
+   (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
     Bus_RNW_reg,
     s_axi_rvalid_i_reg,
     s_axi_bvalid_i_reg,
-    is_write_reg,
-    is_read_reg,
-    pair0_Select,
-    s_axi_wdata_7_sp_1,
-    bus2ip_wrce,
-    \s_axi_wdata[7]_0 ,
     s_axi_wdata_0_sp_1,
     s_axi_wdata_1_sp_1,
     s_axi_wdata_2_sp_1,
@@ -1631,7 +1522,7 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
     s_axi_wdata_4_sp_1,
     s_axi_wdata_5_sp_1,
     s_axi_wdata_6_sp_1,
-    \s_axi_wdata[7]_1 ,
+    s_axi_wdata_7_sp_1,
     s_axi_wdata_8_sp_1,
     s_axi_wdata_9_sp_1,
     s_axi_wdata_10_sp_1,
@@ -1656,39 +1547,12 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
     s_axi_wdata_29_sp_1,
     s_axi_wdata_30_sp_1,
     D_0,
-    \s_axi_wdata[0]_0 ,
-    \s_axi_wdata[1]_0 ,
-    \s_axi_wdata[2]_0 ,
-    \s_axi_wdata[3]_0 ,
-    \s_axi_wdata[4]_0 ,
-    \s_axi_wdata[5]_0 ,
-    \s_axi_wdata[6]_0 ,
-    \s_axi_wdata[7]_2 ,
-    \s_axi_wdata[8]_0 ,
-    \s_axi_wdata[9]_0 ,
-    \s_axi_wdata[10]_0 ,
-    \s_axi_wdata[11]_0 ,
-    \s_axi_wdata[12]_0 ,
-    \s_axi_wdata[13]_0 ,
-    \s_axi_wdata[14]_0 ,
-    \s_axi_wdata[15]_0 ,
-    \s_axi_wdata[16]_0 ,
-    \s_axi_wdata[17]_0 ,
-    \s_axi_wdata[18]_0 ,
-    \s_axi_wdata[19]_0 ,
-    \s_axi_wdata[20]_0 ,
-    \s_axi_wdata[21]_0 ,
-    \s_axi_wdata[22]_0 ,
-    \s_axi_wdata[23]_0 ,
-    \s_axi_wdata[24]_0 ,
-    \s_axi_wdata[25]_0 ,
-    \s_axi_wdata[26]_0 ,
-    \s_axi_wdata[27]_0 ,
-    \s_axi_wdata[28]_0 ,
-    \s_axi_wdata[29]_0 ,
-    \s_axi_wdata[30]_0 ,
-    D_1,
-    Bus_RNW_reg_reg,
+    is_write_reg,
+    is_read_reg,
+    pair0_Select,
+    \s_axi_wdata[7]_0 ,
+    bus2ip_wrce,
+    \s_axi_wdata[7]_1 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ,
@@ -1710,46 +1574,66 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 ,
     \TCSR0_GENERATE[20].TCSR0_FF_I ,
+    Bus_RNW_reg_reg,
+    \INFERRED_GEN.icount_out_reg[31] ,
+    \INFERRED_GEN.icount_out_reg[30] ,
+    \INFERRED_GEN.icount_out_reg[29] ,
+    \INFERRED_GEN.icount_out_reg[28] ,
+    \INFERRED_GEN.icount_out_reg[27] ,
+    \INFERRED_GEN.icount_out_reg[26] ,
+    \INFERRED_GEN.icount_out_reg[25] ,
+    \INFERRED_GEN.icount_out_reg[24] ,
+    \INFERRED_GEN.icount_out_reg[23] ,
+    \INFERRED_GEN.icount_out_reg[22] ,
+    \INFERRED_GEN.icount_out_reg[21] ,
+    \INFERRED_GEN.icount_out_reg[20] ,
+    \INFERRED_GEN.icount_out_reg[19] ,
+    \INFERRED_GEN.icount_out_reg[18] ,
+    \INFERRED_GEN.icount_out_reg[17] ,
+    \INFERRED_GEN.icount_out_reg[16] ,
+    \INFERRED_GEN.icount_out_reg[15] ,
+    \INFERRED_GEN.icount_out_reg[14] ,
+    \INFERRED_GEN.icount_out_reg[13] ,
+    \INFERRED_GEN.icount_out_reg[12] ,
+    \INFERRED_GEN.icount_out_reg[11] ,
+    \INFERRED_GEN.icount_out_reg[10] ,
+    \INFERRED_GEN.icount_out_reg[9] ,
+    \INFERRED_GEN.icount_out_reg[8] ,
+    \INFERRED_GEN.icount_out_reg[7] ,
+    \INFERRED_GEN.icount_out_reg[6] ,
+    \INFERRED_GEN.icount_out_reg[5] ,
+    \INFERRED_GEN.icount_out_reg[4] ,
+    \INFERRED_GEN.icount_out_reg[3] ,
+    \INFERRED_GEN.icount_out_reg[2] ,
+    \INFERRED_GEN.icount_out_reg[1] ,
+    \INFERRED_GEN.icount_out_reg[0] ,
     Bus_RNW_reg_reg_0,
     Bus_RNW_reg_reg_1,
-    Bus_RNW_reg_reg_2,
-    Bus_RNW_reg_reg_3,
-    Bus_RNW_reg_reg_4,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ,
     s_axi_rdata,
     bus2ip_reset,
     s_axi_aclk,
     s_axi_arvalid,
+    s_axi_wdata,
+    counterReg_DBus_32,
     s_axi_aresetn,
     s_axi_wvalid,
     s_axi_awvalid,
-    s_axi_wdata,
     tCSR0_Reg,
     tCSR1_Reg,
-    counterReg_DBus_32,
-    counterReg_DBus_0,
     loadReg_DBus_32,
     s_axi_bready,
     s_axi_rready,
     s_axi_araddr,
     s_axi_awaddr,
     read_done0,
-    read_done1,
     D);
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
   output Bus_RNW_reg;
   output s_axi_rvalid_i_reg;
   output s_axi_bvalid_i_reg;
-  output is_write_reg;
-  output is_read_reg;
-  output pair0_Select;
-  output s_axi_wdata_7_sp_1;
-  output [1:0]bus2ip_wrce;
-  output \s_axi_wdata[7]_0 ;
   output s_axi_wdata_0_sp_1;
   output s_axi_wdata_1_sp_1;
   output s_axi_wdata_2_sp_1;
@@ -1757,7 +1641,7 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
   output s_axi_wdata_4_sp_1;
   output s_axi_wdata_5_sp_1;
   output s_axi_wdata_6_sp_1;
-  output \s_axi_wdata[7]_1 ;
+  output s_axi_wdata_7_sp_1;
   output s_axi_wdata_8_sp_1;
   output s_axi_wdata_9_sp_1;
   output s_axi_wdata_10_sp_1;
@@ -1782,39 +1666,12 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
   output s_axi_wdata_29_sp_1;
   output s_axi_wdata_30_sp_1;
   output D_0;
-  output \s_axi_wdata[0]_0 ;
-  output \s_axi_wdata[1]_0 ;
-  output \s_axi_wdata[2]_0 ;
-  output \s_axi_wdata[3]_0 ;
-  output \s_axi_wdata[4]_0 ;
-  output \s_axi_wdata[5]_0 ;
-  output \s_axi_wdata[6]_0 ;
-  output \s_axi_wdata[7]_2 ;
-  output \s_axi_wdata[8]_0 ;
-  output \s_axi_wdata[9]_0 ;
-  output \s_axi_wdata[10]_0 ;
-  output \s_axi_wdata[11]_0 ;
-  output \s_axi_wdata[12]_0 ;
-  output \s_axi_wdata[13]_0 ;
-  output \s_axi_wdata[14]_0 ;
-  output \s_axi_wdata[15]_0 ;
-  output \s_axi_wdata[16]_0 ;
-  output \s_axi_wdata[17]_0 ;
-  output \s_axi_wdata[18]_0 ;
-  output \s_axi_wdata[19]_0 ;
-  output \s_axi_wdata[20]_0 ;
-  output \s_axi_wdata[21]_0 ;
-  output \s_axi_wdata[22]_0 ;
-  output \s_axi_wdata[23]_0 ;
-  output \s_axi_wdata[24]_0 ;
-  output \s_axi_wdata[25]_0 ;
-  output \s_axi_wdata[26]_0 ;
-  output \s_axi_wdata[27]_0 ;
-  output \s_axi_wdata[28]_0 ;
-  output \s_axi_wdata[29]_0 ;
-  output \s_axi_wdata[30]_0 ;
-  output D_1;
-  output Bus_RNW_reg_reg;
+  output is_write_reg;
+  output is_read_reg;
+  output pair0_Select;
+  output \s_axi_wdata[7]_0 ;
+  output [1:0]bus2ip_wrce;
+  output \s_axi_wdata[7]_1 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ;
@@ -1836,46 +1693,69 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 ;
   output \TCSR0_GENERATE[20].TCSR0_FF_I ;
+  output Bus_RNW_reg_reg;
+  output \INFERRED_GEN.icount_out_reg[31] ;
+  output \INFERRED_GEN.icount_out_reg[30] ;
+  output \INFERRED_GEN.icount_out_reg[29] ;
+  output \INFERRED_GEN.icount_out_reg[28] ;
+  output \INFERRED_GEN.icount_out_reg[27] ;
+  output \INFERRED_GEN.icount_out_reg[26] ;
+  output \INFERRED_GEN.icount_out_reg[25] ;
+  output \INFERRED_GEN.icount_out_reg[24] ;
+  output \INFERRED_GEN.icount_out_reg[23] ;
+  output \INFERRED_GEN.icount_out_reg[22] ;
+  output \INFERRED_GEN.icount_out_reg[21] ;
+  output \INFERRED_GEN.icount_out_reg[20] ;
+  output \INFERRED_GEN.icount_out_reg[19] ;
+  output \INFERRED_GEN.icount_out_reg[18] ;
+  output \INFERRED_GEN.icount_out_reg[17] ;
+  output \INFERRED_GEN.icount_out_reg[16] ;
+  output \INFERRED_GEN.icount_out_reg[15] ;
+  output \INFERRED_GEN.icount_out_reg[14] ;
+  output \INFERRED_GEN.icount_out_reg[13] ;
+  output \INFERRED_GEN.icount_out_reg[12] ;
+  output \INFERRED_GEN.icount_out_reg[11] ;
+  output \INFERRED_GEN.icount_out_reg[10] ;
+  output \INFERRED_GEN.icount_out_reg[9] ;
+  output \INFERRED_GEN.icount_out_reg[8] ;
+  output \INFERRED_GEN.icount_out_reg[7] ;
+  output \INFERRED_GEN.icount_out_reg[6] ;
+  output \INFERRED_GEN.icount_out_reg[5] ;
+  output \INFERRED_GEN.icount_out_reg[4] ;
+  output \INFERRED_GEN.icount_out_reg[3] ;
+  output \INFERRED_GEN.icount_out_reg[2] ;
+  output \INFERRED_GEN.icount_out_reg[1] ;
+  output \INFERRED_GEN.icount_out_reg[0] ;
   output Bus_RNW_reg_reg_0;
   output Bus_RNW_reg_reg_1;
-  output Bus_RNW_reg_reg_2;
-  output Bus_RNW_reg_reg_3;
-  output Bus_RNW_reg_reg_4;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ;
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
   output \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
   output \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
   output [31:0]s_axi_rdata;
   input bus2ip_reset;
   input s_axi_aclk;
   input s_axi_arvalid;
+  input [31:0]s_axi_wdata;
+  input [31:0]counterReg_DBus_32;
   input s_axi_aresetn;
   input s_axi_wvalid;
   input s_axi_awvalid;
-  input [31:0]s_axi_wdata;
   input [1:0]tCSR0_Reg;
   input [0:0]tCSR1_Reg;
-  input [31:0]counterReg_DBus_32;
-  input [31:0]counterReg_DBus_0;
   input [20:0]loadReg_DBus_32;
   input s_axi_bready;
   input s_axi_rready;
   input [2:0]s_axi_araddr;
   input [2:0]s_axi_awaddr;
   input read_done0;
-  input read_done1;
   input [31:0]D;
 
   wire Bus_RNW_reg;
   wire Bus_RNW_reg_reg;
   wire Bus_RNW_reg_reg_0;
   wire Bus_RNW_reg_reg_1;
-  wire Bus_RNW_reg_reg_2;
-  wire Bus_RNW_reg_reg_3;
-  wire Bus_RNW_reg_reg_4;
   wire [31:0]D;
   wire D_0;
-  wire D_1;
   wire \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
@@ -1900,19 +1780,47 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[0] ;
+  wire \INFERRED_GEN.icount_out_reg[10] ;
+  wire \INFERRED_GEN.icount_out_reg[11] ;
+  wire \INFERRED_GEN.icount_out_reg[12] ;
+  wire \INFERRED_GEN.icount_out_reg[13] ;
+  wire \INFERRED_GEN.icount_out_reg[14] ;
+  wire \INFERRED_GEN.icount_out_reg[15] ;
+  wire \INFERRED_GEN.icount_out_reg[16] ;
+  wire \INFERRED_GEN.icount_out_reg[17] ;
+  wire \INFERRED_GEN.icount_out_reg[18] ;
+  wire \INFERRED_GEN.icount_out_reg[19] ;
+  wire \INFERRED_GEN.icount_out_reg[1] ;
+  wire \INFERRED_GEN.icount_out_reg[20] ;
+  wire \INFERRED_GEN.icount_out_reg[21] ;
+  wire \INFERRED_GEN.icount_out_reg[22] ;
+  wire \INFERRED_GEN.icount_out_reg[23] ;
+  wire \INFERRED_GEN.icount_out_reg[24] ;
+  wire \INFERRED_GEN.icount_out_reg[25] ;
+  wire \INFERRED_GEN.icount_out_reg[26] ;
+  wire \INFERRED_GEN.icount_out_reg[27] ;
+  wire \INFERRED_GEN.icount_out_reg[28] ;
+  wire \INFERRED_GEN.icount_out_reg[29] ;
+  wire \INFERRED_GEN.icount_out_reg[2] ;
+  wire \INFERRED_GEN.icount_out_reg[30] ;
+  wire \INFERRED_GEN.icount_out_reg[31] ;
+  wire \INFERRED_GEN.icount_out_reg[3] ;
+  wire \INFERRED_GEN.icount_out_reg[4] ;
+  wire \INFERRED_GEN.icount_out_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[6] ;
+  wire \INFERRED_GEN.icount_out_reg[7] ;
+  wire \INFERRED_GEN.icount_out_reg[8] ;
+  wire \INFERRED_GEN.icount_out_reg[9] ;
   wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire bus2ip_reset;
   wire [1:0]bus2ip_wrce;
-  wire [31:0]counterReg_DBus_0;
   wire [31:0]counterReg_DBus_32;
   wire is_read_reg;
   wire is_write_reg;
   wire [20:0]loadReg_DBus_32;
   wire pair0_Select;
   wire read_done0;
-  wire read_done1;
   wire s_axi_aclk;
   wire [2:0]s_axi_araddr;
   wire s_axi_aresetn;
@@ -1925,39 +1833,8 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
   wire s_axi_rready;
   wire s_axi_rvalid_i_reg;
   wire [31:0]s_axi_wdata;
-  wire \s_axi_wdata[0]_0 ;
-  wire \s_axi_wdata[10]_0 ;
-  wire \s_axi_wdata[11]_0 ;
-  wire \s_axi_wdata[12]_0 ;
-  wire \s_axi_wdata[13]_0 ;
-  wire \s_axi_wdata[14]_0 ;
-  wire \s_axi_wdata[15]_0 ;
-  wire \s_axi_wdata[16]_0 ;
-  wire \s_axi_wdata[17]_0 ;
-  wire \s_axi_wdata[18]_0 ;
-  wire \s_axi_wdata[19]_0 ;
-  wire \s_axi_wdata[1]_0 ;
-  wire \s_axi_wdata[20]_0 ;
-  wire \s_axi_wdata[21]_0 ;
-  wire \s_axi_wdata[22]_0 ;
-  wire \s_axi_wdata[23]_0 ;
-  wire \s_axi_wdata[24]_0 ;
-  wire \s_axi_wdata[25]_0 ;
-  wire \s_axi_wdata[26]_0 ;
-  wire \s_axi_wdata[27]_0 ;
-  wire \s_axi_wdata[28]_0 ;
-  wire \s_axi_wdata[29]_0 ;
-  wire \s_axi_wdata[2]_0 ;
-  wire \s_axi_wdata[30]_0 ;
-  wire \s_axi_wdata[3]_0 ;
-  wire \s_axi_wdata[4]_0 ;
-  wire \s_axi_wdata[5]_0 ;
-  wire \s_axi_wdata[6]_0 ;
   wire \s_axi_wdata[7]_0 ;
   wire \s_axi_wdata[7]_1 ;
-  wire \s_axi_wdata[7]_2 ;
-  wire \s_axi_wdata[8]_0 ;
-  wire \s_axi_wdata[9]_0 ;
   wire s_axi_wdata_0_sn_1;
   wire s_axi_wdata_10_sn_1;
   wire s_axi_wdata_11_sn_1;
@@ -2029,12 +1906,8 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
         .Bus_RNW_reg_reg_0(Bus_RNW_reg_reg),
         .Bus_RNW_reg_reg_1(Bus_RNW_reg_reg_0),
         .Bus_RNW_reg_reg_2(Bus_RNW_reg_reg_1),
-        .Bus_RNW_reg_reg_3(Bus_RNW_reg_reg_2),
-        .Bus_RNW_reg_reg_4(Bus_RNW_reg_reg_3),
-        .Bus_RNW_reg_reg_5(Bus_RNW_reg_reg_4),
         .D(D),
         .D_0(D_0),
-        .D_1(D_1),
         .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ),
@@ -2059,19 +1932,47 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ),
         .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] (\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ),
+        .\INFERRED_GEN.icount_out_reg[0] (\INFERRED_GEN.icount_out_reg[0] ),
+        .\INFERRED_GEN.icount_out_reg[10] (\INFERRED_GEN.icount_out_reg[10] ),
+        .\INFERRED_GEN.icount_out_reg[11] (\INFERRED_GEN.icount_out_reg[11] ),
+        .\INFERRED_GEN.icount_out_reg[12] (\INFERRED_GEN.icount_out_reg[12] ),
+        .\INFERRED_GEN.icount_out_reg[13] (\INFERRED_GEN.icount_out_reg[13] ),
+        .\INFERRED_GEN.icount_out_reg[14] (\INFERRED_GEN.icount_out_reg[14] ),
+        .\INFERRED_GEN.icount_out_reg[15] (\INFERRED_GEN.icount_out_reg[15] ),
+        .\INFERRED_GEN.icount_out_reg[16] (\INFERRED_GEN.icount_out_reg[16] ),
+        .\INFERRED_GEN.icount_out_reg[17] (\INFERRED_GEN.icount_out_reg[17] ),
+        .\INFERRED_GEN.icount_out_reg[18] (\INFERRED_GEN.icount_out_reg[18] ),
+        .\INFERRED_GEN.icount_out_reg[19] (\INFERRED_GEN.icount_out_reg[19] ),
+        .\INFERRED_GEN.icount_out_reg[1] (\INFERRED_GEN.icount_out_reg[1] ),
+        .\INFERRED_GEN.icount_out_reg[20] (\INFERRED_GEN.icount_out_reg[20] ),
+        .\INFERRED_GEN.icount_out_reg[21] (\INFERRED_GEN.icount_out_reg[21] ),
+        .\INFERRED_GEN.icount_out_reg[22] (\INFERRED_GEN.icount_out_reg[22] ),
+        .\INFERRED_GEN.icount_out_reg[23] (\INFERRED_GEN.icount_out_reg[23] ),
+        .\INFERRED_GEN.icount_out_reg[24] (\INFERRED_GEN.icount_out_reg[24] ),
+        .\INFERRED_GEN.icount_out_reg[25] (\INFERRED_GEN.icount_out_reg[25] ),
+        .\INFERRED_GEN.icount_out_reg[26] (\INFERRED_GEN.icount_out_reg[26] ),
+        .\INFERRED_GEN.icount_out_reg[27] (\INFERRED_GEN.icount_out_reg[27] ),
+        .\INFERRED_GEN.icount_out_reg[28] (\INFERRED_GEN.icount_out_reg[28] ),
+        .\INFERRED_GEN.icount_out_reg[29] (\INFERRED_GEN.icount_out_reg[29] ),
+        .\INFERRED_GEN.icount_out_reg[2] (\INFERRED_GEN.icount_out_reg[2] ),
+        .\INFERRED_GEN.icount_out_reg[30] (\INFERRED_GEN.icount_out_reg[30] ),
+        .\INFERRED_GEN.icount_out_reg[31] (\INFERRED_GEN.icount_out_reg[31] ),
+        .\INFERRED_GEN.icount_out_reg[3] (\INFERRED_GEN.icount_out_reg[3] ),
+        .\INFERRED_GEN.icount_out_reg[4] (\INFERRED_GEN.icount_out_reg[4] ),
+        .\INFERRED_GEN.icount_out_reg[5] (\INFERRED_GEN.icount_out_reg[5] ),
+        .\INFERRED_GEN.icount_out_reg[6] (\INFERRED_GEN.icount_out_reg[6] ),
+        .\INFERRED_GEN.icount_out_reg[7] (\INFERRED_GEN.icount_out_reg[7] ),
+        .\INFERRED_GEN.icount_out_reg[8] (\INFERRED_GEN.icount_out_reg[8] ),
+        .\INFERRED_GEN.icount_out_reg[9] (\INFERRED_GEN.icount_out_reg[9] ),
         .\TCSR0_GENERATE[20].TCSR0_FF_I (\TCSR0_GENERATE[20].TCSR0_FF_I ),
         .bus2ip_reset(bus2ip_reset),
         .bus2ip_wrce(bus2ip_wrce),
-        .counterReg_DBus_0(counterReg_DBus_0),
         .counterReg_DBus_32(counterReg_DBus_32),
         .is_read_reg_0(is_read_reg),
         .is_write_reg_0(is_write_reg),
         .loadReg_DBus_32(loadReg_DBus_32),
         .pair0_Select(pair0_Select),
         .read_done0(read_done0),
-        .read_done1(read_done1),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_araddr(s_axi_araddr),
         .s_axi_aresetn(s_axi_aresetn),
@@ -2084,39 +1985,8 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
         .s_axi_rready(s_axi_rready),
         .s_axi_rvalid_i_reg_0(s_axi_rvalid_i_reg),
         .s_axi_wdata(s_axi_wdata),
-        .\s_axi_wdata[0]_0 (\s_axi_wdata[0]_0 ),
-        .\s_axi_wdata[10]_0 (\s_axi_wdata[10]_0 ),
-        .\s_axi_wdata[11]_0 (\s_axi_wdata[11]_0 ),
-        .\s_axi_wdata[12]_0 (\s_axi_wdata[12]_0 ),
-        .\s_axi_wdata[13]_0 (\s_axi_wdata[13]_0 ),
-        .\s_axi_wdata[14]_0 (\s_axi_wdata[14]_0 ),
-        .\s_axi_wdata[15]_0 (\s_axi_wdata[15]_0 ),
-        .\s_axi_wdata[16]_0 (\s_axi_wdata[16]_0 ),
-        .\s_axi_wdata[17]_0 (\s_axi_wdata[17]_0 ),
-        .\s_axi_wdata[18]_0 (\s_axi_wdata[18]_0 ),
-        .\s_axi_wdata[19]_0 (\s_axi_wdata[19]_0 ),
-        .\s_axi_wdata[1]_0 (\s_axi_wdata[1]_0 ),
-        .\s_axi_wdata[20]_0 (\s_axi_wdata[20]_0 ),
-        .\s_axi_wdata[21]_0 (\s_axi_wdata[21]_0 ),
-        .\s_axi_wdata[22]_0 (\s_axi_wdata[22]_0 ),
-        .\s_axi_wdata[23]_0 (\s_axi_wdata[23]_0 ),
-        .\s_axi_wdata[24]_0 (\s_axi_wdata[24]_0 ),
-        .\s_axi_wdata[25]_0 (\s_axi_wdata[25]_0 ),
-        .\s_axi_wdata[26]_0 (\s_axi_wdata[26]_0 ),
-        .\s_axi_wdata[27]_0 (\s_axi_wdata[27]_0 ),
-        .\s_axi_wdata[28]_0 (\s_axi_wdata[28]_0 ),
-        .\s_axi_wdata[29]_0 (\s_axi_wdata[29]_0 ),
-        .\s_axi_wdata[2]_0 (\s_axi_wdata[2]_0 ),
-        .\s_axi_wdata[30]_0 (\s_axi_wdata[30]_0 ),
-        .\s_axi_wdata[3]_0 (\s_axi_wdata[3]_0 ),
-        .\s_axi_wdata[4]_0 (\s_axi_wdata[4]_0 ),
-        .\s_axi_wdata[5]_0 (\s_axi_wdata[5]_0 ),
-        .\s_axi_wdata[6]_0 (\s_axi_wdata[6]_0 ),
         .\s_axi_wdata[7]_0 (\s_axi_wdata[7]_0 ),
         .\s_axi_wdata[7]_1 (\s_axi_wdata[7]_1 ),
-        .\s_axi_wdata[7]_2 (\s_axi_wdata[7]_2 ),
-        .\s_axi_wdata[8]_0 (\s_axi_wdata[8]_0 ),
-        .\s_axi_wdata[9]_0 (\s_axi_wdata[9]_0 ),
         .s_axi_wdata_0_sp_1(s_axi_wdata_0_sn_1),
         .s_axi_wdata_10_sp_1(s_axi_wdata_10_sn_1),
         .s_axi_wdata_11_sp_1(s_axi_wdata_11_sn_1),
@@ -2154,7 +2024,7 @@ module Task_2_design_axi_timer_0_0_axi_lite_ipif
 endmodule
 
 (* C_COUNT_WIDTH = "32" *) (* C_FAMILY = "zynq" *) (* C_GEN0_ASSERT = "1'b1" *) 
-(* C_GEN1_ASSERT = "1'b1" *) (* C_ONE_TIMER_ONLY = "0" *) (* C_S_AXI_ADDR_WIDTH = "5" *) 
+(* C_GEN1_ASSERT = "1'b1" *) (* C_ONE_TIMER_ONLY = "1" *) (* C_S_AXI_ADDR_WIDTH = "5" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRIG0_ASSERT = "1'b1" *) (* C_TRIG1_ASSERT = "1'b1" *) 
 (* ORIG_REF_NAME = "axi_timer" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module Task_2_design_axi_timer_0_0_axi_timer
@@ -2212,13 +2082,9 @@ module Task_2_design_axi_timer_0_0_axi_timer
   input s_axi_rready;
 
   wire \<const0> ;
+  wire AXI4_LITE_I_n_10;
   wire AXI4_LITE_I_n_100;
   wire AXI4_LITE_I_n_101;
-  wire AXI4_LITE_I_n_102;
-  wire AXI4_LITE_I_n_103;
-  wire AXI4_LITE_I_n_104;
-  wire AXI4_LITE_I_n_105;
-  wire AXI4_LITE_I_n_106;
   wire AXI4_LITE_I_n_11;
   wire AXI4_LITE_I_n_12;
   wire AXI4_LITE_I_n_13;
@@ -2243,20 +2109,17 @@ module Task_2_design_axi_timer_0_0_axi_timer
   wire AXI4_LITE_I_n_32;
   wire AXI4_LITE_I_n_33;
   wire AXI4_LITE_I_n_34;
-  wire AXI4_LITE_I_n_35;
-  wire AXI4_LITE_I_n_36;
-  wire AXI4_LITE_I_n_37;
-  wire AXI4_LITE_I_n_38;
   wire AXI4_LITE_I_n_39;
-  wire AXI4_LITE_I_n_40;
-  wire AXI4_LITE_I_n_41;
+  wire AXI4_LITE_I_n_4;
   wire AXI4_LITE_I_n_42;
+  wire AXI4_LITE_I_n_43;
   wire AXI4_LITE_I_n_44;
   wire AXI4_LITE_I_n_45;
   wire AXI4_LITE_I_n_46;
   wire AXI4_LITE_I_n_47;
   wire AXI4_LITE_I_n_48;
   wire AXI4_LITE_I_n_49;
+  wire AXI4_LITE_I_n_5;
   wire AXI4_LITE_I_n_50;
   wire AXI4_LITE_I_n_51;
   wire AXI4_LITE_I_n_52;
@@ -2267,6 +2130,7 @@ module Task_2_design_axi_timer_0_0_axi_timer
   wire AXI4_LITE_I_n_57;
   wire AXI4_LITE_I_n_58;
   wire AXI4_LITE_I_n_59;
+  wire AXI4_LITE_I_n_6;
   wire AXI4_LITE_I_n_60;
   wire AXI4_LITE_I_n_61;
   wire AXI4_LITE_I_n_62;
@@ -2277,11 +2141,13 @@ module Task_2_design_axi_timer_0_0_axi_timer
   wire AXI4_LITE_I_n_67;
   wire AXI4_LITE_I_n_68;
   wire AXI4_LITE_I_n_69;
+  wire AXI4_LITE_I_n_7;
   wire AXI4_LITE_I_n_70;
   wire AXI4_LITE_I_n_71;
   wire AXI4_LITE_I_n_72;
   wire AXI4_LITE_I_n_73;
   wire AXI4_LITE_I_n_74;
+  wire AXI4_LITE_I_n_75;
   wire AXI4_LITE_I_n_76;
   wire AXI4_LITE_I_n_77;
   wire AXI4_LITE_I_n_78;
@@ -2297,6 +2163,7 @@ module Task_2_design_axi_timer_0_0_axi_timer
   wire AXI4_LITE_I_n_87;
   wire AXI4_LITE_I_n_88;
   wire AXI4_LITE_I_n_89;
+  wire AXI4_LITE_I_n_9;
   wire AXI4_LITE_I_n_90;
   wire AXI4_LITE_I_n_91;
   wire AXI4_LITE_I_n_92;
@@ -2308,18 +2175,14 @@ module Task_2_design_axi_timer_0_0_axi_timer
   wire AXI4_LITE_I_n_98;
   wire AXI4_LITE_I_n_99;
   wire \COUNTER_0_I/D ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I/D ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
   wire \TIMER_CONTROL_I/pair0_Select ;
   wire \TIMER_CONTROL_I/read_done0 ;
-  wire \TIMER_CONTROL_I/read_done1 ;
   wire bus2ip_reset;
   wire [0:4]bus2ip_wrce;
   wire capturetrig0;
   wire capturetrig1;
-  wire [31:0]counterReg_DBus_0;
   wire [31:0]counterReg_DBus_32;
   wire freeze;
   wire generateout0;
@@ -2353,52 +2216,76 @@ module Task_2_design_axi_timer_0_0_axi_timer
   assign s_axi_wready = s_axi_awready;
   Task_2_design_axi_timer_0_0_axi_lite_ipif AXI4_LITE_I
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
-        .Bus_RNW_reg_reg(AXI4_LITE_I_n_76),
-        .Bus_RNW_reg_reg_0(AXI4_LITE_I_n_98),
-        .Bus_RNW_reg_reg_1(AXI4_LITE_I_n_99),
-        .Bus_RNW_reg_reg_2(AXI4_LITE_I_n_100),
-        .Bus_RNW_reg_reg_3(AXI4_LITE_I_n_101),
-        .Bus_RNW_reg_reg_4(AXI4_LITE_I_n_102),
+        .Bus_RNW_reg_reg(AXI4_LITE_I_n_64),
+        .Bus_RNW_reg_reg_0(AXI4_LITE_I_n_97),
+        .Bus_RNW_reg_reg_1(AXI4_LITE_I_n_98),
         .D({ip2bus_data[0],ip2bus_data[1],ip2bus_data[2],ip2bus_data[3],ip2bus_data[4],ip2bus_data[5],ip2bus_data[6],ip2bus_data[7],ip2bus_data[8],ip2bus_data[9],ip2bus_data[10],ip2bus_data[11],ip2bus_data[12],ip2bus_data[13],ip2bus_data[14],ip2bus_data[15],ip2bus_data[16],ip2bus_data[17],ip2bus_data[18],ip2bus_data[19],ip2bus_data[20],ip2bus_data[21],ip2bus_data[22],ip2bus_data[23],ip2bus_data[24],ip2bus_data[25],ip2bus_data[26],ip2bus_data[27],ip2bus_data[28],ip2bus_data[29],ip2bus_data[30],ip2bus_data[31]}),
         .D_0(\COUNTER_0_I/D ),
-        .D_1(\GEN_SECOND_TIMER.COUNTER_1_I/D ),
-        .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (AXI4_LITE_I_n_105),
+        .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] (AXI4_LITE_I_n_100),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (AXI4_LITE_I_n_77),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (AXI4_LITE_I_n_78),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 (AXI4_LITE_I_n_79),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_10 (AXI4_LITE_I_n_88),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_11 (AXI4_LITE_I_n_89),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_12 (AXI4_LITE_I_n_90),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_13 (AXI4_LITE_I_n_91),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_14 (AXI4_LITE_I_n_92),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_15 (AXI4_LITE_I_n_93),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_16 (AXI4_LITE_I_n_94),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 (AXI4_LITE_I_n_95),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 (AXI4_LITE_I_n_96),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 (AXI4_LITE_I_n_103),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 (AXI4_LITE_I_n_80),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 (AXI4_LITE_I_n_81),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_4 (AXI4_LITE_I_n_82),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_5 (AXI4_LITE_I_n_83),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_6 (AXI4_LITE_I_n_84),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 (AXI4_LITE_I_n_85),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (AXI4_LITE_I_n_86),
-        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (AXI4_LITE_I_n_87),
-        .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] (AXI4_LITE_I_n_106),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] (AXI4_LITE_I_n_104),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I (AXI4_LITE_I_n_97),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] (AXI4_LITE_I_n_43),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (AXI4_LITE_I_n_44),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 (AXI4_LITE_I_n_45),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_10 (AXI4_LITE_I_n_54),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_11 (AXI4_LITE_I_n_55),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_12 (AXI4_LITE_I_n_56),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_13 (AXI4_LITE_I_n_57),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_14 (AXI4_LITE_I_n_58),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_15 (AXI4_LITE_I_n_59),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_16 (AXI4_LITE_I_n_60),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_17 (AXI4_LITE_I_n_61),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 (AXI4_LITE_I_n_62),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 (AXI4_LITE_I_n_99),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 (AXI4_LITE_I_n_46),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_3 (AXI4_LITE_I_n_47),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_4 (AXI4_LITE_I_n_48),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_5 (AXI4_LITE_I_n_49),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_6 (AXI4_LITE_I_n_50),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 (AXI4_LITE_I_n_51),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (AXI4_LITE_I_n_52),
+        .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (AXI4_LITE_I_n_53),
+        .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] (AXI4_LITE_I_n_101),
+        .\INFERRED_GEN.icount_out_reg[0] (AXI4_LITE_I_n_96),
+        .\INFERRED_GEN.icount_out_reg[10] (AXI4_LITE_I_n_86),
+        .\INFERRED_GEN.icount_out_reg[11] (AXI4_LITE_I_n_85),
+        .\INFERRED_GEN.icount_out_reg[12] (AXI4_LITE_I_n_84),
+        .\INFERRED_GEN.icount_out_reg[13] (AXI4_LITE_I_n_83),
+        .\INFERRED_GEN.icount_out_reg[14] (AXI4_LITE_I_n_82),
+        .\INFERRED_GEN.icount_out_reg[15] (AXI4_LITE_I_n_81),
+        .\INFERRED_GEN.icount_out_reg[16] (AXI4_LITE_I_n_80),
+        .\INFERRED_GEN.icount_out_reg[17] (AXI4_LITE_I_n_79),
+        .\INFERRED_GEN.icount_out_reg[18] (AXI4_LITE_I_n_78),
+        .\INFERRED_GEN.icount_out_reg[19] (AXI4_LITE_I_n_77),
+        .\INFERRED_GEN.icount_out_reg[1] (AXI4_LITE_I_n_95),
+        .\INFERRED_GEN.icount_out_reg[20] (AXI4_LITE_I_n_76),
+        .\INFERRED_GEN.icount_out_reg[21] (AXI4_LITE_I_n_75),
+        .\INFERRED_GEN.icount_out_reg[22] (AXI4_LITE_I_n_74),
+        .\INFERRED_GEN.icount_out_reg[23] (AXI4_LITE_I_n_73),
+        .\INFERRED_GEN.icount_out_reg[24] (AXI4_LITE_I_n_72),
+        .\INFERRED_GEN.icount_out_reg[25] (AXI4_LITE_I_n_71),
+        .\INFERRED_GEN.icount_out_reg[26] (AXI4_LITE_I_n_70),
+        .\INFERRED_GEN.icount_out_reg[27] (AXI4_LITE_I_n_69),
+        .\INFERRED_GEN.icount_out_reg[28] (AXI4_LITE_I_n_68),
+        .\INFERRED_GEN.icount_out_reg[29] (AXI4_LITE_I_n_67),
+        .\INFERRED_GEN.icount_out_reg[2] (AXI4_LITE_I_n_94),
+        .\INFERRED_GEN.icount_out_reg[30] (AXI4_LITE_I_n_66),
+        .\INFERRED_GEN.icount_out_reg[31] (AXI4_LITE_I_n_65),
+        .\INFERRED_GEN.icount_out_reg[3] (AXI4_LITE_I_n_93),
+        .\INFERRED_GEN.icount_out_reg[4] (AXI4_LITE_I_n_92),
+        .\INFERRED_GEN.icount_out_reg[5] (AXI4_LITE_I_n_91),
+        .\INFERRED_GEN.icount_out_reg[6] (AXI4_LITE_I_n_90),
+        .\INFERRED_GEN.icount_out_reg[7] (AXI4_LITE_I_n_89),
+        .\INFERRED_GEN.icount_out_reg[8] (AXI4_LITE_I_n_88),
+        .\INFERRED_GEN.icount_out_reg[9] (AXI4_LITE_I_n_87),
+        .\TCSR0_GENERATE[20].TCSR0_FF_I (AXI4_LITE_I_n_63),
         .bus2ip_reset(bus2ip_reset),
         .bus2ip_wrce({bus2ip_wrce[0],bus2ip_wrce[4]}),
-        .counterReg_DBus_0(counterReg_DBus_0),
         .counterReg_DBus_32(counterReg_DBus_32),
         .is_read_reg(s_axi_arready),
         .is_write_reg(s_axi_awready),
         .loadReg_DBus_32(loadReg_DBus_32),
         .pair0_Select(\TIMER_CONTROL_I/pair0_Select ),
         .read_done0(\TIMER_CONTROL_I/read_done0 ),
-        .read_done1(\TIMER_CONTROL_I/read_done1 ),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_araddr(s_axi_araddr[4:2]),
         .s_axi_aresetn(s_axi_aresetn),
@@ -2411,70 +2298,39 @@ module Task_2_design_axi_timer_0_0_axi_timer
         .s_axi_rready(s_axi_rready),
         .s_axi_rvalid_i_reg(s_axi_rvalid),
         .s_axi_wdata(s_axi_wdata),
-        .\s_axi_wdata[0]_0 (AXI4_LITE_I_n_44),
-        .\s_axi_wdata[10]_0 (AXI4_LITE_I_n_54),
-        .\s_axi_wdata[11]_0 (AXI4_LITE_I_n_55),
-        .\s_axi_wdata[12]_0 (AXI4_LITE_I_n_56),
-        .\s_axi_wdata[13]_0 (AXI4_LITE_I_n_57),
-        .\s_axi_wdata[14]_0 (AXI4_LITE_I_n_58),
-        .\s_axi_wdata[15]_0 (AXI4_LITE_I_n_59),
-        .\s_axi_wdata[16]_0 (AXI4_LITE_I_n_60),
-        .\s_axi_wdata[17]_0 (AXI4_LITE_I_n_61),
-        .\s_axi_wdata[18]_0 (AXI4_LITE_I_n_62),
-        .\s_axi_wdata[19]_0 (AXI4_LITE_I_n_63),
-        .\s_axi_wdata[1]_0 (AXI4_LITE_I_n_45),
-        .\s_axi_wdata[20]_0 (AXI4_LITE_I_n_64),
-        .\s_axi_wdata[21]_0 (AXI4_LITE_I_n_65),
-        .\s_axi_wdata[22]_0 (AXI4_LITE_I_n_66),
-        .\s_axi_wdata[23]_0 (AXI4_LITE_I_n_67),
-        .\s_axi_wdata[24]_0 (AXI4_LITE_I_n_68),
-        .\s_axi_wdata[25]_0 (AXI4_LITE_I_n_69),
-        .\s_axi_wdata[26]_0 (AXI4_LITE_I_n_70),
-        .\s_axi_wdata[27]_0 (AXI4_LITE_I_n_71),
-        .\s_axi_wdata[28]_0 (AXI4_LITE_I_n_72),
-        .\s_axi_wdata[29]_0 (AXI4_LITE_I_n_73),
-        .\s_axi_wdata[2]_0 (AXI4_LITE_I_n_46),
-        .\s_axi_wdata[30]_0 (AXI4_LITE_I_n_74),
-        .\s_axi_wdata[3]_0 (AXI4_LITE_I_n_47),
-        .\s_axi_wdata[4]_0 (AXI4_LITE_I_n_48),
-        .\s_axi_wdata[5]_0 (AXI4_LITE_I_n_49),
-        .\s_axi_wdata[6]_0 (AXI4_LITE_I_n_50),
-        .\s_axi_wdata[7]_0 (AXI4_LITE_I_n_11),
-        .\s_axi_wdata[7]_1 (AXI4_LITE_I_n_19),
-        .\s_axi_wdata[7]_2 (AXI4_LITE_I_n_51),
-        .\s_axi_wdata[8]_0 (AXI4_LITE_I_n_52),
-        .\s_axi_wdata[9]_0 (AXI4_LITE_I_n_53),
-        .s_axi_wdata_0_sp_1(AXI4_LITE_I_n_12),
-        .s_axi_wdata_10_sp_1(AXI4_LITE_I_n_22),
-        .s_axi_wdata_11_sp_1(AXI4_LITE_I_n_23),
-        .s_axi_wdata_12_sp_1(AXI4_LITE_I_n_24),
-        .s_axi_wdata_13_sp_1(AXI4_LITE_I_n_25),
-        .s_axi_wdata_14_sp_1(AXI4_LITE_I_n_26),
-        .s_axi_wdata_15_sp_1(AXI4_LITE_I_n_27),
-        .s_axi_wdata_16_sp_1(AXI4_LITE_I_n_28),
-        .s_axi_wdata_17_sp_1(AXI4_LITE_I_n_29),
-        .s_axi_wdata_18_sp_1(AXI4_LITE_I_n_30),
-        .s_axi_wdata_19_sp_1(AXI4_LITE_I_n_31),
-        .s_axi_wdata_1_sp_1(AXI4_LITE_I_n_13),
-        .s_axi_wdata_20_sp_1(AXI4_LITE_I_n_32),
-        .s_axi_wdata_21_sp_1(AXI4_LITE_I_n_33),
-        .s_axi_wdata_22_sp_1(AXI4_LITE_I_n_34),
-        .s_axi_wdata_23_sp_1(AXI4_LITE_I_n_35),
-        .s_axi_wdata_24_sp_1(AXI4_LITE_I_n_36),
-        .s_axi_wdata_25_sp_1(AXI4_LITE_I_n_37),
-        .s_axi_wdata_26_sp_1(AXI4_LITE_I_n_38),
-        .s_axi_wdata_27_sp_1(AXI4_LITE_I_n_39),
-        .s_axi_wdata_28_sp_1(AXI4_LITE_I_n_40),
-        .s_axi_wdata_29_sp_1(AXI4_LITE_I_n_41),
-        .s_axi_wdata_2_sp_1(AXI4_LITE_I_n_14),
-        .s_axi_wdata_30_sp_1(AXI4_LITE_I_n_42),
-        .s_axi_wdata_3_sp_1(AXI4_LITE_I_n_15),
-        .s_axi_wdata_4_sp_1(AXI4_LITE_I_n_16),
-        .s_axi_wdata_5_sp_1(AXI4_LITE_I_n_17),
-        .s_axi_wdata_6_sp_1(AXI4_LITE_I_n_18),
-        .s_axi_wdata_7_sp_1(AXI4_LITE_I_n_8),
-        .s_axi_wdata_8_sp_1(AXI4_LITE_I_n_20),
-        .s_axi_wdata_9_sp_1(AXI4_LITE_I_n_21),
+        .\s_axi_wdata[7]_0 (AXI4_LITE_I_n_39),
+        .\s_axi_wdata[7]_1 (AXI4_LITE_I_n_42),
+        .s_axi_wdata_0_sp_1(AXI4_LITE_I_n_4),
+        .s_axi_wdata_10_sp_1(AXI4_LITE_I_n_14),
+        .s_axi_wdata_11_sp_1(AXI4_LITE_I_n_15),
+        .s_axi_wdata_12_sp_1(AXI4_LITE_I_n_16),
+        .s_axi_wdata_13_sp_1(AXI4_LITE_I_n_17),
+        .s_axi_wdata_14_sp_1(AXI4_LITE_I_n_18),
+        .s_axi_wdata_15_sp_1(AXI4_LITE_I_n_19),
+        .s_axi_wdata_16_sp_1(AXI4_LITE_I_n_20),
+        .s_axi_wdata_17_sp_1(AXI4_LITE_I_n_21),
+        .s_axi_wdata_18_sp_1(AXI4_LITE_I_n_22),
+        .s_axi_wdata_19_sp_1(AXI4_LITE_I_n_23),
+        .s_axi_wdata_1_sp_1(AXI4_LITE_I_n_5),
+        .s_axi_wdata_20_sp_1(AXI4_LITE_I_n_24),
+        .s_axi_wdata_21_sp_1(AXI4_LITE_I_n_25),
+        .s_axi_wdata_22_sp_1(AXI4_LITE_I_n_26),
+        .s_axi_wdata_23_sp_1(AXI4_LITE_I_n_27),
+        .s_axi_wdata_24_sp_1(AXI4_LITE_I_n_28),
+        .s_axi_wdata_25_sp_1(AXI4_LITE_I_n_29),
+        .s_axi_wdata_26_sp_1(AXI4_LITE_I_n_30),
+        .s_axi_wdata_27_sp_1(AXI4_LITE_I_n_31),
+        .s_axi_wdata_28_sp_1(AXI4_LITE_I_n_32),
+        .s_axi_wdata_29_sp_1(AXI4_LITE_I_n_33),
+        .s_axi_wdata_2_sp_1(AXI4_LITE_I_n_6),
+        .s_axi_wdata_30_sp_1(AXI4_LITE_I_n_34),
+        .s_axi_wdata_3_sp_1(AXI4_LITE_I_n_7),
+        .s_axi_wdata_4_sp_1(AXI4_LITE_I_n_8),
+        .s_axi_wdata_5_sp_1(AXI4_LITE_I_n_9),
+        .s_axi_wdata_6_sp_1(AXI4_LITE_I_n_10),
+        .s_axi_wdata_7_sp_1(AXI4_LITE_I_n_11),
+        .s_axi_wdata_8_sp_1(AXI4_LITE_I_n_12),
+        .s_axi_wdata_9_sp_1(AXI4_LITE_I_n_13),
         .s_axi_wvalid(s_axi_wvalid),
         .tCSR0_Reg({tCSR0_Reg[20],tCSR0_Reg[24]}),
         .tCSR1_Reg(tCSR1_Reg));
@@ -2484,112 +2340,106 @@ module Task_2_design_axi_timer_0_0_axi_timer
        (.Bus_RNW_reg(\I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg ),
         .D({ip2bus_data[0],ip2bus_data[1],ip2bus_data[2],ip2bus_data[3],ip2bus_data[4],ip2bus_data[5],ip2bus_data[6],ip2bus_data[7],ip2bus_data[8],ip2bus_data[9],ip2bus_data[10],ip2bus_data[11],ip2bus_data[12],ip2bus_data[13],ip2bus_data[14],ip2bus_data[15],ip2bus_data[16],ip2bus_data[17],ip2bus_data[18],ip2bus_data[19],ip2bus_data[20],ip2bus_data[21],ip2bus_data[22],ip2bus_data[23],ip2bus_data[24],ip2bus_data[25],ip2bus_data[26],ip2bus_data[27],ip2bus_data[28],ip2bus_data[29],ip2bus_data[30],ip2bus_data[31]}),
         .D_0(\COUNTER_0_I/D ),
-        .D_1(\GEN_SECOND_TIMER.COUNTER_1_I/D ),
-        .\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_77),
-        .\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_87),
-        .\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_88),
-        .\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_89),
-        .\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_90),
-        .\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_91),
-        .\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_92),
-        .\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_93),
-        .\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_94),
-        .\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_95),
-        .\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_96),
-        .\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_78),
-        .\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_97),
-        .\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_79),
-        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_102),
-        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (AXI4_LITE_I_n_98),
-        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 (AXI4_LITE_I_n_100),
-        .\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_80),
-        .\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_81),
-        .\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_82),
-        .\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_83),
-        .\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_84),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_85),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_76),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (AXI4_LITE_I_n_99),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 (AXI4_LITE_I_n_101),
-        .\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_86),
+        .\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_43),
+        .\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_65),
+        .\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_53),
+        .\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_75),
+        .\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_54),
+        .\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_76),
+        .\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_55),
+        .\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_77),
+        .\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_56),
+        .\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_78),
+        .\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_57),
+        .\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_79),
+        .\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_58),
+        .\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_80),
+        .\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_59),
+        .\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_81),
+        .\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_60),
+        .\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_82),
+        .\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_61),
+        .\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_83),
+        .\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_62),
+        .\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_84),
+        .\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_44),
+        .\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_66),
+        .\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_63),
+        .\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_85),
+        .\GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_86),
+        .\GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_87),
+        .\GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_88),
+        .\GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_89),
+        .\GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_90),
+        .\GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_91),
+        .\GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_92),
+        .\GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_93),
+        .\GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_94),
+        .\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_45),
+        .\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_67),
+        .\GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_95),
+        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_64),
+        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (AXI4_LITE_I_n_97),
+        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 (AXI4_LITE_I_n_98),
+        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_96),
+        .\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_46),
+        .\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_68),
+        .\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_47),
+        .\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_69),
+        .\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_48),
+        .\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_70),
+        .\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_49),
+        .\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_71),
+        .\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_50),
+        .\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_72),
+        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_51),
+        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_73),
+        .\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_52),
+        .\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (AXI4_LITE_I_n_74),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg (\I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
         .\LOAD_REG_GEN[0].LOAD_REG_I (loadReg_DBus_32),
-        .\LOAD_REG_GEN[10].LOAD_REG_I (AXI4_LITE_I_n_33),
-        .\LOAD_REG_GEN[10].LOAD_REG_I_0 (AXI4_LITE_I_n_65),
-        .\LOAD_REG_GEN[11].LOAD_REG_I (AXI4_LITE_I_n_32),
-        .\LOAD_REG_GEN[11].LOAD_REG_I_0 (AXI4_LITE_I_n_64),
-        .\LOAD_REG_GEN[12].LOAD_REG_I (AXI4_LITE_I_n_31),
-        .\LOAD_REG_GEN[12].LOAD_REG_I_0 (AXI4_LITE_I_n_63),
-        .\LOAD_REG_GEN[13].LOAD_REG_I (AXI4_LITE_I_n_30),
-        .\LOAD_REG_GEN[13].LOAD_REG_I_0 (AXI4_LITE_I_n_62),
-        .\LOAD_REG_GEN[14].LOAD_REG_I (AXI4_LITE_I_n_29),
-        .\LOAD_REG_GEN[14].LOAD_REG_I_0 (AXI4_LITE_I_n_61),
-        .\LOAD_REG_GEN[15].LOAD_REG_I (AXI4_LITE_I_n_28),
-        .\LOAD_REG_GEN[15].LOAD_REG_I_0 (AXI4_LITE_I_n_60),
-        .\LOAD_REG_GEN[16].LOAD_REG_I (AXI4_LITE_I_n_27),
-        .\LOAD_REG_GEN[16].LOAD_REG_I_0 (AXI4_LITE_I_n_59),
-        .\LOAD_REG_GEN[17].LOAD_REG_I (AXI4_LITE_I_n_26),
-        .\LOAD_REG_GEN[17].LOAD_REG_I_0 (AXI4_LITE_I_n_58),
-        .\LOAD_REG_GEN[18].LOAD_REG_I (AXI4_LITE_I_n_25),
-        .\LOAD_REG_GEN[18].LOAD_REG_I_0 (AXI4_LITE_I_n_57),
-        .\LOAD_REG_GEN[19].LOAD_REG_I (AXI4_LITE_I_n_24),
-        .\LOAD_REG_GEN[19].LOAD_REG_I_0 (AXI4_LITE_I_n_56),
-        .\LOAD_REG_GEN[1].LOAD_REG_I (AXI4_LITE_I_n_42),
-        .\LOAD_REG_GEN[1].LOAD_REG_I_0 (AXI4_LITE_I_n_74),
-        .\LOAD_REG_GEN[20].LOAD_REG_I (AXI4_LITE_I_n_23),
-        .\LOAD_REG_GEN[20].LOAD_REG_I_0 (AXI4_LITE_I_n_55),
-        .\LOAD_REG_GEN[21].LOAD_REG_I (AXI4_LITE_I_n_22),
-        .\LOAD_REG_GEN[21].LOAD_REG_I_0 (AXI4_LITE_I_n_54),
-        .\LOAD_REG_GEN[22].LOAD_REG_I (AXI4_LITE_I_n_21),
-        .\LOAD_REG_GEN[22].LOAD_REG_I_0 (AXI4_LITE_I_n_53),
-        .\LOAD_REG_GEN[23].LOAD_REG_I (AXI4_LITE_I_n_20),
-        .\LOAD_REG_GEN[23].LOAD_REG_I_0 (AXI4_LITE_I_n_52),
-        .\LOAD_REG_GEN[24].LOAD_REG_I (AXI4_LITE_I_n_19),
-        .\LOAD_REG_GEN[24].LOAD_REG_I_0 (AXI4_LITE_I_n_51),
-        .\LOAD_REG_GEN[25].LOAD_REG_I (AXI4_LITE_I_n_18),
-        .\LOAD_REG_GEN[25].LOAD_REG_I_0 (AXI4_LITE_I_n_50),
-        .\LOAD_REG_GEN[26].LOAD_REG_I (AXI4_LITE_I_n_17),
-        .\LOAD_REG_GEN[26].LOAD_REG_I_0 (AXI4_LITE_I_n_49),
-        .\LOAD_REG_GEN[27].LOAD_REG_I (AXI4_LITE_I_n_16),
-        .\LOAD_REG_GEN[27].LOAD_REG_I_0 (AXI4_LITE_I_n_48),
-        .\LOAD_REG_GEN[28].LOAD_REG_I (AXI4_LITE_I_n_15),
-        .\LOAD_REG_GEN[28].LOAD_REG_I_0 (AXI4_LITE_I_n_47),
-        .\LOAD_REG_GEN[29].LOAD_REG_I (AXI4_LITE_I_n_14),
-        .\LOAD_REG_GEN[29].LOAD_REG_I_0 (AXI4_LITE_I_n_46),
-        .\LOAD_REG_GEN[2].LOAD_REG_I (AXI4_LITE_I_n_41),
-        .\LOAD_REG_GEN[2].LOAD_REG_I_0 (AXI4_LITE_I_n_73),
-        .\LOAD_REG_GEN[30].LOAD_REG_I (AXI4_LITE_I_n_13),
-        .\LOAD_REG_GEN[30].LOAD_REG_I_0 (AXI4_LITE_I_n_45),
-        .\LOAD_REG_GEN[31].LOAD_REG_I (AXI4_LITE_I_n_12),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_0 (AXI4_LITE_I_n_44),
-        .\LOAD_REG_GEN[3].LOAD_REG_I (AXI4_LITE_I_n_40),
-        .\LOAD_REG_GEN[3].LOAD_REG_I_0 (AXI4_LITE_I_n_72),
-        .\LOAD_REG_GEN[4].LOAD_REG_I (AXI4_LITE_I_n_39),
-        .\LOAD_REG_GEN[4].LOAD_REG_I_0 (AXI4_LITE_I_n_71),
-        .\LOAD_REG_GEN[5].LOAD_REG_I (AXI4_LITE_I_n_38),
-        .\LOAD_REG_GEN[5].LOAD_REG_I_0 (AXI4_LITE_I_n_70),
-        .\LOAD_REG_GEN[6].LOAD_REG_I (AXI4_LITE_I_n_37),
-        .\LOAD_REG_GEN[6].LOAD_REG_I_0 (AXI4_LITE_I_n_69),
-        .\LOAD_REG_GEN[7].LOAD_REG_I (AXI4_LITE_I_n_36),
-        .\LOAD_REG_GEN[7].LOAD_REG_I_0 (AXI4_LITE_I_n_68),
-        .\LOAD_REG_GEN[8].LOAD_REG_I (AXI4_LITE_I_n_35),
-        .\LOAD_REG_GEN[8].LOAD_REG_I_0 (AXI4_LITE_I_n_67),
-        .\LOAD_REG_GEN[9].LOAD_REG_I (AXI4_LITE_I_n_34),
-        .\LOAD_REG_GEN[9].LOAD_REG_I_0 (AXI4_LITE_I_n_66),
-        .READ_DONE0_I(AXI4_LITE_I_n_103),
-        .READ_DONE1_I(AXI4_LITE_I_n_104),
+        .\LOAD_REG_GEN[10].LOAD_REG_I (AXI4_LITE_I_n_25),
+        .\LOAD_REG_GEN[11].LOAD_REG_I (AXI4_LITE_I_n_24),
+        .\LOAD_REG_GEN[12].LOAD_REG_I (AXI4_LITE_I_n_23),
+        .\LOAD_REG_GEN[13].LOAD_REG_I (AXI4_LITE_I_n_22),
+        .\LOAD_REG_GEN[14].LOAD_REG_I (AXI4_LITE_I_n_21),
+        .\LOAD_REG_GEN[15].LOAD_REG_I (AXI4_LITE_I_n_20),
+        .\LOAD_REG_GEN[16].LOAD_REG_I (AXI4_LITE_I_n_19),
+        .\LOAD_REG_GEN[17].LOAD_REG_I (AXI4_LITE_I_n_18),
+        .\LOAD_REG_GEN[18].LOAD_REG_I (AXI4_LITE_I_n_17),
+        .\LOAD_REG_GEN[19].LOAD_REG_I (AXI4_LITE_I_n_16),
+        .\LOAD_REG_GEN[1].LOAD_REG_I (AXI4_LITE_I_n_34),
+        .\LOAD_REG_GEN[20].LOAD_REG_I (AXI4_LITE_I_n_15),
+        .\LOAD_REG_GEN[21].LOAD_REG_I (AXI4_LITE_I_n_14),
+        .\LOAD_REG_GEN[22].LOAD_REG_I (AXI4_LITE_I_n_13),
+        .\LOAD_REG_GEN[23].LOAD_REG_I (AXI4_LITE_I_n_12),
+        .\LOAD_REG_GEN[24].LOAD_REG_I (AXI4_LITE_I_n_11),
+        .\LOAD_REG_GEN[25].LOAD_REG_I (AXI4_LITE_I_n_10),
+        .\LOAD_REG_GEN[26].LOAD_REG_I (AXI4_LITE_I_n_9),
+        .\LOAD_REG_GEN[27].LOAD_REG_I (AXI4_LITE_I_n_8),
+        .\LOAD_REG_GEN[28].LOAD_REG_I (AXI4_LITE_I_n_7),
+        .\LOAD_REG_GEN[29].LOAD_REG_I (AXI4_LITE_I_n_6),
+        .\LOAD_REG_GEN[2].LOAD_REG_I (AXI4_LITE_I_n_33),
+        .\LOAD_REG_GEN[30].LOAD_REG_I (AXI4_LITE_I_n_5),
+        .\LOAD_REG_GEN[31].LOAD_REG_I (AXI4_LITE_I_n_4),
+        .\LOAD_REG_GEN[3].LOAD_REG_I (AXI4_LITE_I_n_32),
+        .\LOAD_REG_GEN[4].LOAD_REG_I (AXI4_LITE_I_n_31),
+        .\LOAD_REG_GEN[5].LOAD_REG_I (AXI4_LITE_I_n_30),
+        .\LOAD_REG_GEN[6].LOAD_REG_I (AXI4_LITE_I_n_29),
+        .\LOAD_REG_GEN[7].LOAD_REG_I (AXI4_LITE_I_n_28),
+        .\LOAD_REG_GEN[8].LOAD_REG_I (AXI4_LITE_I_n_27),
+        .\LOAD_REG_GEN[9].LOAD_REG_I (AXI4_LITE_I_n_26),
+        .READ_DONE0_I(AXI4_LITE_I_n_99),
         .\TCSR0_GENERATE[20].TCSR0_FF_I ({tCSR0_Reg[20],tCSR0_Reg[24]}),
-        .\TCSR0_GENERATE[23].TCSR0_FF_I (AXI4_LITE_I_n_105),
-        .\TCSR0_GENERATE[24].TCSR0_FF_I (AXI4_LITE_I_n_8),
-        .\TCSR1_GENERATE[23].TCSR1_FF_I (AXI4_LITE_I_n_106),
+        .\TCSR0_GENERATE[23].TCSR0_FF_I (AXI4_LITE_I_n_100),
+        .\TCSR0_GENERATE[24].TCSR0_FF_I (AXI4_LITE_I_n_39),
+        .\TCSR1_GENERATE[23].TCSR1_FF_I (AXI4_LITE_I_n_101),
         .\TCSR1_GENERATE[24].TCSR1_FF_I (tCSR1_Reg),
-        .\TCSR1_GENERATE[24].TCSR1_FF_I_0 (AXI4_LITE_I_n_11),
+        .\TCSR1_GENERATE[24].TCSR1_FF_I_0 (AXI4_LITE_I_n_42),
         .bus2ip_reset(bus2ip_reset),
         .bus2ip_wrce({bus2ip_wrce[0],bus2ip_wrce[4]}),
         .capturetrig0(capturetrig0),
         .capturetrig1(capturetrig1),
-        .counterReg_DBus_0(counterReg_DBus_0),
         .counterReg_DBus_32(counterReg_DBus_32),
         .freeze(freeze),
         .generateout0(generateout0),
@@ -2598,7 +2448,6 @@ module Task_2_design_axi_timer_0_0_axi_timer
         .pair0_Select(\TIMER_CONTROL_I/pair0_Select ),
         .pwm0(pwm0),
         .read_done0(\TIMER_CONTROL_I/read_done0 ),
-        .read_done1(\TIMER_CONTROL_I/read_done1 ),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_wdata({s_axi_wdata[11:9],s_axi_wdata[6:0]}));
@@ -2955,20 +2804,11 @@ endmodule
 (* ORIG_REF_NAME = "count_module" *) 
 module Task_2_design_axi_timer_0_0_count_module
    (\LOAD_REG_GEN[0].LOAD_REG_I_0 ,
+    s_axi_aresetn_0,
     loadReg_DBus_32,
-    \INFERRED_GEN.icount_out_reg[31] ,
-    DI,
-    \INFERRED_GEN.icount_out_reg[27] ,
-    \INFERRED_GEN.icount_out_reg[23] ,
-    \INFERRED_GEN.icount_out_reg[19] ,
-    \INFERRED_GEN.icount_out_reg[15] ,
-    \INFERRED_GEN.icount_out_reg[11] ,
-    \INFERRED_GEN.icount_out_reg[7] ,
-    \INFERRED_GEN.icount_out_reg[3] ,
-    \INFERRED_GEN.icount_out_reg[0] ,
+    counterReg_DBus_32,
     counter_TC,
     generateOutPre00,
-    \INFERRED_GEN.icount_out_reg[31]_0 ,
     CE,
     D_0,
     s_axi_aclk,
@@ -3003,26 +2843,17 @@ module Task_2_design_axi_timer_0_0_count_module
     \LOAD_REG_GEN[29].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[30].LOAD_REG_I_0 ,
     \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
-    \INFERRED_GEN.icount_out_reg[0]_0 ,
+    \INFERRED_GEN.icount_out_reg[0] ,
     S,
-    \INFERRED_GEN.icount_out_reg[31]_1 ,
+    \INFERRED_GEN.icount_out_reg[31] ,
     s_axi_aresetn,
-    Q);
+    p_0_in);
   output [20:0]\LOAD_REG_GEN[0].LOAD_REG_I_0 ;
+  output s_axi_aresetn_0;
   output [10:0]loadReg_DBus_32;
-  output \INFERRED_GEN.icount_out_reg[31] ;
-  output [2:0]DI;
-  output [3:0]\INFERRED_GEN.icount_out_reg[27] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[23] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[19] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[15] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[11] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[7] ;
-  output [2:0]\INFERRED_GEN.icount_out_reg[3] ;
-  output \INFERRED_GEN.icount_out_reg[0] ;
+  output [31:0]counterReg_DBus_32;
   output [0:0]counter_TC;
   output generateOutPre00;
-  input \INFERRED_GEN.icount_out_reg[31]_0 ;
   input CE;
   input D_0;
   input s_axi_aclk;
@@ -3057,27 +2888,16 @@ module Task_2_design_axi_timer_0_0_count_module
   input \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
   input \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
   input \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
-  input \INFERRED_GEN.icount_out_reg[0]_0 ;
+  input \INFERRED_GEN.icount_out_reg[0] ;
   input [0:0]S;
-  input \INFERRED_GEN.icount_out_reg[31]_1 ;
+  input \INFERRED_GEN.icount_out_reg[31] ;
   input s_axi_aresetn;
-  input [0:0]Q;
+  input p_0_in;
 
   wire CE;
-  wire [2:0]DI;
   wire D_0;
   wire \INFERRED_GEN.icount_out_reg[0] ;
-  wire \INFERRED_GEN.icount_out_reg[0]_0 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[11] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[15] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[19] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[23] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[27] ;
   wire \INFERRED_GEN.icount_out_reg[31] ;
-  wire \INFERRED_GEN.icount_out_reg[31]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_1 ;
-  wire [2:0]\INFERRED_GEN.icount_out_reg[3] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[7] ;
   wire [20:0]\LOAD_REG_GEN[0].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[11].LOAD_REG_I_0 ;
@@ -3110,767 +2930,26 @@ module Task_2_design_axi_timer_0_0_count_module
   wire \LOAD_REG_GEN[7].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[8].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[9].LOAD_REG_I_0 ;
-  wire [0:0]Q;
-  wire [0:0]S;
-  wire [0:0]counter_TC;
-  wire generateOutPre00;
-  wire [10:0]loadReg_DBus_32;
-  wire s_axi_aclk;
-  wire s_axi_aresetn;
-
-  Task_2_design_axi_timer_0_0_counter_f_1 COUNTER_I
-       (.DI(DI),
-        .\INFERRED_GEN.icount_out_reg[0]_0 (\INFERRED_GEN.icount_out_reg[0] ),
-        .\INFERRED_GEN.icount_out_reg[0]_1 (\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .\INFERRED_GEN.icount_out_reg[11]_0 (\INFERRED_GEN.icount_out_reg[11] ),
-        .\INFERRED_GEN.icount_out_reg[15]_0 (\INFERRED_GEN.icount_out_reg[15] ),
-        .\INFERRED_GEN.icount_out_reg[19]_0 (\INFERRED_GEN.icount_out_reg[19] ),
-        .\INFERRED_GEN.icount_out_reg[23]_0 (\INFERRED_GEN.icount_out_reg[23] ),
-        .\INFERRED_GEN.icount_out_reg[27]_0 (\INFERRED_GEN.icount_out_reg[27] ),
-        .\INFERRED_GEN.icount_out_reg[31]_0 (\INFERRED_GEN.icount_out_reg[31] ),
-        .\INFERRED_GEN.icount_out_reg[31]_1 (\INFERRED_GEN.icount_out_reg[31]_0 ),
-        .\INFERRED_GEN.icount_out_reg[31]_2 (\INFERRED_GEN.icount_out_reg[31]_1 ),
-        .\INFERRED_GEN.icount_out_reg[31]_3 (\LOAD_REG_GEN[0].LOAD_REG_I_0 ),
-        .\INFERRED_GEN.icount_out_reg[3]_0 (\INFERRED_GEN.icount_out_reg[3] ),
-        .\INFERRED_GEN.icount_out_reg[7]_0 (\INFERRED_GEN.icount_out_reg[7] ),
-        .Q(Q),
-        .S(S),
-        .counter_TC(counter_TC),
-        .generateOutPre00(generateOutPre00),
-        .loadReg_DBus_32(loadReg_DBus_32),
-        .s_axi_aclk(s_axi_aclk),
-        .s_axi_aresetn(s_axi_aresetn));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(D_0),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [20]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[10].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[10].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [10]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[11].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[11].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [9]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[12].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[12].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [8]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[13].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[13].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [7]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[14].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[14].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [6]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[15].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[15].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [5]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[16].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[16].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [4]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[17].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[17].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[18].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[18].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[19].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[19].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[1].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[1].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [19]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[20].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[20].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[21].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[21].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[10]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[22].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[22].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[9]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[23].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[23].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[8]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[24].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[24].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[7]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[25].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[25].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[6]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[26].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[26].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[5]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[27].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[27].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[4]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[28].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[28].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[29].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[29].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[2].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[2].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [18]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[30].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[30].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[31].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_32[0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[3].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[3].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [17]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[4].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[4].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [16]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[5].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[5].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [15]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[6].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[6].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [14]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[7].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[7].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [13]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[8].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[8].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [12]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    \LOAD_REG_GEN[9].LOAD_REG_I 
-       (.C(s_axi_aclk),
-        .CE(CE),
-        .D(\LOAD_REG_GEN[9].LOAD_REG_I_0 ),
-        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [11]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_0 ));
-endmodule
-
-(* ORIG_REF_NAME = "count_module" *) 
-module Task_2_design_axi_timer_0_0_count_module_0
-   (s_axi_aresetn_0,
-    \INFERRED_GEN.icount_out_reg[31] ,
-    DI,
-    \INFERRED_GEN.icount_out_reg[27] ,
-    \INFERRED_GEN.icount_out_reg[23] ,
-    \INFERRED_GEN.icount_out_reg[19] ,
-    \INFERRED_GEN.icount_out_reg[15] ,
-    \INFERRED_GEN.icount_out_reg[11] ,
-    \INFERRED_GEN.icount_out_reg[7] ,
-    \INFERRED_GEN.icount_out_reg[3] ,
-    \INFERRED_GEN.icount_out_reg[0] ,
-    counter_TC,
-    generateOutPre10,
-    \INFERRED_GEN.icount_out_reg[23]_0 ,
-    \INFERRED_GEN.icount_out_reg[18] ,
-    \INFERRED_GEN.icount_out_reg[17] ,
-    \INFERRED_GEN.icount_out_reg[14] ,
-    \INFERRED_GEN.icount_out_reg[4] ,
-    \INFERRED_GEN.icount_out_reg[2] ,
-    \INFERRED_GEN.icount_out_reg[31]_0 ,
-    \INFERRED_GEN.icount_out_reg[30] ,
-    \INFERRED_GEN.icount_out_reg[29] ,
-    \INFERRED_GEN.icount_out_reg[28] ,
-    \INFERRED_GEN.icount_out_reg[27]_0 ,
-    \LOAD_REG_GEN[5].LOAD_REG_I_0 ,
-    \INFERRED_GEN.icount_out_reg[25] ,
-    \INFERRED_GEN.icount_out_reg[24] ,
-    \INFERRED_GEN.icount_out_reg[22] ,
-    \INFERRED_GEN.icount_out_reg[21] ,
-    \INFERRED_GEN.icount_out_reg[20] ,
-    \INFERRED_GEN.icount_out_reg[19]_0 ,
-    \INFERRED_GEN.icount_out_reg[16] ,
-    \INFERRED_GEN.icount_out_reg[15]_0 ,
-    \INFERRED_GEN.icount_out_reg[13] ,
-    \INFERRED_GEN.icount_out_reg[12] ,
-    \INFERRED_GEN.icount_out_reg[11]_0 ,
-    \LOAD_REG_GEN[21].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[22].LOAD_REG_I_0 ,
-    \INFERRED_GEN.icount_out_reg[8] ,
-    \INFERRED_GEN.icount_out_reg[7]_0 ,
-    \INFERRED_GEN.icount_out_reg[6] ,
-    \INFERRED_GEN.icount_out_reg[5] ,
-    \INFERRED_GEN.icount_out_reg[3]_0 ,
-    \INFERRED_GEN.icount_out_reg[1] ,
-    \INFERRED_GEN.icount_out_reg[0]_0 ,
-    CE,
-    D_1,
-    s_axi_aclk,
-    \LOAD_REG_GEN[1].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[2].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[3].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[4].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[5].LOAD_REG_I_1 ,
-    \LOAD_REG_GEN[6].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[7].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[8].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[9].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[10].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[11].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[12].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[13].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[14].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[15].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[16].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[17].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[18].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[19].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[20].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[21].LOAD_REG_I_1 ,
-    \LOAD_REG_GEN[22].LOAD_REG_I_1 ,
-    \LOAD_REG_GEN[23].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[24].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[25].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[26].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[27].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[28].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[29].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[30].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
-    \INFERRED_GEN.icount_out_reg[0]_1 ,
-    S,
-    \INFERRED_GEN.icount_out_reg[31]_1 ,
-    s_axi_aresetn,
-    Q,
-    counterReg_DBus_32,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 );
-  output s_axi_aresetn_0;
-  output \INFERRED_GEN.icount_out_reg[31] ;
-  output [2:0]DI;
-  output [3:0]\INFERRED_GEN.icount_out_reg[27] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[23] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[19] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[15] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[11] ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[7] ;
-  output [2:0]\INFERRED_GEN.icount_out_reg[3] ;
-  output \INFERRED_GEN.icount_out_reg[0] ;
-  output [0:0]counter_TC;
-  output generateOutPre10;
-  output \INFERRED_GEN.icount_out_reg[23]_0 ;
-  output \INFERRED_GEN.icount_out_reg[18] ;
-  output \INFERRED_GEN.icount_out_reg[17] ;
-  output \INFERRED_GEN.icount_out_reg[14] ;
-  output \INFERRED_GEN.icount_out_reg[4] ;
-  output \INFERRED_GEN.icount_out_reg[2] ;
-  output \INFERRED_GEN.icount_out_reg[31]_0 ;
-  output \INFERRED_GEN.icount_out_reg[30] ;
-  output \INFERRED_GEN.icount_out_reg[29] ;
-  output \INFERRED_GEN.icount_out_reg[28] ;
-  output \INFERRED_GEN.icount_out_reg[27]_0 ;
-  output \LOAD_REG_GEN[5].LOAD_REG_I_0 ;
-  output \INFERRED_GEN.icount_out_reg[25] ;
-  output \INFERRED_GEN.icount_out_reg[24] ;
-  output \INFERRED_GEN.icount_out_reg[22] ;
-  output \INFERRED_GEN.icount_out_reg[21] ;
-  output \INFERRED_GEN.icount_out_reg[20] ;
-  output \INFERRED_GEN.icount_out_reg[19]_0 ;
-  output \INFERRED_GEN.icount_out_reg[16] ;
-  output \INFERRED_GEN.icount_out_reg[15]_0 ;
-  output \INFERRED_GEN.icount_out_reg[13] ;
-  output \INFERRED_GEN.icount_out_reg[12] ;
-  output \INFERRED_GEN.icount_out_reg[11]_0 ;
-  output \LOAD_REG_GEN[21].LOAD_REG_I_0 ;
-  output \LOAD_REG_GEN[22].LOAD_REG_I_0 ;
-  output \INFERRED_GEN.icount_out_reg[8] ;
-  output \INFERRED_GEN.icount_out_reg[7]_0 ;
-  output \INFERRED_GEN.icount_out_reg[6] ;
-  output \INFERRED_GEN.icount_out_reg[5] ;
-  output \INFERRED_GEN.icount_out_reg[3]_0 ;
-  output \INFERRED_GEN.icount_out_reg[1] ;
-  output \INFERRED_GEN.icount_out_reg[0]_0 ;
-  input CE;
-  input D_1;
-  input s_axi_aclk;
-  input \LOAD_REG_GEN[1].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[2].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[3].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[4].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[5].LOAD_REG_I_1 ;
-  input \LOAD_REG_GEN[6].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[7].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[8].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[9].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[11].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[12].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[13].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[14].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[15].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[16].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[17].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[18].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[19].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[20].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[21].LOAD_REG_I_1 ;
-  input \LOAD_REG_GEN[22].LOAD_REG_I_1 ;
-  input \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[26].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[27].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[28].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
-  input \INFERRED_GEN.icount_out_reg[0]_1 ;
-  input [0:0]S;
-  input \INFERRED_GEN.icount_out_reg[31]_1 ;
-  input s_axi_aresetn;
-  input [0:0]Q;
-  input [31:0]counterReg_DBus_32;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ;
-
-  wire CE;
-  wire [2:0]DI;
-  wire D_1;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ;
-  wire \INFERRED_GEN.icount_out_reg[0] ;
-  wire \INFERRED_GEN.icount_out_reg[0]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[0]_1 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[11] ;
-  wire \INFERRED_GEN.icount_out_reg[11]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[12] ;
-  wire \INFERRED_GEN.icount_out_reg[13] ;
-  wire \INFERRED_GEN.icount_out_reg[14] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[15] ;
-  wire \INFERRED_GEN.icount_out_reg[15]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[16] ;
-  wire \INFERRED_GEN.icount_out_reg[17] ;
-  wire \INFERRED_GEN.icount_out_reg[18] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[19] ;
-  wire \INFERRED_GEN.icount_out_reg[19]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[1] ;
-  wire \INFERRED_GEN.icount_out_reg[20] ;
-  wire \INFERRED_GEN.icount_out_reg[21] ;
-  wire \INFERRED_GEN.icount_out_reg[22] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[23] ;
-  wire \INFERRED_GEN.icount_out_reg[23]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[24] ;
-  wire \INFERRED_GEN.icount_out_reg[25] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[27] ;
-  wire \INFERRED_GEN.icount_out_reg[27]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[28] ;
-  wire \INFERRED_GEN.icount_out_reg[29] ;
-  wire \INFERRED_GEN.icount_out_reg[2] ;
-  wire \INFERRED_GEN.icount_out_reg[30] ;
-  wire \INFERRED_GEN.icount_out_reg[31] ;
-  wire \INFERRED_GEN.icount_out_reg[31]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_1 ;
-  wire [2:0]\INFERRED_GEN.icount_out_reg[3] ;
-  wire \INFERRED_GEN.icount_out_reg[3]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[4] ;
-  wire \INFERRED_GEN.icount_out_reg[5] ;
-  wire \INFERRED_GEN.icount_out_reg[6] ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[7] ;
-  wire \INFERRED_GEN.icount_out_reg[7]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[8] ;
-  wire \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[11].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[12].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[13].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[14].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[15].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[16].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[17].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[18].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[19].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[1].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[20].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[21].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[21].LOAD_REG_I_1 ;
-  wire \LOAD_REG_GEN[22].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[22].LOAD_REG_I_1 ;
-  wire \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[26].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[27].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[28].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[2].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[3].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[4].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[5].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[5].LOAD_REG_I_1 ;
-  wire \LOAD_REG_GEN[6].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[7].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[8].LOAD_REG_I_0 ;
-  wire \LOAD_REG_GEN[9].LOAD_REG_I_0 ;
-  wire [0:0]Q;
   wire [0:0]S;
   wire [31:0]counterReg_DBus_32;
   wire [0:0]counter_TC;
-  wire generateOutPre10;
-  wire [31:0]loadReg_DBus_0;
+  wire generateOutPre00;
+  wire [10:0]loadReg_DBus_32;
+  wire p_0_in;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire s_axi_aresetn_0;
 
   Task_2_design_axi_timer_0_0_counter_f COUNTER_I
-       (.\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .\INFERRED_GEN.icount_out_reg[0]_0 (\INFERRED_GEN.icount_out_reg[0] ),
-        .\INFERRED_GEN.icount_out_reg[0]_1 (\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .\INFERRED_GEN.icount_out_reg[0]_2 (\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .\INFERRED_GEN.icount_out_reg[10]_0 (\INFERRED_GEN.icount_out_reg[11] [2]),
-        .\INFERRED_GEN.icount_out_reg[11]_0 (\INFERRED_GEN.icount_out_reg[11] [3]),
-        .\INFERRED_GEN.icount_out_reg[11]_1 (\INFERRED_GEN.icount_out_reg[11]_0 ),
-        .\INFERRED_GEN.icount_out_reg[12]_0 (\INFERRED_GEN.icount_out_reg[15] [0]),
-        .\INFERRED_GEN.icount_out_reg[12]_1 (\INFERRED_GEN.icount_out_reg[12] ),
-        .\INFERRED_GEN.icount_out_reg[13]_0 (\INFERRED_GEN.icount_out_reg[15] [1]),
-        .\INFERRED_GEN.icount_out_reg[13]_1 (\INFERRED_GEN.icount_out_reg[13] ),
-        .\INFERRED_GEN.icount_out_reg[14]_0 (\INFERRED_GEN.icount_out_reg[15] [2]),
-        .\INFERRED_GEN.icount_out_reg[14]_1 (\INFERRED_GEN.icount_out_reg[14] ),
-        .\INFERRED_GEN.icount_out_reg[15]_0 (\INFERRED_GEN.icount_out_reg[15] [3]),
-        .\INFERRED_GEN.icount_out_reg[15]_1 (\INFERRED_GEN.icount_out_reg[15]_0 ),
-        .\INFERRED_GEN.icount_out_reg[16]_0 (\INFERRED_GEN.icount_out_reg[19] [0]),
-        .\INFERRED_GEN.icount_out_reg[16]_1 (\INFERRED_GEN.icount_out_reg[16] ),
-        .\INFERRED_GEN.icount_out_reg[17]_0 (\INFERRED_GEN.icount_out_reg[19] [1]),
-        .\INFERRED_GEN.icount_out_reg[17]_1 (\INFERRED_GEN.icount_out_reg[17] ),
-        .\INFERRED_GEN.icount_out_reg[18]_0 (\INFERRED_GEN.icount_out_reg[19] [2]),
-        .\INFERRED_GEN.icount_out_reg[18]_1 (\INFERRED_GEN.icount_out_reg[18] ),
-        .\INFERRED_GEN.icount_out_reg[19]_0 (\INFERRED_GEN.icount_out_reg[19] [3]),
-        .\INFERRED_GEN.icount_out_reg[19]_1 (\INFERRED_GEN.icount_out_reg[19]_0 ),
-        .\INFERRED_GEN.icount_out_reg[1]_0 (\INFERRED_GEN.icount_out_reg[3] [0]),
-        .\INFERRED_GEN.icount_out_reg[1]_1 (\INFERRED_GEN.icount_out_reg[1] ),
-        .\INFERRED_GEN.icount_out_reg[20]_0 (\INFERRED_GEN.icount_out_reg[23] [0]),
-        .\INFERRED_GEN.icount_out_reg[20]_1 (\INFERRED_GEN.icount_out_reg[20] ),
-        .\INFERRED_GEN.icount_out_reg[21]_0 (\INFERRED_GEN.icount_out_reg[23] [1]),
-        .\INFERRED_GEN.icount_out_reg[21]_1 (\INFERRED_GEN.icount_out_reg[21] ),
-        .\INFERRED_GEN.icount_out_reg[22]_0 (\INFERRED_GEN.icount_out_reg[23] [2]),
-        .\INFERRED_GEN.icount_out_reg[22]_1 (\INFERRED_GEN.icount_out_reg[22] ),
-        .\INFERRED_GEN.icount_out_reg[23]_0 (\INFERRED_GEN.icount_out_reg[23] [3]),
-        .\INFERRED_GEN.icount_out_reg[23]_1 (\INFERRED_GEN.icount_out_reg[23]_0 ),
-        .\INFERRED_GEN.icount_out_reg[24]_0 (\INFERRED_GEN.icount_out_reg[27] [0]),
-        .\INFERRED_GEN.icount_out_reg[24]_1 (\INFERRED_GEN.icount_out_reg[24] ),
-        .\INFERRED_GEN.icount_out_reg[25]_0 (\INFERRED_GEN.icount_out_reg[27] [1]),
-        .\INFERRED_GEN.icount_out_reg[25]_1 (\INFERRED_GEN.icount_out_reg[25] ),
-        .\INFERRED_GEN.icount_out_reg[26]_0 (\INFERRED_GEN.icount_out_reg[27] [2]),
-        .\INFERRED_GEN.icount_out_reg[27]_0 (\INFERRED_GEN.icount_out_reg[27] [3]),
-        .\INFERRED_GEN.icount_out_reg[27]_1 (\INFERRED_GEN.icount_out_reg[27]_0 ),
-        .\INFERRED_GEN.icount_out_reg[28]_0 (DI[0]),
-        .\INFERRED_GEN.icount_out_reg[28]_1 (\INFERRED_GEN.icount_out_reg[28] ),
-        .\INFERRED_GEN.icount_out_reg[29]_0 (DI[1]),
-        .\INFERRED_GEN.icount_out_reg[29]_1 (\INFERRED_GEN.icount_out_reg[29] ),
-        .\INFERRED_GEN.icount_out_reg[2]_0 (\INFERRED_GEN.icount_out_reg[3] [1]),
-        .\INFERRED_GEN.icount_out_reg[2]_1 (\INFERRED_GEN.icount_out_reg[2] ),
-        .\INFERRED_GEN.icount_out_reg[30]_0 (DI[2]),
-        .\INFERRED_GEN.icount_out_reg[30]_1 (\INFERRED_GEN.icount_out_reg[30] ),
+       (.\INFERRED_GEN.icount_out_reg[0]_0 (\INFERRED_GEN.icount_out_reg[0] ),
         .\INFERRED_GEN.icount_out_reg[31]_0 (\INFERRED_GEN.icount_out_reg[31] ),
-        .\INFERRED_GEN.icount_out_reg[31]_1 (\INFERRED_GEN.icount_out_reg[31]_0 ),
-        .\INFERRED_GEN.icount_out_reg[31]_2 (\INFERRED_GEN.icount_out_reg[31]_1 ),
-        .\INFERRED_GEN.icount_out_reg[3]_0 (\INFERRED_GEN.icount_out_reg[3] [2]),
-        .\INFERRED_GEN.icount_out_reg[3]_1 (\INFERRED_GEN.icount_out_reg[3]_0 ),
-        .\INFERRED_GEN.icount_out_reg[4]_0 (\INFERRED_GEN.icount_out_reg[7] [0]),
-        .\INFERRED_GEN.icount_out_reg[4]_1 (\INFERRED_GEN.icount_out_reg[4] ),
-        .\INFERRED_GEN.icount_out_reg[5]_0 (\INFERRED_GEN.icount_out_reg[7] [1]),
-        .\INFERRED_GEN.icount_out_reg[5]_1 (\INFERRED_GEN.icount_out_reg[5] ),
-        .\INFERRED_GEN.icount_out_reg[6]_0 (\INFERRED_GEN.icount_out_reg[7] [2]),
-        .\INFERRED_GEN.icount_out_reg[6]_1 (\INFERRED_GEN.icount_out_reg[6] ),
-        .\INFERRED_GEN.icount_out_reg[7]_0 (\INFERRED_GEN.icount_out_reg[7] [3]),
-        .\INFERRED_GEN.icount_out_reg[7]_1 (\INFERRED_GEN.icount_out_reg[7]_0 ),
-        .\INFERRED_GEN.icount_out_reg[8]_0 (\INFERRED_GEN.icount_out_reg[11] [0]),
-        .\INFERRED_GEN.icount_out_reg[8]_1 (\INFERRED_GEN.icount_out_reg[8] ),
-        .\INFERRED_GEN.icount_out_reg[9]_0 (\INFERRED_GEN.icount_out_reg[11] [1]),
-        .\LOAD_REG_GEN[21].LOAD_REG_I (\LOAD_REG_GEN[21].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[22].LOAD_REG_I (\LOAD_REG_GEN[22].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[5].LOAD_REG_I (\LOAD_REG_GEN[5].LOAD_REG_I_0 ),
-        .Q(Q),
+        .\INFERRED_GEN.icount_out_reg[31]_1 (\LOAD_REG_GEN[0].LOAD_REG_I_0 ),
         .S(S),
         .counterReg_DBus_32(counterReg_DBus_32),
         .counter_TC(counter_TC),
-        .generateOutPre10(generateOutPre10),
-        .loadReg_DBus_0(loadReg_DBus_0),
+        .generateOutPre00(generateOutPre00),
+        .loadReg_DBus_32(loadReg_DBus_32),
+        .p_0_in(p_0_in),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_aresetn_0(s_axi_aresetn_0));
@@ -3883,8 +2962,8 @@ module Task_2_design_axi_timer_0_0_count_module_0
     \LOAD_REG_GEN[0].LOAD_REG_I 
        (.C(s_axi_aclk),
         .CE(CE),
-        .D(D_1),
-        .Q(loadReg_DBus_0[31]),
+        .D(D_0),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [20]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3896,7 +2975,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[10].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[21]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [10]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3908,7 +2987,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[11].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[20]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [9]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3920,7 +2999,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[12].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[19]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [8]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3932,7 +3011,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[13].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[18]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [7]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3944,7 +3023,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[14].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[17]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [6]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3956,7 +3035,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[15].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[16]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [5]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3968,7 +3047,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[16].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[15]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [4]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3980,7 +3059,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[17].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[14]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [3]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -3992,7 +3071,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[18].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[13]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [2]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4004,7 +3083,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[19].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[12]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [1]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4016,7 +3095,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[1].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[30]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [19]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4028,7 +3107,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[20].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[11]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [0]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4039,8 +3118,8 @@ module Task_2_design_axi_timer_0_0_count_module_0
     \LOAD_REG_GEN[21].LOAD_REG_I 
        (.C(s_axi_aclk),
         .CE(CE),
-        .D(\LOAD_REG_GEN[21].LOAD_REG_I_1 ),
-        .Q(loadReg_DBus_0[10]),
+        .D(\LOAD_REG_GEN[21].LOAD_REG_I_0 ),
+        .Q(loadReg_DBus_32[10]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4051,8 +3130,8 @@ module Task_2_design_axi_timer_0_0_count_module_0
     \LOAD_REG_GEN[22].LOAD_REG_I 
        (.C(s_axi_aclk),
         .CE(CE),
-        .D(\LOAD_REG_GEN[22].LOAD_REG_I_1 ),
-        .Q(loadReg_DBus_0[9]),
+        .D(\LOAD_REG_GEN[22].LOAD_REG_I_0 ),
+        .Q(loadReg_DBus_32[9]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4064,7 +3143,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[23].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[8]),
+        .Q(loadReg_DBus_32[8]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4076,7 +3155,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[24].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[7]),
+        .Q(loadReg_DBus_32[7]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4088,7 +3167,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[25].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[6]),
+        .Q(loadReg_DBus_32[6]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4100,7 +3179,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[26].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[5]),
+        .Q(loadReg_DBus_32[5]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4112,7 +3191,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[27].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[4]),
+        .Q(loadReg_DBus_32[4]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4124,7 +3203,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[28].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[3]),
+        .Q(loadReg_DBus_32[3]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4136,7 +3215,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[29].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[2]),
+        .Q(loadReg_DBus_32[2]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4148,7 +3227,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[2].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[29]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [18]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4160,7 +3239,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[30].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[1]),
+        .Q(loadReg_DBus_32[1]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4172,7 +3251,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[0]),
+        .Q(loadReg_DBus_32[0]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4184,7 +3263,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[3].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[28]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [17]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4196,7 +3275,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[4].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[27]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [16]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4207,8 +3286,8 @@ module Task_2_design_axi_timer_0_0_count_module_0
     \LOAD_REG_GEN[5].LOAD_REG_I 
        (.C(s_axi_aclk),
         .CE(CE),
-        .D(\LOAD_REG_GEN[5].LOAD_REG_I_1 ),
-        .Q(loadReg_DBus_0[26]),
+        .D(\LOAD_REG_GEN[5].LOAD_REG_I_0 ),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [15]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4220,7 +3299,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[6].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[25]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [14]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4232,7 +3311,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[7].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[24]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [13]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4244,7 +3323,7 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[8].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[23]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [12]),
         .R(s_axi_aresetn_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   FDRE #(
@@ -4256,172 +3335,37 @@ module Task_2_design_axi_timer_0_0_count_module_0
        (.C(s_axi_aclk),
         .CE(CE),
         .D(\LOAD_REG_GEN[9].LOAD_REG_I_0 ),
-        .Q(loadReg_DBus_0[22]),
+        .Q(\LOAD_REG_GEN[0].LOAD_REG_I_0 [11]),
         .R(s_axi_aresetn_0));
 endmodule
 
 (* ORIG_REF_NAME = "counter_f" *) 
 module Task_2_design_axi_timer_0_0_counter_f
-   (\INFERRED_GEN.icount_out_reg[31]_0 ,
+   (counterReg_DBus_32,
     s_axi_aresetn_0,
-    \INFERRED_GEN.icount_out_reg[30]_0 ,
-    \INFERRED_GEN.icount_out_reg[29]_0 ,
-    \INFERRED_GEN.icount_out_reg[28]_0 ,
-    \INFERRED_GEN.icount_out_reg[27]_0 ,
-    \INFERRED_GEN.icount_out_reg[26]_0 ,
-    \INFERRED_GEN.icount_out_reg[25]_0 ,
-    \INFERRED_GEN.icount_out_reg[24]_0 ,
-    \INFERRED_GEN.icount_out_reg[23]_0 ,
-    \INFERRED_GEN.icount_out_reg[22]_0 ,
-    \INFERRED_GEN.icount_out_reg[21]_0 ,
-    \INFERRED_GEN.icount_out_reg[20]_0 ,
-    \INFERRED_GEN.icount_out_reg[19]_0 ,
-    \INFERRED_GEN.icount_out_reg[18]_0 ,
-    \INFERRED_GEN.icount_out_reg[17]_0 ,
-    \INFERRED_GEN.icount_out_reg[16]_0 ,
-    \INFERRED_GEN.icount_out_reg[15]_0 ,
-    \INFERRED_GEN.icount_out_reg[14]_0 ,
-    \INFERRED_GEN.icount_out_reg[13]_0 ,
-    \INFERRED_GEN.icount_out_reg[12]_0 ,
-    \INFERRED_GEN.icount_out_reg[11]_0 ,
-    \INFERRED_GEN.icount_out_reg[10]_0 ,
-    \INFERRED_GEN.icount_out_reg[9]_0 ,
-    \INFERRED_GEN.icount_out_reg[8]_0 ,
-    \INFERRED_GEN.icount_out_reg[7]_0 ,
-    \INFERRED_GEN.icount_out_reg[6]_0 ,
-    \INFERRED_GEN.icount_out_reg[5]_0 ,
-    \INFERRED_GEN.icount_out_reg[4]_0 ,
-    \INFERRED_GEN.icount_out_reg[3]_0 ,
-    \INFERRED_GEN.icount_out_reg[2]_0 ,
-    \INFERRED_GEN.icount_out_reg[1]_0 ,
-    \INFERRED_GEN.icount_out_reg[0]_0 ,
     counter_TC,
-    generateOutPre10,
-    \INFERRED_GEN.icount_out_reg[23]_1 ,
-    \INFERRED_GEN.icount_out_reg[18]_1 ,
-    \INFERRED_GEN.icount_out_reg[17]_1 ,
-    \INFERRED_GEN.icount_out_reg[14]_1 ,
-    \INFERRED_GEN.icount_out_reg[4]_1 ,
-    \INFERRED_GEN.icount_out_reg[2]_1 ,
-    \INFERRED_GEN.icount_out_reg[31]_1 ,
-    \INFERRED_GEN.icount_out_reg[30]_1 ,
-    \INFERRED_GEN.icount_out_reg[29]_1 ,
-    \INFERRED_GEN.icount_out_reg[28]_1 ,
-    \INFERRED_GEN.icount_out_reg[27]_1 ,
-    \LOAD_REG_GEN[5].LOAD_REG_I ,
-    \INFERRED_GEN.icount_out_reg[25]_1 ,
-    \INFERRED_GEN.icount_out_reg[24]_1 ,
-    \INFERRED_GEN.icount_out_reg[22]_1 ,
-    \INFERRED_GEN.icount_out_reg[21]_1 ,
-    \INFERRED_GEN.icount_out_reg[20]_1 ,
-    \INFERRED_GEN.icount_out_reg[19]_1 ,
-    \INFERRED_GEN.icount_out_reg[16]_1 ,
-    \INFERRED_GEN.icount_out_reg[15]_1 ,
-    \INFERRED_GEN.icount_out_reg[13]_1 ,
-    \INFERRED_GEN.icount_out_reg[12]_1 ,
-    \INFERRED_GEN.icount_out_reg[11]_1 ,
-    \LOAD_REG_GEN[21].LOAD_REG_I ,
-    \LOAD_REG_GEN[22].LOAD_REG_I ,
-    \INFERRED_GEN.icount_out_reg[8]_1 ,
-    \INFERRED_GEN.icount_out_reg[7]_1 ,
-    \INFERRED_GEN.icount_out_reg[6]_1 ,
-    \INFERRED_GEN.icount_out_reg[5]_1 ,
-    \INFERRED_GEN.icount_out_reg[3]_1 ,
-    \INFERRED_GEN.icount_out_reg[1]_1 ,
-    \INFERRED_GEN.icount_out_reg[0]_1 ,
-    \INFERRED_GEN.icount_out_reg[0]_2 ,
+    generateOutPre00,
+    \INFERRED_GEN.icount_out_reg[0]_0 ,
     s_axi_aclk,
     S,
-    \INFERRED_GEN.icount_out_reg[31]_2 ,
+    \INFERRED_GEN.icount_out_reg[31]_0 ,
     s_axi_aresetn,
-    Q,
-    counterReg_DBus_32,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
-    loadReg_DBus_0,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 );
-  output \INFERRED_GEN.icount_out_reg[31]_0 ;
+    p_0_in,
+    loadReg_DBus_32,
+    \INFERRED_GEN.icount_out_reg[31]_1 );
+  output [31:0]counterReg_DBus_32;
   output s_axi_aresetn_0;
-  output \INFERRED_GEN.icount_out_reg[30]_0 ;
-  output \INFERRED_GEN.icount_out_reg[29]_0 ;
-  output \INFERRED_GEN.icount_out_reg[28]_0 ;
-  output \INFERRED_GEN.icount_out_reg[27]_0 ;
-  output \INFERRED_GEN.icount_out_reg[26]_0 ;
-  output \INFERRED_GEN.icount_out_reg[25]_0 ;
-  output \INFERRED_GEN.icount_out_reg[24]_0 ;
-  output \INFERRED_GEN.icount_out_reg[23]_0 ;
-  output \INFERRED_GEN.icount_out_reg[22]_0 ;
-  output \INFERRED_GEN.icount_out_reg[21]_0 ;
-  output \INFERRED_GEN.icount_out_reg[20]_0 ;
-  output \INFERRED_GEN.icount_out_reg[19]_0 ;
-  output \INFERRED_GEN.icount_out_reg[18]_0 ;
-  output \INFERRED_GEN.icount_out_reg[17]_0 ;
-  output \INFERRED_GEN.icount_out_reg[16]_0 ;
-  output \INFERRED_GEN.icount_out_reg[15]_0 ;
-  output \INFERRED_GEN.icount_out_reg[14]_0 ;
-  output \INFERRED_GEN.icount_out_reg[13]_0 ;
-  output \INFERRED_GEN.icount_out_reg[12]_0 ;
-  output \INFERRED_GEN.icount_out_reg[11]_0 ;
-  output \INFERRED_GEN.icount_out_reg[10]_0 ;
-  output \INFERRED_GEN.icount_out_reg[9]_0 ;
-  output \INFERRED_GEN.icount_out_reg[8]_0 ;
-  output \INFERRED_GEN.icount_out_reg[7]_0 ;
-  output \INFERRED_GEN.icount_out_reg[6]_0 ;
-  output \INFERRED_GEN.icount_out_reg[5]_0 ;
-  output \INFERRED_GEN.icount_out_reg[4]_0 ;
-  output \INFERRED_GEN.icount_out_reg[3]_0 ;
-  output \INFERRED_GEN.icount_out_reg[2]_0 ;
-  output \INFERRED_GEN.icount_out_reg[1]_0 ;
-  output \INFERRED_GEN.icount_out_reg[0]_0 ;
   output [0:0]counter_TC;
-  output generateOutPre10;
-  output \INFERRED_GEN.icount_out_reg[23]_1 ;
-  output \INFERRED_GEN.icount_out_reg[18]_1 ;
-  output \INFERRED_GEN.icount_out_reg[17]_1 ;
-  output \INFERRED_GEN.icount_out_reg[14]_1 ;
-  output \INFERRED_GEN.icount_out_reg[4]_1 ;
-  output \INFERRED_GEN.icount_out_reg[2]_1 ;
-  output \INFERRED_GEN.icount_out_reg[31]_1 ;
-  output \INFERRED_GEN.icount_out_reg[30]_1 ;
-  output \INFERRED_GEN.icount_out_reg[29]_1 ;
-  output \INFERRED_GEN.icount_out_reg[28]_1 ;
-  output \INFERRED_GEN.icount_out_reg[27]_1 ;
-  output \LOAD_REG_GEN[5].LOAD_REG_I ;
-  output \INFERRED_GEN.icount_out_reg[25]_1 ;
-  output \INFERRED_GEN.icount_out_reg[24]_1 ;
-  output \INFERRED_GEN.icount_out_reg[22]_1 ;
-  output \INFERRED_GEN.icount_out_reg[21]_1 ;
-  output \INFERRED_GEN.icount_out_reg[20]_1 ;
-  output \INFERRED_GEN.icount_out_reg[19]_1 ;
-  output \INFERRED_GEN.icount_out_reg[16]_1 ;
-  output \INFERRED_GEN.icount_out_reg[15]_1 ;
-  output \INFERRED_GEN.icount_out_reg[13]_1 ;
-  output \INFERRED_GEN.icount_out_reg[12]_1 ;
-  output \INFERRED_GEN.icount_out_reg[11]_1 ;
-  output \LOAD_REG_GEN[21].LOAD_REG_I ;
-  output \LOAD_REG_GEN[22].LOAD_REG_I ;
-  output \INFERRED_GEN.icount_out_reg[8]_1 ;
-  output \INFERRED_GEN.icount_out_reg[7]_1 ;
-  output \INFERRED_GEN.icount_out_reg[6]_1 ;
-  output \INFERRED_GEN.icount_out_reg[5]_1 ;
-  output \INFERRED_GEN.icount_out_reg[3]_1 ;
-  output \INFERRED_GEN.icount_out_reg[1]_1 ;
-  output \INFERRED_GEN.icount_out_reg[0]_1 ;
-  input \INFERRED_GEN.icount_out_reg[0]_2 ;
+  output generateOutPre00;
+  input \INFERRED_GEN.icount_out_reg[0]_0 ;
   input s_axi_aclk;
   input [0:0]S;
-  input \INFERRED_GEN.icount_out_reg[31]_2 ;
+  input \INFERRED_GEN.icount_out_reg[31]_0 ;
   input s_axi_aresetn;
-  input [0:0]Q;
-  input [31:0]counterReg_DBus_32;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
-  input [31:0]loadReg_DBus_0;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ;
+  input p_0_in;
+  input [10:0]loadReg_DBus_32;
+  input [20:0]\INFERRED_GEN.icount_out_reg[31]_1 ;
 
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ;
   wire \INFERRED_GEN.icount_out0_carry__0_i_1_n_0 ;
   wire \INFERRED_GEN.icount_out0_carry__0_i_2_n_0 ;
   wire \INFERRED_GEN.icount_out0_carry__0_i_3_n_0 ;
@@ -4517,436 +3461,22 @@ module Task_2_design_axi_timer_0_0_counter_f
   wire \INFERRED_GEN.icount_out0_carry_n_5 ;
   wire \INFERRED_GEN.icount_out0_carry_n_6 ;
   wire \INFERRED_GEN.icount_out0_carry_n_7 ;
-  wire \INFERRED_GEN.icount_out[0]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[10]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[11]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[12]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[13]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[14]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[15]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[16]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[17]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[18]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[19]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[1]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[20]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[21]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[22]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[23]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[24]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[25]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[26]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[27]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[28]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[29]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[2]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[30]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_2__0_n_0 ;
   wire \INFERRED_GEN.icount_out[32]_i_1_n_0 ;
-  wire \INFERRED_GEN.icount_out[3]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[4]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[5]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[6]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[7]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[8]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[9]_i_1__0_n_0 ;
   wire \INFERRED_GEN.icount_out_reg[0]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[0]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[0]_2 ;
-  wire \INFERRED_GEN.icount_out_reg[10]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[11]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[11]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[12]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[12]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[13]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[13]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[14]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[14]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[15]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[15]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[16]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[16]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[17]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[17]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[18]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[18]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[19]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[19]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[1]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[1]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[20]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[20]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[21]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[21]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[22]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[22]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[23]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[23]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[24]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[24]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[25]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[25]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[26]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[27]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[27]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[28]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[28]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[29]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[29]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[2]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[2]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[30]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[30]_1 ;
   wire \INFERRED_GEN.icount_out_reg[31]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_2 ;
-  wire \INFERRED_GEN.icount_out_reg[3]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[3]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[4]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[4]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[5]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[5]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[6]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[6]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[7]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[7]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[8]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[8]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[9]_0 ;
-  wire \LOAD_REG_GEN[21].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[22].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[5].LOAD_REG_I ;
-  wire [0:0]Q;
+  wire [20:0]\INFERRED_GEN.icount_out_reg[31]_1 ;
   wire [0:0]S;
   wire [31:0]counterReg_DBus_32;
   wire [0:0]counter_TC;
-  wire generateOutPre10;
-  wire [31:0]loadReg_DBus_0;
+  wire generateOutPre00;
+  wire [10:0]loadReg_DBus_32;
+  wire p_0_in;
+  wire [31:0]p_1_in;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire s_axi_aresetn_0;
   wire [3:3]\NLW_INFERRED_GEN.icount_out0_carry__6_CO_UNCONNECTED ;
 
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[31]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[31]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[31]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[21]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[21]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[21]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[21]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[20]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[20]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[20]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[20]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[19]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[19]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[19]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[19]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[18]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_0[18]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(\INFERRED_GEN.icount_out_reg[18]_0 ),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\INFERRED_GEN.icount_out_reg[18]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[17]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_0[17]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(\INFERRED_GEN.icount_out_reg[17]_0 ),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\INFERRED_GEN.icount_out_reg[17]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[16]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[16]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[16]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[16]_1 ));
-  LUT6 #(
-    .INIT(64'hD0DD0000D0DDD0DD)) 
-    \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[15]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I3(\INFERRED_GEN.icount_out_reg[15]_0 ),
-        .I4(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I5(loadReg_DBus_0[15]),
-        .O(\INFERRED_GEN.icount_out_reg[15]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[14]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_0[14]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(\INFERRED_GEN.icount_out_reg[14]_0 ),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\INFERRED_GEN.icount_out_reg[14]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[13]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[13]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[13]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[13]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[12]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[12]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[12]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[12]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[30]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[30]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[30]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[30]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[11]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[11]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[11]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[11]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(loadReg_DBus_0[10]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I2(\INFERRED_GEN.icount_out_reg[10]_0 ),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I4(counterReg_DBus_32[10]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\LOAD_REG_GEN[21].LOAD_REG_I ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(loadReg_DBus_0[9]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I2(\INFERRED_GEN.icount_out_reg[9]_0 ),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I4(counterReg_DBus_32[9]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\LOAD_REG_GEN[22].LOAD_REG_I ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[8]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[8]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[8]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[8]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[7]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[7]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[7]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[7]_1 ));
-  LUT6 #(
-    .INIT(64'hD0DD0000D0DDD0DD)) 
-    \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[6]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I3(\INFERRED_GEN.icount_out_reg[6]_0 ),
-        .I4(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I5(loadReg_DBus_0[6]),
-        .O(\INFERRED_GEN.icount_out_reg[6]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[5]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[5]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[5]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[5]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[4]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_0[4]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(\INFERRED_GEN.icount_out_reg[4]_0 ),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\INFERRED_GEN.icount_out_reg[4]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[3]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[3]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[3]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[3]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[2]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_0[2]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(\INFERRED_GEN.icount_out_reg[2]_0 ),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\INFERRED_GEN.icount_out_reg[2]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[29]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[29]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[29]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[29]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[1]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[1]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[1]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[1]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[0]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[0]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[0]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[28]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[28]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[28]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[28]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[27]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(counterReg_DBus_32[27]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I4(loadReg_DBus_0[27]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .O(\INFERRED_GEN.icount_out_reg[27]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(loadReg_DBus_0[26]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I2(\INFERRED_GEN.icount_out_reg[26]_0 ),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I4(counterReg_DBus_32[26]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\LOAD_REG_GEN[5].LOAD_REG_I ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[25]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[25]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[25]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[25]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[24]_0 ),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(loadReg_DBus_0[24]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(counterReg_DBus_32[24]),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .O(\INFERRED_GEN.icount_out_reg[24]_1 ));
-  LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[23]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_0[23]),
-        .I3(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I4(\INFERRED_GEN.icount_out_reg[23]_0 ),
-        .I5(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\INFERRED_GEN.icount_out_reg[23]_1 ));
-  LUT6 #(
-    .INIT(64'hD0DD0000D0DDD0DD)) 
-    \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(counterReg_DBus_32[22]),
-        .I1(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .I2(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .I3(\INFERRED_GEN.icount_out_reg[22]_0 ),
-        .I4(\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .I5(loadReg_DBus_0[22]),
-        .O(\INFERRED_GEN.icount_out_reg[22]_1 ));
   LUT1 #(
     .INIT(2'h1)) 
     GenerateOut0_i_1
@@ -4957,8 +3487,8 @@ module Task_2_design_axi_timer_0_0_counter_f
   CARRY4 \INFERRED_GEN.icount_out0_carry 
        (.CI(1'b0),
         .CO({\INFERRED_GEN.icount_out0_carry_n_0 ,\INFERRED_GEN.icount_out0_carry_n_1 ,\INFERRED_GEN.icount_out0_carry_n_2 ,\INFERRED_GEN.icount_out0_carry_n_3 }),
-        .CYINIT(\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .DI({\INFERRED_GEN.icount_out_reg[3]_0 ,\INFERRED_GEN.icount_out_reg[2]_0 ,\INFERRED_GEN.icount_out_reg[1]_0 ,\INFERRED_GEN.icount_out0_carry_i_1_n_0 }),
+        .CYINIT(counterReg_DBus_32[0]),
+        .DI({counterReg_DBus_32[3:1],\INFERRED_GEN.icount_out0_carry_i_1_n_0 }),
         .O({\INFERRED_GEN.icount_out0_carry_n_4 ,\INFERRED_GEN.icount_out0_carry_n_5 ,\INFERRED_GEN.icount_out0_carry_n_6 ,\INFERRED_GEN.icount_out0_carry_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry_i_4_n_0 ,S}));
   (* ADDER_THRESHOLD = "35" *) 
@@ -4967,32 +3497,32 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry_n_0 ),
         .CO({\INFERRED_GEN.icount_out0_carry__0_n_0 ,\INFERRED_GEN.icount_out0_carry__0_n_1 ,\INFERRED_GEN.icount_out0_carry__0_n_2 ,\INFERRED_GEN.icount_out0_carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({\INFERRED_GEN.icount_out_reg[7]_0 ,\INFERRED_GEN.icount_out_reg[6]_0 ,\INFERRED_GEN.icount_out_reg[5]_0 ,\INFERRED_GEN.icount_out_reg[4]_0 }),
+        .DI(counterReg_DBus_32[7:4]),
         .O({\INFERRED_GEN.icount_out0_carry__0_n_4 ,\INFERRED_GEN.icount_out0_carry__0_n_5 ,\INFERRED_GEN.icount_out0_carry__0_n_6 ,\INFERRED_GEN.icount_out0_carry__0_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__0_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__0_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__0_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__0_i_4_n_0 }));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__0_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[7]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[8]_0 ),
+       (.I0(counterReg_DBus_32[7]),
+        .I1(counterReg_DBus_32[8]),
         .O(\INFERRED_GEN.icount_out0_carry__0_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__0_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[6]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[7]_0 ),
+       (.I0(counterReg_DBus_32[6]),
+        .I1(counterReg_DBus_32[7]),
         .O(\INFERRED_GEN.icount_out0_carry__0_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__0_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[5]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[6]_0 ),
+       (.I0(counterReg_DBus_32[5]),
+        .I1(counterReg_DBus_32[6]),
         .O(\INFERRED_GEN.icount_out0_carry__0_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__0_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[4]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[5]_0 ),
+       (.I0(counterReg_DBus_32[4]),
+        .I1(counterReg_DBus_32[5]),
         .O(\INFERRED_GEN.icount_out0_carry__0_i_4_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -5000,32 +3530,32 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry__0_n_0 ),
         .CO({\INFERRED_GEN.icount_out0_carry__1_n_0 ,\INFERRED_GEN.icount_out0_carry__1_n_1 ,\INFERRED_GEN.icount_out0_carry__1_n_2 ,\INFERRED_GEN.icount_out0_carry__1_n_3 }),
         .CYINIT(1'b0),
-        .DI({\INFERRED_GEN.icount_out_reg[11]_0 ,\INFERRED_GEN.icount_out_reg[10]_0 ,\INFERRED_GEN.icount_out_reg[9]_0 ,\INFERRED_GEN.icount_out_reg[8]_0 }),
+        .DI(counterReg_DBus_32[11:8]),
         .O({\INFERRED_GEN.icount_out0_carry__1_n_4 ,\INFERRED_GEN.icount_out0_carry__1_n_5 ,\INFERRED_GEN.icount_out0_carry__1_n_6 ,\INFERRED_GEN.icount_out0_carry__1_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__1_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__1_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__1_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__1_i_4_n_0 }));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__1_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[11]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[12]_0 ),
+       (.I0(counterReg_DBus_32[11]),
+        .I1(counterReg_DBus_32[12]),
         .O(\INFERRED_GEN.icount_out0_carry__1_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__1_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[10]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[11]_0 ),
+       (.I0(counterReg_DBus_32[10]),
+        .I1(counterReg_DBus_32[11]),
         .O(\INFERRED_GEN.icount_out0_carry__1_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__1_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[9]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[10]_0 ),
+       (.I0(counterReg_DBus_32[9]),
+        .I1(counterReg_DBus_32[10]),
         .O(\INFERRED_GEN.icount_out0_carry__1_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__1_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[8]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[9]_0 ),
+       (.I0(counterReg_DBus_32[8]),
+        .I1(counterReg_DBus_32[9]),
         .O(\INFERRED_GEN.icount_out0_carry__1_i_4_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -5033,32 +3563,32 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry__1_n_0 ),
         .CO({\INFERRED_GEN.icount_out0_carry__2_n_0 ,\INFERRED_GEN.icount_out0_carry__2_n_1 ,\INFERRED_GEN.icount_out0_carry__2_n_2 ,\INFERRED_GEN.icount_out0_carry__2_n_3 }),
         .CYINIT(1'b0),
-        .DI({\INFERRED_GEN.icount_out_reg[15]_0 ,\INFERRED_GEN.icount_out_reg[14]_0 ,\INFERRED_GEN.icount_out_reg[13]_0 ,\INFERRED_GEN.icount_out_reg[12]_0 }),
+        .DI(counterReg_DBus_32[15:12]),
         .O({\INFERRED_GEN.icount_out0_carry__2_n_4 ,\INFERRED_GEN.icount_out0_carry__2_n_5 ,\INFERRED_GEN.icount_out0_carry__2_n_6 ,\INFERRED_GEN.icount_out0_carry__2_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__2_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__2_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__2_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__2_i_4_n_0 }));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__2_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[15]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[16]_0 ),
+       (.I0(counterReg_DBus_32[15]),
+        .I1(counterReg_DBus_32[16]),
         .O(\INFERRED_GEN.icount_out0_carry__2_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__2_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[14]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[15]_0 ),
+       (.I0(counterReg_DBus_32[14]),
+        .I1(counterReg_DBus_32[15]),
         .O(\INFERRED_GEN.icount_out0_carry__2_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__2_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[13]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[14]_0 ),
+       (.I0(counterReg_DBus_32[13]),
+        .I1(counterReg_DBus_32[14]),
         .O(\INFERRED_GEN.icount_out0_carry__2_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__2_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[12]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[13]_0 ),
+       (.I0(counterReg_DBus_32[12]),
+        .I1(counterReg_DBus_32[13]),
         .O(\INFERRED_GEN.icount_out0_carry__2_i_4_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -5066,32 +3596,32 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry__2_n_0 ),
         .CO({\INFERRED_GEN.icount_out0_carry__3_n_0 ,\INFERRED_GEN.icount_out0_carry__3_n_1 ,\INFERRED_GEN.icount_out0_carry__3_n_2 ,\INFERRED_GEN.icount_out0_carry__3_n_3 }),
         .CYINIT(1'b0),
-        .DI({\INFERRED_GEN.icount_out_reg[19]_0 ,\INFERRED_GEN.icount_out_reg[18]_0 ,\INFERRED_GEN.icount_out_reg[17]_0 ,\INFERRED_GEN.icount_out_reg[16]_0 }),
+        .DI(counterReg_DBus_32[19:16]),
         .O({\INFERRED_GEN.icount_out0_carry__3_n_4 ,\INFERRED_GEN.icount_out0_carry__3_n_5 ,\INFERRED_GEN.icount_out0_carry__3_n_6 ,\INFERRED_GEN.icount_out0_carry__3_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__3_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__3_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__3_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__3_i_4_n_0 }));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__3_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[19]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[20]_0 ),
+       (.I0(counterReg_DBus_32[19]),
+        .I1(counterReg_DBus_32[20]),
         .O(\INFERRED_GEN.icount_out0_carry__3_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__3_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[18]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[19]_0 ),
+       (.I0(counterReg_DBus_32[18]),
+        .I1(counterReg_DBus_32[19]),
         .O(\INFERRED_GEN.icount_out0_carry__3_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__3_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[17]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[18]_0 ),
+       (.I0(counterReg_DBus_32[17]),
+        .I1(counterReg_DBus_32[18]),
         .O(\INFERRED_GEN.icount_out0_carry__3_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__3_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[16]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[17]_0 ),
+       (.I0(counterReg_DBus_32[16]),
+        .I1(counterReg_DBus_32[17]),
         .O(\INFERRED_GEN.icount_out0_carry__3_i_4_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -5099,32 +3629,32 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry__3_n_0 ),
         .CO({\INFERRED_GEN.icount_out0_carry__4_n_0 ,\INFERRED_GEN.icount_out0_carry__4_n_1 ,\INFERRED_GEN.icount_out0_carry__4_n_2 ,\INFERRED_GEN.icount_out0_carry__4_n_3 }),
         .CYINIT(1'b0),
-        .DI({\INFERRED_GEN.icount_out_reg[23]_0 ,\INFERRED_GEN.icount_out_reg[22]_0 ,\INFERRED_GEN.icount_out_reg[21]_0 ,\INFERRED_GEN.icount_out_reg[20]_0 }),
+        .DI(counterReg_DBus_32[23:20]),
         .O({\INFERRED_GEN.icount_out0_carry__4_n_4 ,\INFERRED_GEN.icount_out0_carry__4_n_5 ,\INFERRED_GEN.icount_out0_carry__4_n_6 ,\INFERRED_GEN.icount_out0_carry__4_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__4_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__4_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__4_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__4_i_4_n_0 }));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__4_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[23]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[24]_0 ),
+       (.I0(counterReg_DBus_32[23]),
+        .I1(counterReg_DBus_32[24]),
         .O(\INFERRED_GEN.icount_out0_carry__4_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__4_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[22]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[23]_0 ),
+       (.I0(counterReg_DBus_32[22]),
+        .I1(counterReg_DBus_32[23]),
         .O(\INFERRED_GEN.icount_out0_carry__4_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__4_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[21]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[22]_0 ),
+       (.I0(counterReg_DBus_32[21]),
+        .I1(counterReg_DBus_32[22]),
         .O(\INFERRED_GEN.icount_out0_carry__4_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__4_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[20]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[21]_0 ),
+       (.I0(counterReg_DBus_32[20]),
+        .I1(counterReg_DBus_32[21]),
         .O(\INFERRED_GEN.icount_out0_carry__4_i_4_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -5132,32 +3662,32 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry__4_n_0 ),
         .CO({\INFERRED_GEN.icount_out0_carry__5_n_0 ,\INFERRED_GEN.icount_out0_carry__5_n_1 ,\INFERRED_GEN.icount_out0_carry__5_n_2 ,\INFERRED_GEN.icount_out0_carry__5_n_3 }),
         .CYINIT(1'b0),
-        .DI({\INFERRED_GEN.icount_out_reg[27]_0 ,\INFERRED_GEN.icount_out_reg[26]_0 ,\INFERRED_GEN.icount_out_reg[25]_0 ,\INFERRED_GEN.icount_out_reg[24]_0 }),
+        .DI(counterReg_DBus_32[27:24]),
         .O({\INFERRED_GEN.icount_out0_carry__5_n_4 ,\INFERRED_GEN.icount_out0_carry__5_n_5 ,\INFERRED_GEN.icount_out0_carry__5_n_6 ,\INFERRED_GEN.icount_out0_carry__5_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__5_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__5_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__5_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__5_i_4_n_0 }));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__5_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[27]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[28]_0 ),
+       (.I0(counterReg_DBus_32[27]),
+        .I1(counterReg_DBus_32[28]),
         .O(\INFERRED_GEN.icount_out0_carry__5_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__5_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[26]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[27]_0 ),
+       (.I0(counterReg_DBus_32[26]),
+        .I1(counterReg_DBus_32[27]),
         .O(\INFERRED_GEN.icount_out0_carry__5_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__5_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[25]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[26]_0 ),
+       (.I0(counterReg_DBus_32[25]),
+        .I1(counterReg_DBus_32[26]),
         .O(\INFERRED_GEN.icount_out0_carry__5_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__5_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[24]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[25]_0 ),
+       (.I0(counterReg_DBus_32[24]),
+        .I1(counterReg_DBus_32[25]),
         .O(\INFERRED_GEN.icount_out0_carry__5_i_4_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
@@ -5165,469 +3695,469 @@ module Task_2_design_axi_timer_0_0_counter_f
        (.CI(\INFERRED_GEN.icount_out0_carry__5_n_0 ),
         .CO({\NLW_INFERRED_GEN.icount_out0_carry__6_CO_UNCONNECTED [3],\INFERRED_GEN.icount_out0_carry__6_n_1 ,\INFERRED_GEN.icount_out0_carry__6_n_2 ,\INFERRED_GEN.icount_out0_carry__6_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,\INFERRED_GEN.icount_out_reg[30]_0 ,\INFERRED_GEN.icount_out_reg[29]_0 ,\INFERRED_GEN.icount_out_reg[28]_0 }),
+        .DI({1'b0,counterReg_DBus_32[30:28]}),
         .O({\INFERRED_GEN.icount_out0_carry__6_n_4 ,\INFERRED_GEN.icount_out0_carry__6_n_5 ,\INFERRED_GEN.icount_out0_carry__6_n_6 ,\INFERRED_GEN.icount_out0_carry__6_n_7 }),
         .S({\INFERRED_GEN.icount_out0_carry__6_i_1_n_0 ,\INFERRED_GEN.icount_out0_carry__6_i_2_n_0 ,\INFERRED_GEN.icount_out0_carry__6_i_3_n_0 ,\INFERRED_GEN.icount_out0_carry__6_i_4_n_0 }));
   LUT1 #(
     .INIT(2'h1)) 
     \INFERRED_GEN.icount_out0_carry__6_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[31]_0 ),
+       (.I0(counterReg_DBus_32[31]),
         .O(\INFERRED_GEN.icount_out0_carry__6_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__6_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[30]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+       (.I0(counterReg_DBus_32[30]),
+        .I1(counterReg_DBus_32[31]),
         .O(\INFERRED_GEN.icount_out0_carry__6_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__6_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[29]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[30]_0 ),
+       (.I0(counterReg_DBus_32[29]),
+        .I1(counterReg_DBus_32[30]),
         .O(\INFERRED_GEN.icount_out0_carry__6_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry__6_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[28]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[29]_0 ),
+       (.I0(counterReg_DBus_32[28]),
+        .I1(counterReg_DBus_32[29]),
         .O(\INFERRED_GEN.icount_out0_carry__6_i_4_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \INFERRED_GEN.icount_out0_carry_i_1 
-       (.I0(\INFERRED_GEN.icount_out_reg[1]_0 ),
+       (.I0(counterReg_DBus_32[1]),
         .O(\INFERRED_GEN.icount_out0_carry_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry_i_2 
-       (.I0(\INFERRED_GEN.icount_out_reg[3]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[4]_0 ),
+       (.I0(counterReg_DBus_32[3]),
+        .I1(counterReg_DBus_32[4]),
         .O(\INFERRED_GEN.icount_out0_carry_i_2_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry_i_3 
-       (.I0(\INFERRED_GEN.icount_out_reg[2]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[3]_0 ),
+       (.I0(counterReg_DBus_32[2]),
+        .I1(counterReg_DBus_32[3]),
         .O(\INFERRED_GEN.icount_out0_carry_i_3_n_0 ));
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.icount_out0_carry_i_4 
-       (.I0(\INFERRED_GEN.icount_out_reg[1]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[2]_0 ),
+       (.I0(counterReg_DBus_32[1]),
+        .I1(counterReg_DBus_32[2]),
         .O(\INFERRED_GEN.icount_out0_carry_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
-    .INIT(8'h74)) 
-    \INFERRED_GEN.icount_out[0]_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[0]),
-        .O(\INFERRED_GEN.icount_out[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+    .INIT(8'h2E)) 
+    \INFERRED_GEN.icount_out[0]_i_1 
+       (.I0(loadReg_DBus_32[0]),
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(counterReg_DBus_32[0]),
+        .O(p_1_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[10]_i_1__0 
+    \INFERRED_GEN.icount_out[10]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__1_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[10]),
-        .O(\INFERRED_GEN.icount_out[10]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[10]),
+        .O(p_1_in[10]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[11]_i_1__0 
+    \INFERRED_GEN.icount_out[11]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__1_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[11]),
-        .O(\INFERRED_GEN.icount_out[11]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [0]),
+        .O(p_1_in[11]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[12]_i_1__0 
+    \INFERRED_GEN.icount_out[12]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__1_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[12]),
-        .O(\INFERRED_GEN.icount_out[12]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [1]),
+        .O(p_1_in[12]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[13]_i_1__0 
+    \INFERRED_GEN.icount_out[13]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__2_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[13]),
-        .O(\INFERRED_GEN.icount_out[13]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [2]),
+        .O(p_1_in[13]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[14]_i_1__0 
+    \INFERRED_GEN.icount_out[14]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__2_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[14]),
-        .O(\INFERRED_GEN.icount_out[14]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [3]),
+        .O(p_1_in[14]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[15]_i_1__0 
+    \INFERRED_GEN.icount_out[15]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__2_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[15]),
-        .O(\INFERRED_GEN.icount_out[15]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [4]),
+        .O(p_1_in[15]));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[16]_i_1__0 
+    \INFERRED_GEN.icount_out[16]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__2_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[16]),
-        .O(\INFERRED_GEN.icount_out[16]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [5]),
+        .O(p_1_in[16]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[17]_i_1__0 
+    \INFERRED_GEN.icount_out[17]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__3_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[17]),
-        .O(\INFERRED_GEN.icount_out[17]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [6]),
+        .O(p_1_in[17]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[18]_i_1__0 
+    \INFERRED_GEN.icount_out[18]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__3_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[18]),
-        .O(\INFERRED_GEN.icount_out[18]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [7]),
+        .O(p_1_in[18]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[19]_i_1__0 
+    \INFERRED_GEN.icount_out[19]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__3_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[19]),
-        .O(\INFERRED_GEN.icount_out[19]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [8]),
+        .O(p_1_in[19]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[1]_i_1__0 
+    \INFERRED_GEN.icount_out[1]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[1]),
-        .O(\INFERRED_GEN.icount_out[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[1]),
+        .O(p_1_in[1]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[20]_i_1__0 
+    \INFERRED_GEN.icount_out[20]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__3_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[20]),
-        .O(\INFERRED_GEN.icount_out[20]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [9]),
+        .O(p_1_in[20]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[21]_i_1__0 
+    \INFERRED_GEN.icount_out[21]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__4_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[21]),
-        .O(\INFERRED_GEN.icount_out[21]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [10]),
+        .O(p_1_in[21]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[22]_i_1__0 
+    \INFERRED_GEN.icount_out[22]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__4_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[22]),
-        .O(\INFERRED_GEN.icount_out[22]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [11]),
+        .O(p_1_in[22]));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[23]_i_1__0 
+    \INFERRED_GEN.icount_out[23]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__4_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[23]),
-        .O(\INFERRED_GEN.icount_out[23]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [12]),
+        .O(p_1_in[23]));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[24]_i_1__0 
+    \INFERRED_GEN.icount_out[24]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__4_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[24]),
-        .O(\INFERRED_GEN.icount_out[24]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [13]),
+        .O(p_1_in[24]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[25]_i_1__0 
+    \INFERRED_GEN.icount_out[25]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__5_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[25]),
-        .O(\INFERRED_GEN.icount_out[25]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [14]),
+        .O(p_1_in[25]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[26]_i_1__0 
+    \INFERRED_GEN.icount_out[26]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__5_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[26]),
-        .O(\INFERRED_GEN.icount_out[26]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [15]),
+        .O(p_1_in[26]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[27]_i_1__0 
+    \INFERRED_GEN.icount_out[27]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__5_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[27]),
-        .O(\INFERRED_GEN.icount_out[27]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [16]),
+        .O(p_1_in[27]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[28]_i_1__0 
+    \INFERRED_GEN.icount_out[28]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__5_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[28]),
-        .O(\INFERRED_GEN.icount_out[28]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [17]),
+        .O(p_1_in[28]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[29]_i_1__0 
+    \INFERRED_GEN.icount_out[29]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__6_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[29]),
-        .O(\INFERRED_GEN.icount_out[29]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [18]),
+        .O(p_1_in[29]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[2]_i_1__0 
+    \INFERRED_GEN.icount_out[2]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[2]),
-        .O(\INFERRED_GEN.icount_out[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[2]),
+        .O(p_1_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[30]_i_1__0 
+    \INFERRED_GEN.icount_out[30]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__6_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[30]),
-        .O(\INFERRED_GEN.icount_out[30]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [19]),
+        .O(p_1_in[30]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[31]_i_2__0 
+    \INFERRED_GEN.icount_out[31]_i_2 
        (.I0(\INFERRED_GEN.icount_out0_carry__6_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[31]),
-        .O(\INFERRED_GEN.icount_out[31]_i_2__0_n_0 ));
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[31]_1 [20]),
+        .O(p_1_in[31]));
   LUT5 #(
     .INIT(32'h8C800000)) 
     \INFERRED_GEN.icount_out[32]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__6_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[0]_2 ),
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .I3(counter_TC),
         .I4(s_axi_aresetn),
         .O(\INFERRED_GEN.icount_out[32]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[3]_i_1__0 
+    \INFERRED_GEN.icount_out[3]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[3]),
-        .O(\INFERRED_GEN.icount_out[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[3]),
+        .O(p_1_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[4]_i_1__0 
+    \INFERRED_GEN.icount_out[4]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[4]),
-        .O(\INFERRED_GEN.icount_out[4]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[4]),
+        .O(p_1_in[4]));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[5]_i_1__0 
+    \INFERRED_GEN.icount_out[5]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__0_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[5]),
-        .O(\INFERRED_GEN.icount_out[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[5]),
+        .O(p_1_in[5]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[6]_i_1__0 
+    \INFERRED_GEN.icount_out[6]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__0_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[6]),
-        .O(\INFERRED_GEN.icount_out[6]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[6]),
+        .O(p_1_in[6]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[7]_i_1__0 
+    \INFERRED_GEN.icount_out[7]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__0_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[7]),
-        .O(\INFERRED_GEN.icount_out[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[7]),
+        .O(p_1_in[7]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[8]_i_1__0 
+    \INFERRED_GEN.icount_out[8]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__0_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[8]),
-        .O(\INFERRED_GEN.icount_out[8]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[8]),
+        .O(p_1_in[8]));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[9]_i_1__0 
+    \INFERRED_GEN.icount_out[9]_i_1 
        (.I0(\INFERRED_GEN.icount_out0_carry__1_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_0[9]),
-        .O(\INFERRED_GEN.icount_out[9]_i_1__0_n_0 ));
+        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .I2(loadReg_DBus_32[9]),
+        .O(p_1_in[9]));
   FDRE \INFERRED_GEN.icount_out_reg[0] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[0]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[0]),
+        .Q(counterReg_DBus_32[0]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[10] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[10]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[10]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[10]),
+        .Q(counterReg_DBus_32[10]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[11] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[11]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[11]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[11]),
+        .Q(counterReg_DBus_32[11]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[12] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[12]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[12]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[12]),
+        .Q(counterReg_DBus_32[12]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[13] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[13]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[13]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[13]),
+        .Q(counterReg_DBus_32[13]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[14] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[14]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[14]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[14]),
+        .Q(counterReg_DBus_32[14]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[15] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[15]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[15]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[15]),
+        .Q(counterReg_DBus_32[15]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[16] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[16]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[16]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[16]),
+        .Q(counterReg_DBus_32[16]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[17] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[17]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[17]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[17]),
+        .Q(counterReg_DBus_32[17]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[18] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[18]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[18]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[18]),
+        .Q(counterReg_DBus_32[18]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[19] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[19]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[19]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[19]),
+        .Q(counterReg_DBus_32[19]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[1] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[1]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[1]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[1]),
+        .Q(counterReg_DBus_32[1]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[20] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[20]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[20]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[20]),
+        .Q(counterReg_DBus_32[20]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[21] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[21]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[21]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[21]),
+        .Q(counterReg_DBus_32[21]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[22] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[22]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[22]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[22]),
+        .Q(counterReg_DBus_32[22]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[23] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[23]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[23]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[23]),
+        .Q(counterReg_DBus_32[23]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[24] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[24]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[24]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[24]),
+        .Q(counterReg_DBus_32[24]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[25] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[25]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[25]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[25]),
+        .Q(counterReg_DBus_32[25]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[26] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[26]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[26]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[26]),
+        .Q(counterReg_DBus_32[26]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[27] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[27]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[27]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[27]),
+        .Q(counterReg_DBus_32[27]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[28] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[28]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[28]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[28]),
+        .Q(counterReg_DBus_32[28]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[29] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[29]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[29]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[29]),
+        .Q(counterReg_DBus_32[29]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[2] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[2]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[2]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[2]),
+        .Q(counterReg_DBus_32[2]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[30] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[30]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[30]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[30]),
+        .Q(counterReg_DBus_32[30]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[31] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[31]_i_2__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[31]_0 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
+        .D(p_1_in[31]),
+        .Q(counterReg_DBus_32[31]),
         .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[32] 
        (.C(s_axi_aclk),
@@ -5637,949 +4167,51 @@ module Task_2_design_axi_timer_0_0_counter_f
         .R(1'b0));
   FDRE \INFERRED_GEN.icount_out_reg[3] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[3]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[3]_0 ),
-        .R(s_axi_aresetn_0));
-  FDRE \INFERRED_GEN.icount_out_reg[4] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[4]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[4]_0 ),
-        .R(s_axi_aresetn_0));
-  FDRE \INFERRED_GEN.icount_out_reg[5] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[5]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[5]_0 ),
-        .R(s_axi_aresetn_0));
-  FDRE \INFERRED_GEN.icount_out_reg[6] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[6]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[6]_0 ),
-        .R(s_axi_aresetn_0));
-  FDRE \INFERRED_GEN.icount_out_reg[7] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[7]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[7]_0 ),
-        .R(s_axi_aresetn_0));
-  FDRE \INFERRED_GEN.icount_out_reg[8] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[8]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[8]_0 ),
-        .R(s_axi_aresetn_0));
-  FDRE \INFERRED_GEN.icount_out_reg[9] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_2 ),
-        .D(\INFERRED_GEN.icount_out[9]_i_1__0_n_0 ),
-        .Q(\INFERRED_GEN.icount_out_reg[9]_0 ),
-        .R(s_axi_aresetn_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    generateOutPre1_i_1
-       (.I0(counter_TC),
-        .I1(Q),
-        .O(generateOutPre10));
-endmodule
-
-(* ORIG_REF_NAME = "counter_f" *) 
-module Task_2_design_axi_timer_0_0_counter_f_1
-   (\INFERRED_GEN.icount_out_reg[31]_0 ,
-    DI,
-    \INFERRED_GEN.icount_out_reg[27]_0 ,
-    \INFERRED_GEN.icount_out_reg[23]_0 ,
-    \INFERRED_GEN.icount_out_reg[19]_0 ,
-    \INFERRED_GEN.icount_out_reg[15]_0 ,
-    \INFERRED_GEN.icount_out_reg[11]_0 ,
-    \INFERRED_GEN.icount_out_reg[7]_0 ,
-    \INFERRED_GEN.icount_out_reg[3]_0 ,
-    \INFERRED_GEN.icount_out_reg[0]_0 ,
-    counter_TC,
-    generateOutPre00,
-    \INFERRED_GEN.icount_out_reg[31]_1 ,
-    \INFERRED_GEN.icount_out_reg[0]_1 ,
-    s_axi_aclk,
-    S,
-    \INFERRED_GEN.icount_out_reg[31]_2 ,
-    s_axi_aresetn,
-    Q,
-    loadReg_DBus_32,
-    \INFERRED_GEN.icount_out_reg[31]_3 );
-  output \INFERRED_GEN.icount_out_reg[31]_0 ;
-  output [2:0]DI;
-  output [3:0]\INFERRED_GEN.icount_out_reg[27]_0 ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[23]_0 ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[19]_0 ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[15]_0 ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[11]_0 ;
-  output [3:0]\INFERRED_GEN.icount_out_reg[7]_0 ;
-  output [2:0]\INFERRED_GEN.icount_out_reg[3]_0 ;
-  output \INFERRED_GEN.icount_out_reg[0]_0 ;
-  output [0:0]counter_TC;
-  output generateOutPre00;
-  input \INFERRED_GEN.icount_out_reg[31]_1 ;
-  input \INFERRED_GEN.icount_out_reg[0]_1 ;
-  input s_axi_aclk;
-  input [0:0]S;
-  input \INFERRED_GEN.icount_out_reg[31]_2 ;
-  input s_axi_aresetn;
-  input [0:0]Q;
-  input [10:0]loadReg_DBus_32;
-  input [20:0]\INFERRED_GEN.icount_out_reg[31]_3 ;
-
-  wire [2:0]DI;
-  wire \INFERRED_GEN.icount_out0_carry__0_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__0_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__1_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__2_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__3_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__4_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__5_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry__6_n_7 ;
-  wire \INFERRED_GEN.icount_out0_carry_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry_i_2__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry_i_3__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_1 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_2 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_3 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_4 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_5 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_6 ;
-  wire \INFERRED_GEN.icount_out0_carry_n_7 ;
-  wire \INFERRED_GEN.icount_out[32]_i_1__0_n_0 ;
-  wire \INFERRED_GEN.icount_out_reg[0]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[0]_1 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[11]_0 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[15]_0 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[19]_0 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[23]_0 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[27]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_0 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_1 ;
-  wire \INFERRED_GEN.icount_out_reg[31]_2 ;
-  wire [20:0]\INFERRED_GEN.icount_out_reg[31]_3 ;
-  wire [2:0]\INFERRED_GEN.icount_out_reg[3]_0 ;
-  wire [3:0]\INFERRED_GEN.icount_out_reg[7]_0 ;
-  wire [0:0]Q;
-  wire [0:0]S;
-  wire [0:0]counter_TC;
-  wire generateOutPre00;
-  wire [10:0]loadReg_DBus_32;
-  wire [31:0]p_1_in;
-  wire s_axi_aclk;
-  wire s_axi_aresetn;
-  wire [3:3]\NLW_INFERRED_GEN.icount_out0_carry__6_CO_UNCONNECTED ;
-
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry 
-       (.CI(1'b0),
-        .CO({\INFERRED_GEN.icount_out0_carry_n_0 ,\INFERRED_GEN.icount_out0_carry_n_1 ,\INFERRED_GEN.icount_out0_carry_n_2 ,\INFERRED_GEN.icount_out0_carry_n_3 }),
-        .CYINIT(\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .DI({\INFERRED_GEN.icount_out_reg[3]_0 ,\INFERRED_GEN.icount_out0_carry_i_1__0_n_0 }),
-        .O({\INFERRED_GEN.icount_out0_carry_n_4 ,\INFERRED_GEN.icount_out0_carry_n_5 ,\INFERRED_GEN.icount_out0_carry_n_6 ,\INFERRED_GEN.icount_out0_carry_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry_i_4__0_n_0 ,S}));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__0 
-       (.CI(\INFERRED_GEN.icount_out0_carry_n_0 ),
-        .CO({\INFERRED_GEN.icount_out0_carry__0_n_0 ,\INFERRED_GEN.icount_out0_carry__0_n_1 ,\INFERRED_GEN.icount_out0_carry__0_n_2 ,\INFERRED_GEN.icount_out0_carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI(\INFERRED_GEN.icount_out_reg[7]_0 ),
-        .O({\INFERRED_GEN.icount_out0_carry__0_n_4 ,\INFERRED_GEN.icount_out0_carry__0_n_5 ,\INFERRED_GEN.icount_out0_carry__0_n_6 ,\INFERRED_GEN.icount_out0_carry__0_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__0_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__0_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__0_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__0_i_4__0_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__0_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[7]_0 [3]),
-        .I1(\INFERRED_GEN.icount_out_reg[11]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry__0_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__0_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[7]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[7]_0 [3]),
-        .O(\INFERRED_GEN.icount_out0_carry__0_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__0_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[7]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[7]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry__0_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__0_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[7]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[7]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry__0_i_4__0_n_0 ));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__1 
-       (.CI(\INFERRED_GEN.icount_out0_carry__0_n_0 ),
-        .CO({\INFERRED_GEN.icount_out0_carry__1_n_0 ,\INFERRED_GEN.icount_out0_carry__1_n_1 ,\INFERRED_GEN.icount_out0_carry__1_n_2 ,\INFERRED_GEN.icount_out0_carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(\INFERRED_GEN.icount_out_reg[11]_0 ),
-        .O({\INFERRED_GEN.icount_out0_carry__1_n_4 ,\INFERRED_GEN.icount_out0_carry__1_n_5 ,\INFERRED_GEN.icount_out0_carry__1_n_6 ,\INFERRED_GEN.icount_out0_carry__1_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__1_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__1_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__1_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__1_i_4__0_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__1_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[11]_0 [3]),
-        .I1(\INFERRED_GEN.icount_out_reg[15]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry__1_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__1_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[11]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[11]_0 [3]),
-        .O(\INFERRED_GEN.icount_out0_carry__1_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__1_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[11]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[11]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry__1_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__1_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[11]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[11]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry__1_i_4__0_n_0 ));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__2 
-       (.CI(\INFERRED_GEN.icount_out0_carry__1_n_0 ),
-        .CO({\INFERRED_GEN.icount_out0_carry__2_n_0 ,\INFERRED_GEN.icount_out0_carry__2_n_1 ,\INFERRED_GEN.icount_out0_carry__2_n_2 ,\INFERRED_GEN.icount_out0_carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI(\INFERRED_GEN.icount_out_reg[15]_0 ),
-        .O({\INFERRED_GEN.icount_out0_carry__2_n_4 ,\INFERRED_GEN.icount_out0_carry__2_n_5 ,\INFERRED_GEN.icount_out0_carry__2_n_6 ,\INFERRED_GEN.icount_out0_carry__2_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__2_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__2_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__2_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__2_i_4__0_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__2_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[15]_0 [3]),
-        .I1(\INFERRED_GEN.icount_out_reg[19]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry__2_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__2_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[15]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[15]_0 [3]),
-        .O(\INFERRED_GEN.icount_out0_carry__2_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__2_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[15]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[15]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry__2_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__2_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[15]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[15]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry__2_i_4__0_n_0 ));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__3 
-       (.CI(\INFERRED_GEN.icount_out0_carry__2_n_0 ),
-        .CO({\INFERRED_GEN.icount_out0_carry__3_n_0 ,\INFERRED_GEN.icount_out0_carry__3_n_1 ,\INFERRED_GEN.icount_out0_carry__3_n_2 ,\INFERRED_GEN.icount_out0_carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI(\INFERRED_GEN.icount_out_reg[19]_0 ),
-        .O({\INFERRED_GEN.icount_out0_carry__3_n_4 ,\INFERRED_GEN.icount_out0_carry__3_n_5 ,\INFERRED_GEN.icount_out0_carry__3_n_6 ,\INFERRED_GEN.icount_out0_carry__3_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__3_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__3_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__3_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__3_i_4__0_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__3_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[19]_0 [3]),
-        .I1(\INFERRED_GEN.icount_out_reg[23]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry__3_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__3_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[19]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[19]_0 [3]),
-        .O(\INFERRED_GEN.icount_out0_carry__3_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__3_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[19]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[19]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry__3_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__3_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[19]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[19]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry__3_i_4__0_n_0 ));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__4 
-       (.CI(\INFERRED_GEN.icount_out0_carry__3_n_0 ),
-        .CO({\INFERRED_GEN.icount_out0_carry__4_n_0 ,\INFERRED_GEN.icount_out0_carry__4_n_1 ,\INFERRED_GEN.icount_out0_carry__4_n_2 ,\INFERRED_GEN.icount_out0_carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI(\INFERRED_GEN.icount_out_reg[23]_0 ),
-        .O({\INFERRED_GEN.icount_out0_carry__4_n_4 ,\INFERRED_GEN.icount_out0_carry__4_n_5 ,\INFERRED_GEN.icount_out0_carry__4_n_6 ,\INFERRED_GEN.icount_out0_carry__4_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__4_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__4_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__4_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__4_i_4__0_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__4_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[23]_0 [3]),
-        .I1(\INFERRED_GEN.icount_out_reg[27]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry__4_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__4_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[23]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[23]_0 [3]),
-        .O(\INFERRED_GEN.icount_out0_carry__4_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__4_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[23]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[23]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry__4_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__4_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[23]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[23]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry__4_i_4__0_n_0 ));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__5 
-       (.CI(\INFERRED_GEN.icount_out0_carry__4_n_0 ),
-        .CO({\INFERRED_GEN.icount_out0_carry__5_n_0 ,\INFERRED_GEN.icount_out0_carry__5_n_1 ,\INFERRED_GEN.icount_out0_carry__5_n_2 ,\INFERRED_GEN.icount_out0_carry__5_n_3 }),
-        .CYINIT(1'b0),
-        .DI(\INFERRED_GEN.icount_out_reg[27]_0 ),
-        .O({\INFERRED_GEN.icount_out0_carry__5_n_4 ,\INFERRED_GEN.icount_out0_carry__5_n_5 ,\INFERRED_GEN.icount_out0_carry__5_n_6 ,\INFERRED_GEN.icount_out0_carry__5_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__5_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__5_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__5_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__5_i_4__0_n_0 }));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__5_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[27]_0 [3]),
-        .I1(DI[0]),
-        .O(\INFERRED_GEN.icount_out0_carry__5_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__5_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[27]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[27]_0 [3]),
-        .O(\INFERRED_GEN.icount_out0_carry__5_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__5_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[27]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[27]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry__5_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__5_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[27]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[27]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry__5_i_4__0_n_0 ));
-  (* ADDER_THRESHOLD = "35" *) 
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
-  CARRY4 \INFERRED_GEN.icount_out0_carry__6 
-       (.CI(\INFERRED_GEN.icount_out0_carry__5_n_0 ),
-        .CO({\NLW_INFERRED_GEN.icount_out0_carry__6_CO_UNCONNECTED [3],\INFERRED_GEN.icount_out0_carry__6_n_1 ,\INFERRED_GEN.icount_out0_carry__6_n_2 ,\INFERRED_GEN.icount_out0_carry__6_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,DI}),
-        .O({\INFERRED_GEN.icount_out0_carry__6_n_4 ,\INFERRED_GEN.icount_out0_carry__6_n_5 ,\INFERRED_GEN.icount_out0_carry__6_n_6 ,\INFERRED_GEN.icount_out0_carry__6_n_7 }),
-        .S({\INFERRED_GEN.icount_out0_carry__6_i_1__0_n_0 ,\INFERRED_GEN.icount_out0_carry__6_i_2__0_n_0 ,\INFERRED_GEN.icount_out0_carry__6_i_3__0_n_0 ,\INFERRED_GEN.icount_out0_carry__6_i_4__0_n_0 }));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \INFERRED_GEN.icount_out0_carry__6_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[31]_0 ),
-        .O(\INFERRED_GEN.icount_out0_carry__6_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__6_i_2__0 
-       (.I0(DI[2]),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_0 ),
-        .O(\INFERRED_GEN.icount_out0_carry__6_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__6_i_3__0 
-       (.I0(DI[1]),
-        .I1(DI[2]),
-        .O(\INFERRED_GEN.icount_out0_carry__6_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry__6_i_4__0 
-       (.I0(DI[0]),
-        .I1(DI[1]),
-        .O(\INFERRED_GEN.icount_out0_carry__6_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \INFERRED_GEN.icount_out0_carry_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[3]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry_i_1__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry_i_2__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[3]_0 [2]),
-        .I1(\INFERRED_GEN.icount_out_reg[7]_0 [0]),
-        .O(\INFERRED_GEN.icount_out0_carry_i_2__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry_i_3__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[3]_0 [1]),
-        .I1(\INFERRED_GEN.icount_out_reg[3]_0 [2]),
-        .O(\INFERRED_GEN.icount_out0_carry_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h9)) 
-    \INFERRED_GEN.icount_out0_carry_i_4__0 
-       (.I0(\INFERRED_GEN.icount_out_reg[3]_0 [0]),
-        .I1(\INFERRED_GEN.icount_out_reg[3]_0 [1]),
-        .O(\INFERRED_GEN.icount_out0_carry_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT3 #(
-    .INIT(8'h2E)) 
-    \INFERRED_GEN.icount_out[0]_i_1 
-       (.I0(loadReg_DBus_32[0]),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[10]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__1_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[10]),
-        .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[11]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__1_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [0]),
-        .O(p_1_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[12]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__1_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [1]),
-        .O(p_1_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[13]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__2_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [2]),
-        .O(p_1_in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[14]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__2_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [3]),
-        .O(p_1_in[14]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[15]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__2_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [4]),
-        .O(p_1_in[15]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[16]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__2_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [5]),
-        .O(p_1_in[16]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[17]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__3_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [6]),
-        .O(p_1_in[17]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[18]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__3_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [7]),
-        .O(p_1_in[18]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[19]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__3_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [8]),
-        .O(p_1_in[19]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[1]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[1]),
-        .O(p_1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[20]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__3_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [9]),
-        .O(p_1_in[20]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[21]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__4_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [10]),
-        .O(p_1_in[21]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[22]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__4_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [11]),
-        .O(p_1_in[22]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[23]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__4_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [12]),
-        .O(p_1_in[23]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[24]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__4_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [13]),
-        .O(p_1_in[24]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[25]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__5_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [14]),
-        .O(p_1_in[25]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[26]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__5_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [15]),
-        .O(p_1_in[26]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[27]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__5_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [16]),
-        .O(p_1_in[27]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[28]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__5_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [17]),
-        .O(p_1_in[28]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[29]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__6_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [18]),
-        .O(p_1_in[29]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[2]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[2]),
-        .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[30]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__6_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [19]),
-        .O(p_1_in[30]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[31]_i_2 
-       (.I0(\INFERRED_GEN.icount_out0_carry__6_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[31]_3 [20]),
-        .O(p_1_in[31]));
-  LUT5 #(
-    .INIT(32'h8C800000)) 
-    \INFERRED_GEN.icount_out[32]_i_1__0 
-       (.I0(\INFERRED_GEN.icount_out0_carry__6_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .I3(counter_TC),
-        .I4(s_axi_aresetn),
-        .O(\INFERRED_GEN.icount_out[32]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[3]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[3]),
-        .O(p_1_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[4]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[4]),
-        .O(p_1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[5]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__0_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[5]),
-        .O(p_1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[6]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__0_n_6 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[6]),
-        .O(p_1_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[7]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__0_n_5 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[7]),
-        .O(p_1_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[8]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__0_n_4 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[8]),
-        .O(p_1_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \INFERRED_GEN.icount_out[9]_i_1 
-       (.I0(\INFERRED_GEN.icount_out0_carry__1_n_7 ),
-        .I1(\INFERRED_GEN.icount_out_reg[31]_2 ),
-        .I2(loadReg_DBus_32[9]),
-        .O(p_1_in[9]));
-  FDRE \INFERRED_GEN.icount_out_reg[0] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[0]),
-        .Q(\INFERRED_GEN.icount_out_reg[0]_0 ),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[10] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[10]),
-        .Q(\INFERRED_GEN.icount_out_reg[11]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[11] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[11]),
-        .Q(\INFERRED_GEN.icount_out_reg[11]_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[12] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[12]),
-        .Q(\INFERRED_GEN.icount_out_reg[15]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[13] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[13]),
-        .Q(\INFERRED_GEN.icount_out_reg[15]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[14] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[14]),
-        .Q(\INFERRED_GEN.icount_out_reg[15]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[15] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[15]),
-        .Q(\INFERRED_GEN.icount_out_reg[15]_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[16] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[16]),
-        .Q(\INFERRED_GEN.icount_out_reg[19]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[17] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[17]),
-        .Q(\INFERRED_GEN.icount_out_reg[19]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[18] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[18]),
-        .Q(\INFERRED_GEN.icount_out_reg[19]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[19] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[19]),
-        .Q(\INFERRED_GEN.icount_out_reg[19]_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[1] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[1]),
-        .Q(\INFERRED_GEN.icount_out_reg[3]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[20] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[20]),
-        .Q(\INFERRED_GEN.icount_out_reg[23]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[21] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[21]),
-        .Q(\INFERRED_GEN.icount_out_reg[23]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[22] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[22]),
-        .Q(\INFERRED_GEN.icount_out_reg[23]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[23] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[23]),
-        .Q(\INFERRED_GEN.icount_out_reg[23]_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[24] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[24]),
-        .Q(\INFERRED_GEN.icount_out_reg[27]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[25] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[25]),
-        .Q(\INFERRED_GEN.icount_out_reg[27]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[26] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[26]),
-        .Q(\INFERRED_GEN.icount_out_reg[27]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[27] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[27]),
-        .Q(\INFERRED_GEN.icount_out_reg[27]_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[28] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[28]),
-        .Q(DI[0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[29] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[29]),
-        .Q(DI[1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[2] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[2]),
-        .Q(\INFERRED_GEN.icount_out_reg[3]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[30] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[30]),
-        .Q(DI[2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[31] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
-        .D(p_1_in[31]),
-        .Q(\INFERRED_GEN.icount_out_reg[31]_0 ),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
-  FDRE \INFERRED_GEN.icount_out_reg[32] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(\INFERRED_GEN.icount_out[32]_i_1__0_n_0 ),
-        .Q(counter_TC),
-        .R(1'b0));
-  FDRE \INFERRED_GEN.icount_out_reg[3] 
-       (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[3]),
-        .Q(\INFERRED_GEN.icount_out_reg[3]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[3]),
+        .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[4] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[4]),
-        .Q(\INFERRED_GEN.icount_out_reg[7]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[4]),
+        .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[5] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[5]),
-        .Q(\INFERRED_GEN.icount_out_reg[7]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[5]),
+        .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[6] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[6]),
-        .Q(\INFERRED_GEN.icount_out_reg[7]_0 [2]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[6]),
+        .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[7] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[7]),
-        .Q(\INFERRED_GEN.icount_out_reg[7]_0 [3]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[7]),
+        .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[8] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[8]),
-        .Q(\INFERRED_GEN.icount_out_reg[11]_0 [0]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[8]),
+        .R(s_axi_aresetn_0));
   FDRE \INFERRED_GEN.icount_out_reg[9] 
        (.C(s_axi_aclk),
-        .CE(\INFERRED_GEN.icount_out_reg[0]_1 ),
+        .CE(\INFERRED_GEN.icount_out_reg[0]_0 ),
         .D(p_1_in[9]),
-        .Q(\INFERRED_GEN.icount_out_reg[11]_0 [1]),
-        .R(\INFERRED_GEN.icount_out_reg[31]_1 ));
+        .Q(counterReg_DBus_32[9]),
+        .R(s_axi_aresetn_0));
   LUT2 #(
     .INIT(4'h2)) 
     generateOutPre0_i_1
        (.I0(counter_TC),
-        .I1(Q),
+        .I1(p_0_in),
         .O(generateOutPre00));
 endmodule
 
@@ -7380,17 +5012,10 @@ endmodule
 
 (* ORIG_REF_NAME = "slave_attachment" *) 
 module Task_2_design_axi_timer_0_0_slave_attachment
-   (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
-    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
+   (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
     Bus_RNW_reg_reg,
     s_axi_rvalid_i_reg_0,
     s_axi_bvalid_i_reg_0,
-    is_write_reg_0,
-    is_read_reg_0,
-    pair0_Select,
-    s_axi_wdata_7_sp_1,
-    bus2ip_wrce,
-    \s_axi_wdata[7]_0 ,
     s_axi_wdata_0_sp_1,
     s_axi_wdata_1_sp_1,
     s_axi_wdata_2_sp_1,
@@ -7398,7 +5023,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     s_axi_wdata_4_sp_1,
     s_axi_wdata_5_sp_1,
     s_axi_wdata_6_sp_1,
-    \s_axi_wdata[7]_1 ,
+    s_axi_wdata_7_sp_1,
     s_axi_wdata_8_sp_1,
     s_axi_wdata_9_sp_1,
     s_axi_wdata_10_sp_1,
@@ -7423,39 +5048,12 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     s_axi_wdata_29_sp_1,
     s_axi_wdata_30_sp_1,
     D_0,
-    \s_axi_wdata[0]_0 ,
-    \s_axi_wdata[1]_0 ,
-    \s_axi_wdata[2]_0 ,
-    \s_axi_wdata[3]_0 ,
-    \s_axi_wdata[4]_0 ,
-    \s_axi_wdata[5]_0 ,
-    \s_axi_wdata[6]_0 ,
-    \s_axi_wdata[7]_2 ,
-    \s_axi_wdata[8]_0 ,
-    \s_axi_wdata[9]_0 ,
-    \s_axi_wdata[10]_0 ,
-    \s_axi_wdata[11]_0 ,
-    \s_axi_wdata[12]_0 ,
-    \s_axi_wdata[13]_0 ,
-    \s_axi_wdata[14]_0 ,
-    \s_axi_wdata[15]_0 ,
-    \s_axi_wdata[16]_0 ,
-    \s_axi_wdata[17]_0 ,
-    \s_axi_wdata[18]_0 ,
-    \s_axi_wdata[19]_0 ,
-    \s_axi_wdata[20]_0 ,
-    \s_axi_wdata[21]_0 ,
-    \s_axi_wdata[22]_0 ,
-    \s_axi_wdata[23]_0 ,
-    \s_axi_wdata[24]_0 ,
-    \s_axi_wdata[25]_0 ,
-    \s_axi_wdata[26]_0 ,
-    \s_axi_wdata[27]_0 ,
-    \s_axi_wdata[28]_0 ,
-    \s_axi_wdata[29]_0 ,
-    \s_axi_wdata[30]_0 ,
-    D_1,
-    Bus_RNW_reg_reg_0,
+    is_write_reg_0,
+    is_read_reg_0,
+    pair0_Select,
+    \s_axi_wdata[7]_0 ,
+    bus2ip_wrce,
+    \s_axi_wdata[7]_1 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 ,
@@ -7477,46 +5075,66 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ,
     \TCSR0_GENERATE[20].TCSR0_FF_I ,
+    Bus_RNW_reg_reg_0,
+    \INFERRED_GEN.icount_out_reg[31] ,
+    \INFERRED_GEN.icount_out_reg[30] ,
+    \INFERRED_GEN.icount_out_reg[29] ,
+    \INFERRED_GEN.icount_out_reg[28] ,
+    \INFERRED_GEN.icount_out_reg[27] ,
+    \INFERRED_GEN.icount_out_reg[26] ,
+    \INFERRED_GEN.icount_out_reg[25] ,
+    \INFERRED_GEN.icount_out_reg[24] ,
+    \INFERRED_GEN.icount_out_reg[23] ,
+    \INFERRED_GEN.icount_out_reg[22] ,
+    \INFERRED_GEN.icount_out_reg[21] ,
+    \INFERRED_GEN.icount_out_reg[20] ,
+    \INFERRED_GEN.icount_out_reg[19] ,
+    \INFERRED_GEN.icount_out_reg[18] ,
+    \INFERRED_GEN.icount_out_reg[17] ,
+    \INFERRED_GEN.icount_out_reg[16] ,
+    \INFERRED_GEN.icount_out_reg[15] ,
+    \INFERRED_GEN.icount_out_reg[14] ,
+    \INFERRED_GEN.icount_out_reg[13] ,
+    \INFERRED_GEN.icount_out_reg[12] ,
+    \INFERRED_GEN.icount_out_reg[11] ,
+    \INFERRED_GEN.icount_out_reg[10] ,
+    \INFERRED_GEN.icount_out_reg[9] ,
+    \INFERRED_GEN.icount_out_reg[8] ,
+    \INFERRED_GEN.icount_out_reg[7] ,
+    \INFERRED_GEN.icount_out_reg[6] ,
+    \INFERRED_GEN.icount_out_reg[5] ,
+    \INFERRED_GEN.icount_out_reg[4] ,
+    \INFERRED_GEN.icount_out_reg[3] ,
+    \INFERRED_GEN.icount_out_reg[2] ,
+    \INFERRED_GEN.icount_out_reg[1] ,
+    \INFERRED_GEN.icount_out_reg[0] ,
     Bus_RNW_reg_reg_1,
     Bus_RNW_reg_reg_2,
-    Bus_RNW_reg_reg_3,
-    Bus_RNW_reg_reg_4,
-    Bus_RNW_reg_reg_5,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
     \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ,
     s_axi_rdata,
     bus2ip_reset,
     s_axi_aclk,
     s_axi_arvalid,
+    s_axi_wdata,
+    counterReg_DBus_32,
     s_axi_aresetn,
     s_axi_wvalid,
     s_axi_awvalid,
-    s_axi_wdata,
     tCSR0_Reg,
     tCSR1_Reg,
-    counterReg_DBus_32,
-    counterReg_DBus_0,
     loadReg_DBus_32,
     s_axi_bready,
     s_axi_rready,
     s_axi_araddr,
     s_axi_awaddr,
     read_done0,
-    read_done1,
     D);
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ;
   output Bus_RNW_reg_reg;
   output s_axi_rvalid_i_reg_0;
   output s_axi_bvalid_i_reg_0;
-  output is_write_reg_0;
-  output is_read_reg_0;
-  output pair0_Select;
-  output s_axi_wdata_7_sp_1;
-  output [1:0]bus2ip_wrce;
-  output \s_axi_wdata[7]_0 ;
   output s_axi_wdata_0_sp_1;
   output s_axi_wdata_1_sp_1;
   output s_axi_wdata_2_sp_1;
@@ -7524,7 +5142,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   output s_axi_wdata_4_sp_1;
   output s_axi_wdata_5_sp_1;
   output s_axi_wdata_6_sp_1;
-  output \s_axi_wdata[7]_1 ;
+  output s_axi_wdata_7_sp_1;
   output s_axi_wdata_8_sp_1;
   output s_axi_wdata_9_sp_1;
   output s_axi_wdata_10_sp_1;
@@ -7549,39 +5167,12 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   output s_axi_wdata_29_sp_1;
   output s_axi_wdata_30_sp_1;
   output D_0;
-  output \s_axi_wdata[0]_0 ;
-  output \s_axi_wdata[1]_0 ;
-  output \s_axi_wdata[2]_0 ;
-  output \s_axi_wdata[3]_0 ;
-  output \s_axi_wdata[4]_0 ;
-  output \s_axi_wdata[5]_0 ;
-  output \s_axi_wdata[6]_0 ;
-  output \s_axi_wdata[7]_2 ;
-  output \s_axi_wdata[8]_0 ;
-  output \s_axi_wdata[9]_0 ;
-  output \s_axi_wdata[10]_0 ;
-  output \s_axi_wdata[11]_0 ;
-  output \s_axi_wdata[12]_0 ;
-  output \s_axi_wdata[13]_0 ;
-  output \s_axi_wdata[14]_0 ;
-  output \s_axi_wdata[15]_0 ;
-  output \s_axi_wdata[16]_0 ;
-  output \s_axi_wdata[17]_0 ;
-  output \s_axi_wdata[18]_0 ;
-  output \s_axi_wdata[19]_0 ;
-  output \s_axi_wdata[20]_0 ;
-  output \s_axi_wdata[21]_0 ;
-  output \s_axi_wdata[22]_0 ;
-  output \s_axi_wdata[23]_0 ;
-  output \s_axi_wdata[24]_0 ;
-  output \s_axi_wdata[25]_0 ;
-  output \s_axi_wdata[26]_0 ;
-  output \s_axi_wdata[27]_0 ;
-  output \s_axi_wdata[28]_0 ;
-  output \s_axi_wdata[29]_0 ;
-  output \s_axi_wdata[30]_0 ;
-  output D_1;
-  output Bus_RNW_reg_reg_0;
+  output is_write_reg_0;
+  output is_read_reg_0;
+  output pair0_Select;
+  output \s_axi_wdata[7]_0 ;
+  output [1:0]bus2ip_wrce;
+  output \s_axi_wdata[7]_1 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_1 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_2 ;
@@ -7603,46 +5194,69 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_18 ;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_19 ;
   output \TCSR0_GENERATE[20].TCSR0_FF_I ;
+  output Bus_RNW_reg_reg_0;
+  output \INFERRED_GEN.icount_out_reg[31] ;
+  output \INFERRED_GEN.icount_out_reg[30] ;
+  output \INFERRED_GEN.icount_out_reg[29] ;
+  output \INFERRED_GEN.icount_out_reg[28] ;
+  output \INFERRED_GEN.icount_out_reg[27] ;
+  output \INFERRED_GEN.icount_out_reg[26] ;
+  output \INFERRED_GEN.icount_out_reg[25] ;
+  output \INFERRED_GEN.icount_out_reg[24] ;
+  output \INFERRED_GEN.icount_out_reg[23] ;
+  output \INFERRED_GEN.icount_out_reg[22] ;
+  output \INFERRED_GEN.icount_out_reg[21] ;
+  output \INFERRED_GEN.icount_out_reg[20] ;
+  output \INFERRED_GEN.icount_out_reg[19] ;
+  output \INFERRED_GEN.icount_out_reg[18] ;
+  output \INFERRED_GEN.icount_out_reg[17] ;
+  output \INFERRED_GEN.icount_out_reg[16] ;
+  output \INFERRED_GEN.icount_out_reg[15] ;
+  output \INFERRED_GEN.icount_out_reg[14] ;
+  output \INFERRED_GEN.icount_out_reg[13] ;
+  output \INFERRED_GEN.icount_out_reg[12] ;
+  output \INFERRED_GEN.icount_out_reg[11] ;
+  output \INFERRED_GEN.icount_out_reg[10] ;
+  output \INFERRED_GEN.icount_out_reg[9] ;
+  output \INFERRED_GEN.icount_out_reg[8] ;
+  output \INFERRED_GEN.icount_out_reg[7] ;
+  output \INFERRED_GEN.icount_out_reg[6] ;
+  output \INFERRED_GEN.icount_out_reg[5] ;
+  output \INFERRED_GEN.icount_out_reg[4] ;
+  output \INFERRED_GEN.icount_out_reg[3] ;
+  output \INFERRED_GEN.icount_out_reg[2] ;
+  output \INFERRED_GEN.icount_out_reg[1] ;
+  output \INFERRED_GEN.icount_out_reg[0] ;
   output Bus_RNW_reg_reg_1;
   output Bus_RNW_reg_reg_2;
-  output Bus_RNW_reg_reg_3;
-  output Bus_RNW_reg_reg_4;
-  output Bus_RNW_reg_reg_5;
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_20 ;
-  output \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
   output \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ;
   output \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
   output [31:0]s_axi_rdata;
   input bus2ip_reset;
   input s_axi_aclk;
   input s_axi_arvalid;
+  input [31:0]s_axi_wdata;
+  input [31:0]counterReg_DBus_32;
   input s_axi_aresetn;
   input s_axi_wvalid;
   input s_axi_awvalid;
-  input [31:0]s_axi_wdata;
   input [1:0]tCSR0_Reg;
   input [0:0]tCSR1_Reg;
-  input [31:0]counterReg_DBus_32;
-  input [31:0]counterReg_DBus_0;
   input [20:0]loadReg_DBus_32;
   input s_axi_bready;
   input s_axi_rready;
   input [2:0]s_axi_araddr;
   input [2:0]s_axi_awaddr;
   input read_done0;
-  input read_done1;
   input [31:0]D;
 
   wire Bus_RNW_reg_reg;
   wire Bus_RNW_reg_reg_0;
   wire Bus_RNW_reg_reg_1;
   wire Bus_RNW_reg_reg_2;
-  wire Bus_RNW_reg_reg_3;
-  wire Bus_RNW_reg_reg_4;
-  wire Bus_RNW_reg_reg_5;
   wire [31:0]D;
   wire D_0;
-  wire D_1;
   wire \FSM_onehot_state[0]_i_1_n_0 ;
   wire \FSM_onehot_state[3]_i_2_n_0 ;
   wire \FSM_onehot_state_reg_n_0_[0] ;
@@ -7671,17 +5285,47 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 ;
   wire \GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ;
   wire \INCLUDE_DPHASE_TIMER.dpto_cnt[5]_i_1_n_0 ;
   wire [5:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg ;
-  wire I_DECODER_n_106;
-  wire I_DECODER_n_107;
-  wire I_DECODER_n_5;
-  wire I_DECODER_n_6;
-  wire I_DECODER_n_7;
-  wire I_DECODER_n_8;
-  wire I_DECODER_n_9;
+  wire \INFERRED_GEN.icount_out_reg[0] ;
+  wire \INFERRED_GEN.icount_out_reg[10] ;
+  wire \INFERRED_GEN.icount_out_reg[11] ;
+  wire \INFERRED_GEN.icount_out_reg[12] ;
+  wire \INFERRED_GEN.icount_out_reg[13] ;
+  wire \INFERRED_GEN.icount_out_reg[14] ;
+  wire \INFERRED_GEN.icount_out_reg[15] ;
+  wire \INFERRED_GEN.icount_out_reg[16] ;
+  wire \INFERRED_GEN.icount_out_reg[17] ;
+  wire \INFERRED_GEN.icount_out_reg[18] ;
+  wire \INFERRED_GEN.icount_out_reg[19] ;
+  wire \INFERRED_GEN.icount_out_reg[1] ;
+  wire \INFERRED_GEN.icount_out_reg[20] ;
+  wire \INFERRED_GEN.icount_out_reg[21] ;
+  wire \INFERRED_GEN.icount_out_reg[22] ;
+  wire \INFERRED_GEN.icount_out_reg[23] ;
+  wire \INFERRED_GEN.icount_out_reg[24] ;
+  wire \INFERRED_GEN.icount_out_reg[25] ;
+  wire \INFERRED_GEN.icount_out_reg[26] ;
+  wire \INFERRED_GEN.icount_out_reg[27] ;
+  wire \INFERRED_GEN.icount_out_reg[28] ;
+  wire \INFERRED_GEN.icount_out_reg[29] ;
+  wire \INFERRED_GEN.icount_out_reg[2] ;
+  wire \INFERRED_GEN.icount_out_reg[30] ;
+  wire \INFERRED_GEN.icount_out_reg[31] ;
+  wire \INFERRED_GEN.icount_out_reg[3] ;
+  wire \INFERRED_GEN.icount_out_reg[4] ;
+  wire \INFERRED_GEN.icount_out_reg[5] ;
+  wire \INFERRED_GEN.icount_out_reg[6] ;
+  wire \INFERRED_GEN.icount_out_reg[7] ;
+  wire \INFERRED_GEN.icount_out_reg[8] ;
+  wire \INFERRED_GEN.icount_out_reg[9] ;
+  wire I_DECODER_n_102;
+  wire I_DECODER_n_103;
+  wire I_DECODER_n_36;
+  wire I_DECODER_n_37;
+  wire I_DECODER_n_38;
+  wire I_DECODER_n_39;
+  wire I_DECODER_n_40;
   wire \TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire [0:2]bus2ip_addr;
   wire \bus2ip_addr_i[2]_i_1_n_0 ;
@@ -7691,7 +5335,6 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   wire bus2ip_reset;
   wire bus2ip_rnw_i;
   wire [1:0]bus2ip_wrce;
-  wire [31:0]counterReg_DBus_0;
   wire [31:0]counterReg_DBus_32;
   wire is_read_i_1_n_0;
   wire is_read_reg_0;
@@ -7704,7 +5347,6 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   wire pair0_Select;
   wire [5:0]plusOp;
   wire read_done0;
-  wire read_done1;
   wire rst;
   wire s_axi_aclk;
   wire [2:0]s_axi_araddr;
@@ -7720,39 +5362,8 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   wire s_axi_rresp_i;
   wire s_axi_rvalid_i_reg_0;
   wire [31:0]s_axi_wdata;
-  wire \s_axi_wdata[0]_0 ;
-  wire \s_axi_wdata[10]_0 ;
-  wire \s_axi_wdata[11]_0 ;
-  wire \s_axi_wdata[12]_0 ;
-  wire \s_axi_wdata[13]_0 ;
-  wire \s_axi_wdata[14]_0 ;
-  wire \s_axi_wdata[15]_0 ;
-  wire \s_axi_wdata[16]_0 ;
-  wire \s_axi_wdata[17]_0 ;
-  wire \s_axi_wdata[18]_0 ;
-  wire \s_axi_wdata[19]_0 ;
-  wire \s_axi_wdata[1]_0 ;
-  wire \s_axi_wdata[20]_0 ;
-  wire \s_axi_wdata[21]_0 ;
-  wire \s_axi_wdata[22]_0 ;
-  wire \s_axi_wdata[23]_0 ;
-  wire \s_axi_wdata[24]_0 ;
-  wire \s_axi_wdata[25]_0 ;
-  wire \s_axi_wdata[26]_0 ;
-  wire \s_axi_wdata[27]_0 ;
-  wire \s_axi_wdata[28]_0 ;
-  wire \s_axi_wdata[29]_0 ;
-  wire \s_axi_wdata[2]_0 ;
-  wire \s_axi_wdata[30]_0 ;
-  wire \s_axi_wdata[3]_0 ;
-  wire \s_axi_wdata[4]_0 ;
-  wire \s_axi_wdata[5]_0 ;
-  wire \s_axi_wdata[6]_0 ;
   wire \s_axi_wdata[7]_0 ;
   wire \s_axi_wdata[7]_1 ;
-  wire \s_axi_wdata[7]_2 ;
-  wire \s_axi_wdata[8]_0 ;
-  wire \s_axi_wdata[9]_0 ;
   wire s_axi_wdata_0_sn_1;
   wire s_axi_wdata_10_sn_1;
   wire s_axi_wdata_11_sn_1;
@@ -7857,7 +5468,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     \FSM_onehot_state_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_9),
+        .D(I_DECODER_n_40),
         .Q(s_axi_rresp_i),
         .R(rst));
   (* FSM_ENCODED_STATES = "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001" *) 
@@ -7866,7 +5477,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     \FSM_onehot_state_reg[2] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_8),
+        .D(I_DECODER_n_39),
         .Q(s_axi_bresp_i),
         .R(rst));
   (* FSM_ENCODED_STATES = "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001" *) 
@@ -7875,7 +5486,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     \FSM_onehot_state_reg[3] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_7),
+        .D(I_DECODER_n_38),
         .Q(\FSM_onehot_state_reg_n_0_[3] ),
         .R(rst));
   LUT1 #(
@@ -7883,14 +5494,14 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [1]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -7898,7 +5509,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [1]),
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [0]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_1 
@@ -7907,7 +5518,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [2]),
         .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg [3]),
         .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[4]_i_1 
@@ -7974,13 +5585,9 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .Bus_RNW_reg_reg_1(Bus_RNW_reg_reg_0),
         .Bus_RNW_reg_reg_2(Bus_RNW_reg_reg_1),
         .Bus_RNW_reg_reg_3(Bus_RNW_reg_reg_2),
-        .Bus_RNW_reg_reg_4(Bus_RNW_reg_reg_3),
-        .Bus_RNW_reg_reg_5(Bus_RNW_reg_reg_4),
-        .Bus_RNW_reg_reg_6(Bus_RNW_reg_reg_5),
-        .D({I_DECODER_n_5,I_DECODER_n_6}),
+        .D({I_DECODER_n_36,I_DECODER_n_37}),
         .D_0(D_0),
-        .D_1(D_1),
-        .\FSM_onehot_state_reg[2] ({I_DECODER_n_7,I_DECODER_n_8,I_DECODER_n_9}),
+        .\FSM_onehot_state_reg[2] ({I_DECODER_n_38,I_DECODER_n_39,I_DECODER_n_40}),
         .\FSM_onehot_state_reg[3] ({\FSM_onehot_state_reg_n_0_[3] ,s_axi_bresp_i,s_axi_rresp_i,\FSM_onehot_state_reg_n_0_[0] }),
         .\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 (\GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ),
@@ -8006,21 +5613,49 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_7 ),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_9 (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_8 ),
         .\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4]_0 (\GEN_BKEND_CE_REGISTERS[4].ce_out_i_reg[4] ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_1 (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ),
         .\GEN_BKEND_CE_REGISTERS[7].ce_out_i_reg[7]_0 ({bus2ip_addr[0],bus2ip_addr[1],bus2ip_addr[2]}),
+        .\INFERRED_GEN.icount_out_reg[0] (\INFERRED_GEN.icount_out_reg[0] ),
+        .\INFERRED_GEN.icount_out_reg[10] (\INFERRED_GEN.icount_out_reg[10] ),
+        .\INFERRED_GEN.icount_out_reg[11] (\INFERRED_GEN.icount_out_reg[11] ),
+        .\INFERRED_GEN.icount_out_reg[12] (\INFERRED_GEN.icount_out_reg[12] ),
+        .\INFERRED_GEN.icount_out_reg[13] (\INFERRED_GEN.icount_out_reg[13] ),
+        .\INFERRED_GEN.icount_out_reg[14] (\INFERRED_GEN.icount_out_reg[14] ),
+        .\INFERRED_GEN.icount_out_reg[15] (\INFERRED_GEN.icount_out_reg[15] ),
+        .\INFERRED_GEN.icount_out_reg[16] (\INFERRED_GEN.icount_out_reg[16] ),
+        .\INFERRED_GEN.icount_out_reg[17] (\INFERRED_GEN.icount_out_reg[17] ),
+        .\INFERRED_GEN.icount_out_reg[18] (\INFERRED_GEN.icount_out_reg[18] ),
+        .\INFERRED_GEN.icount_out_reg[19] (\INFERRED_GEN.icount_out_reg[19] ),
+        .\INFERRED_GEN.icount_out_reg[1] (\INFERRED_GEN.icount_out_reg[1] ),
+        .\INFERRED_GEN.icount_out_reg[20] (\INFERRED_GEN.icount_out_reg[20] ),
+        .\INFERRED_GEN.icount_out_reg[21] (\INFERRED_GEN.icount_out_reg[21] ),
+        .\INFERRED_GEN.icount_out_reg[22] (\INFERRED_GEN.icount_out_reg[22] ),
+        .\INFERRED_GEN.icount_out_reg[23] (\INFERRED_GEN.icount_out_reg[23] ),
+        .\INFERRED_GEN.icount_out_reg[24] (\INFERRED_GEN.icount_out_reg[24] ),
+        .\INFERRED_GEN.icount_out_reg[25] (\INFERRED_GEN.icount_out_reg[25] ),
+        .\INFERRED_GEN.icount_out_reg[26] (\INFERRED_GEN.icount_out_reg[26] ),
+        .\INFERRED_GEN.icount_out_reg[27] (\INFERRED_GEN.icount_out_reg[27] ),
+        .\INFERRED_GEN.icount_out_reg[28] (\INFERRED_GEN.icount_out_reg[28] ),
+        .\INFERRED_GEN.icount_out_reg[29] (\INFERRED_GEN.icount_out_reg[29] ),
+        .\INFERRED_GEN.icount_out_reg[2] (\INFERRED_GEN.icount_out_reg[2] ),
+        .\INFERRED_GEN.icount_out_reg[30] (\INFERRED_GEN.icount_out_reg[30] ),
+        .\INFERRED_GEN.icount_out_reg[31] (\INFERRED_GEN.icount_out_reg[31] ),
+        .\INFERRED_GEN.icount_out_reg[3] (\INFERRED_GEN.icount_out_reg[3] ),
+        .\INFERRED_GEN.icount_out_reg[4] (\INFERRED_GEN.icount_out_reg[4] ),
+        .\INFERRED_GEN.icount_out_reg[5] (\INFERRED_GEN.icount_out_reg[5] ),
+        .\INFERRED_GEN.icount_out_reg[6] (\INFERRED_GEN.icount_out_reg[6] ),
+        .\INFERRED_GEN.icount_out_reg[7] (\INFERRED_GEN.icount_out_reg[7] ),
+        .\INFERRED_GEN.icount_out_reg[8] (\INFERRED_GEN.icount_out_reg[8] ),
+        .\INFERRED_GEN.icount_out_reg[9] (\INFERRED_GEN.icount_out_reg[9] ),
         .Q(start2),
         .\TCSR0_GENERATE[20].TCSR0_FF_I (\TCSR0_GENERATE[20].TCSR0_FF_I ),
         .bus2ip_rnw_i(bus2ip_rnw_i),
         .bus2ip_wrce(bus2ip_wrce),
-        .counterReg_DBus_0(counterReg_DBus_0),
         .counterReg_DBus_32(counterReg_DBus_32),
         .is_read_reg(is_read_reg_0),
         .is_write_reg(is_write_reg_0),
         .loadReg_DBus_32(loadReg_DBus_32),
         .pair0_Select(pair0_Select),
         .read_done0(read_done0),
-        .read_done1(read_done1),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_arready(is_read_reg_n_0),
@@ -8029,46 +5664,15 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .s_axi_awready(is_write_reg_n_0),
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_bready(s_axi_bready),
-        .s_axi_bready_0(I_DECODER_n_107),
+        .s_axi_bready_0(I_DECODER_n_103),
         .s_axi_bvalid_i_reg(s_axi_bvalid_i_reg_0),
         .s_axi_rready(s_axi_rready),
-        .s_axi_rready_0(I_DECODER_n_106),
+        .s_axi_rready_0(I_DECODER_n_102),
         .s_axi_rvalid_i_reg({\state_reg_n_0_[1] ,\state_reg_n_0_[0] }),
         .s_axi_rvalid_i_reg_0(s_axi_rvalid_i_reg_0),
         .s_axi_wdata(s_axi_wdata),
-        .\s_axi_wdata[0]_0 (\s_axi_wdata[0]_0 ),
-        .\s_axi_wdata[10]_0 (\s_axi_wdata[10]_0 ),
-        .\s_axi_wdata[11]_0 (\s_axi_wdata[11]_0 ),
-        .\s_axi_wdata[12]_0 (\s_axi_wdata[12]_0 ),
-        .\s_axi_wdata[13]_0 (\s_axi_wdata[13]_0 ),
-        .\s_axi_wdata[14]_0 (\s_axi_wdata[14]_0 ),
-        .\s_axi_wdata[15]_0 (\s_axi_wdata[15]_0 ),
-        .\s_axi_wdata[16]_0 (\s_axi_wdata[16]_0 ),
-        .\s_axi_wdata[17]_0 (\s_axi_wdata[17]_0 ),
-        .\s_axi_wdata[18]_0 (\s_axi_wdata[18]_0 ),
-        .\s_axi_wdata[19]_0 (\s_axi_wdata[19]_0 ),
-        .\s_axi_wdata[1]_0 (\s_axi_wdata[1]_0 ),
-        .\s_axi_wdata[20]_0 (\s_axi_wdata[20]_0 ),
-        .\s_axi_wdata[21]_0 (\s_axi_wdata[21]_0 ),
-        .\s_axi_wdata[22]_0 (\s_axi_wdata[22]_0 ),
-        .\s_axi_wdata[23]_0 (\s_axi_wdata[23]_0 ),
-        .\s_axi_wdata[24]_0 (\s_axi_wdata[24]_0 ),
-        .\s_axi_wdata[25]_0 (\s_axi_wdata[25]_0 ),
-        .\s_axi_wdata[26]_0 (\s_axi_wdata[26]_0 ),
-        .\s_axi_wdata[27]_0 (\s_axi_wdata[27]_0 ),
-        .\s_axi_wdata[28]_0 (\s_axi_wdata[28]_0 ),
-        .\s_axi_wdata[29]_0 (\s_axi_wdata[29]_0 ),
-        .\s_axi_wdata[2]_0 (\s_axi_wdata[2]_0 ),
-        .\s_axi_wdata[30]_0 (\s_axi_wdata[30]_0 ),
-        .\s_axi_wdata[3]_0 (\s_axi_wdata[3]_0 ),
-        .\s_axi_wdata[4]_0 (\s_axi_wdata[4]_0 ),
-        .\s_axi_wdata[5]_0 (\s_axi_wdata[5]_0 ),
-        .\s_axi_wdata[6]_0 (\s_axi_wdata[6]_0 ),
         .\s_axi_wdata[7]_0 (\s_axi_wdata[7]_0 ),
         .\s_axi_wdata[7]_1 (\s_axi_wdata[7]_1 ),
-        .\s_axi_wdata[7]_2 (\s_axi_wdata[7]_2 ),
-        .\s_axi_wdata[8]_0 (\s_axi_wdata[8]_0 ),
-        .\s_axi_wdata[9]_0 (\s_axi_wdata[9]_0 ),
         .s_axi_wdata_0_sp_1(s_axi_wdata_0_sn_1),
         .s_axi_wdata_10_sp_1(s_axi_wdata_10_sn_1),
         .s_axi_wdata_11_sp_1(s_axi_wdata_11_sn_1),
@@ -8112,7 +5716,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .I1(s_axi_arvalid),
         .I2(s_axi_awaddr[0]),
         .O(\bus2ip_addr_i[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[3]_i_1 
@@ -8129,7 +5733,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .I3(s_axi_wvalid),
         .I4(s_axi_awvalid),
         .O(\bus2ip_addr_i[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \bus2ip_addr_i[4]_i_2 
@@ -8213,7 +5817,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     s_axi_bvalid_i_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_107),
+        .D(I_DECODER_n_103),
         .Q(s_axi_bvalid_i_reg_0),
         .R(rst));
   FDRE #(
@@ -8477,10 +6081,10 @@ module Task_2_design_axi_timer_0_0_slave_attachment
     s_axi_rvalid_i_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_106),
+        .D(I_DECODER_n_102),
         .Q(s_axi_rvalid_i_reg_0),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h000F0008)) 
     start2_i_1
@@ -8496,7 +6100,7 @@ module Task_2_design_axi_timer_0_0_slave_attachment
         .D(start2_i_1_n_0),
         .Q(start2),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \state[1]_i_2 
@@ -8506,13 +6110,13 @@ module Task_2_design_axi_timer_0_0_slave_attachment
   FDRE \state_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_6),
+        .D(I_DECODER_n_37),
         .Q(\state_reg_n_0_[0] ),
         .R(rst));
   FDRE \state_reg[1] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(I_DECODER_n_5),
+        .D(I_DECODER_n_36),
         .Q(\state_reg_n_0_[1] ),
         .R(rst));
 endmodule
@@ -8522,7 +6126,6 @@ module Task_2_design_axi_timer_0_0_tc_core
    (D,
     \LOAD_REG_GEN[0].LOAD_REG_I ,
     bus2ip_reset,
-    counterReg_DBus_0,
     counterReg_DBus_32,
     generateout0,
     generateout1,
@@ -8530,29 +6133,60 @@ module Task_2_design_axi_timer_0_0_tc_core
     \TCSR0_GENERATE[20].TCSR0_FF_I ,
     \TCSR1_GENERATE[24].TCSR1_FF_I ,
     read_done0,
-    read_done1,
     pwm0,
     \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
+    \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
     D_0,
     s_axi_aclk,
     \LOAD_REG_GEN[1].LOAD_REG_I ,
@@ -8586,38 +6220,6 @@ module Task_2_design_axi_timer_0_0_tc_core
     \LOAD_REG_GEN[29].LOAD_REG_I ,
     \LOAD_REG_GEN[30].LOAD_REG_I ,
     \LOAD_REG_GEN[31].LOAD_REG_I ,
-    D_1,
-    \LOAD_REG_GEN[1].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[2].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[3].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[4].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[5].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[6].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[7].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[8].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[9].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[10].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[11].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[12].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[13].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[14].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[15].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[16].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[17].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[18].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[19].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[20].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[21].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[22].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[23].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[24].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[25].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[26].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[27].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[28].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[29].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[30].LOAD_REG_I_0 ,
-    \LOAD_REG_GEN[31].LOAD_REG_I_0 ,
     freeze,
     capturetrig0,
     capturetrig1,
@@ -8629,21 +6231,15 @@ module Task_2_design_axi_timer_0_0_tc_core
     \TCSR0_GENERATE[23].TCSR0_FF_I ,
     \TCSR1_GENERATE[23].TCSR1_FF_I ,
     READ_DONE0_I,
-    READ_DONE1_I,
     s_axi_aresetn,
     Bus_RNW_reg,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ,
-    \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ,
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ,
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 );
   output [31:0]D;
   output [20:0]\LOAD_REG_GEN[0].LOAD_REG_I ;
   output bus2ip_reset;
-  output [31:0]counterReg_DBus_0;
   output [31:0]counterReg_DBus_32;
   output generateout0;
   output generateout1;
@@ -8651,29 +6247,60 @@ module Task_2_design_axi_timer_0_0_tc_core
   output [1:0]\TCSR0_GENERATE[20].TCSR0_FF_I ;
   output [0:0]\TCSR1_GENERATE[24].TCSR1_FF_I ;
   output read_done0;
-  output read_done1;
   output pwm0;
   input \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   input D_0;
   input s_axi_aclk;
   input \LOAD_REG_GEN[1].LOAD_REG_I ;
@@ -8707,38 +6334,6 @@ module Task_2_design_axi_timer_0_0_tc_core
   input \LOAD_REG_GEN[29].LOAD_REG_I ;
   input \LOAD_REG_GEN[30].LOAD_REG_I ;
   input \LOAD_REG_GEN[31].LOAD_REG_I ;
-  input D_1;
-  input \LOAD_REG_GEN[1].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[2].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[3].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[4].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[5].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[6].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[7].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[8].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[9].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[11].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[12].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[13].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[14].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[15].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[16].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[17].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[18].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[19].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[20].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[21].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[22].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[26].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[27].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[28].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
-  input \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
   input freeze;
   input capturetrig0;
   input capturetrig1;
@@ -8750,157 +6345,116 @@ module Task_2_design_axi_timer_0_0_tc_core
   input \TCSR0_GENERATE[23].TCSR0_FF_I ;
   input \TCSR1_GENERATE[23].TCSR1_FF_I ;
   input READ_DONE0_I;
-  input READ_DONE1_I;
   input s_axi_aresetn;
   input Bus_RNW_reg;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ;
-  input \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ;
   input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ;
   input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ;
 
   wire Bus_RNW_reg;
   wire CE;
-  wire CE_0;
   wire [31:0]D;
   wire D_0;
-  wire D_1;
   wire \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ;
   wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ;
+  wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ;
-  wire \GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ;
   wire \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
+  wire \GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_35 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_36 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_37 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_38 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_39 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_40 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_41 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_42 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_43 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_44 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_45 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_46 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_47 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_48 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_49 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_50 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_51 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_52 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_53 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_54 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_55 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_56 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_57 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_58 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_59 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_60 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_61 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_62 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_63 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_64 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_65 ;
-  wire \GEN_SECOND_TIMER.COUNTER_1_I_n_66 ;
   wire [20:0]\LOAD_REG_GEN[0].LOAD_REG_I ;
   wire \LOAD_REG_GEN[10].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[10].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[11].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[11].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[12].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[12].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[13].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[13].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[14].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[14].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[15].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[15].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[16].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[16].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[17].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[17].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[18].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[18].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[19].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[19].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[1].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[1].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[20].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[20].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[21].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[21].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[22].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[22].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[23].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[23].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[24].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[25].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[25].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[26].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[26].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[27].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[27].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[28].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[28].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[29].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[29].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[2].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[2].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[30].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[30].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[31].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[31].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[3].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[3].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[4].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[4].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[5].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[5].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[6].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[6].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[7].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[7].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[8].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[8].LOAD_REG_I_0 ;
   wire \LOAD_REG_GEN[9].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[9].LOAD_REG_I_0 ;
   wire R;
   wire READ_DONE0_I;
-  wire READ_DONE1_I;
   wire [1:0]\TCSR0_GENERATE[20].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I ;
   wire [0:0]\TCSR1_GENERATE[24].TCSR1_FF_I ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
+  wire TIMER_CONTROL_I_n_10;
+  wire TIMER_CONTROL_I_n_11;
   wire TIMER_CONTROL_I_n_12;
   wire TIMER_CONTROL_I_n_13;
   wire TIMER_CONTROL_I_n_14;
@@ -8911,25 +6465,17 @@ module Task_2_design_axi_timer_0_0_tc_core
   wire TIMER_CONTROL_I_n_19;
   wire TIMER_CONTROL_I_n_20;
   wire TIMER_CONTROL_I_n_21;
-  wire TIMER_CONTROL_I_n_22;
   wire TIMER_CONTROL_I_n_23;
   wire TIMER_CONTROL_I_n_24;
-  wire TIMER_CONTROL_I_n_25;
-  wire TIMER_CONTROL_I_n_26;
-  wire TIMER_CONTROL_I_n_28;
-  wire TIMER_CONTROL_I_n_29;
-  wire TIMER_CONTROL_I_n_30;
-  wire TIMER_CONTROL_I_n_4;
+  wire TIMER_CONTROL_I_n_9;
   wire bus2ip_reset;
   wire [1:0]bus2ip_wrce;
   wire capturetrig0;
   wire capturetrig1;
-  wire [31:0]counterReg_DBus_0;
   wire [31:0]counterReg_DBus_32;
-  wire [0:1]counter_TC;
+  wire [0:0]counter_TC;
   wire freeze;
   wire generateOutPre00;
-  wire generateOutPre10;
   wire generateout0;
   wire generateout1;
   wire interrupt;
@@ -8938,27 +6484,15 @@ module Task_2_design_axi_timer_0_0_tc_core
   wire pair0_Select;
   wire pwm0;
   wire read_done0;
-  wire read_done1;
   wire s_axi_aclk;
   wire s_axi_aresetn;
   wire [9:0]s_axi_wdata;
 
   Task_2_design_axi_timer_0_0_count_module COUNTER_0_I
-       (.CE(CE_0),
-        .DI(counterReg_DBus_32[30:28]),
+       (.CE(CE),
         .D_0(D_0),
-        .\INFERRED_GEN.icount_out_reg[0] (counterReg_DBus_32[0]),
-        .\INFERRED_GEN.icount_out_reg[0]_0 (TIMER_CONTROL_I_n_23),
-        .\INFERRED_GEN.icount_out_reg[11] (counterReg_DBus_32[11:8]),
-        .\INFERRED_GEN.icount_out_reg[15] (counterReg_DBus_32[15:12]),
-        .\INFERRED_GEN.icount_out_reg[19] (counterReg_DBus_32[19:16]),
-        .\INFERRED_GEN.icount_out_reg[23] (counterReg_DBus_32[23:20]),
-        .\INFERRED_GEN.icount_out_reg[27] (counterReg_DBus_32[27:24]),
-        .\INFERRED_GEN.icount_out_reg[31] (counterReg_DBus_32[31]),
-        .\INFERRED_GEN.icount_out_reg[31]_0 (bus2ip_reset),
-        .\INFERRED_GEN.icount_out_reg[31]_1 (TIMER_CONTROL_I_n_25),
-        .\INFERRED_GEN.icount_out_reg[3] (counterReg_DBus_32[3:1]),
-        .\INFERRED_GEN.icount_out_reg[7] (counterReg_DBus_32[7:4]),
+        .\INFERRED_GEN.icount_out_reg[0] (TIMER_CONTROL_I_n_20),
+        .\INFERRED_GEN.icount_out_reg[31] (TIMER_CONTROL_I_n_21),
         .\LOAD_REG_GEN[0].LOAD_REG_I_0 (\LOAD_REG_GEN[0].LOAD_REG_I ),
         .\LOAD_REG_GEN[10].LOAD_REG_I_0 (\LOAD_REG_GEN[10].LOAD_REG_I ),
         .\LOAD_REG_GEN[11].LOAD_REG_I_0 (\LOAD_REG_GEN[11].LOAD_REG_I ),
@@ -8991,99 +6525,12 @@ module Task_2_design_axi_timer_0_0_tc_core
         .\LOAD_REG_GEN[7].LOAD_REG_I_0 (\LOAD_REG_GEN[7].LOAD_REG_I ),
         .\LOAD_REG_GEN[8].LOAD_REG_I_0 (\LOAD_REG_GEN[8].LOAD_REG_I ),
         .\LOAD_REG_GEN[9].LOAD_REG_I_0 (\LOAD_REG_GEN[9].LOAD_REG_I ),
-        .Q(p_0_in),
-        .S(TIMER_CONTROL_I_n_30),
-        .counter_TC(counter_TC[0]),
+        .S(TIMER_CONTROL_I_n_24),
+        .counterReg_DBus_32(counterReg_DBus_32),
+        .counter_TC(counter_TC),
         .generateOutPre00(generateOutPre00),
         .loadReg_DBus_32(loadReg_DBus_32),
-        .s_axi_aclk(s_axi_aclk),
-        .s_axi_aresetn(s_axi_aresetn));
-  Task_2_design_axi_timer_0_0_count_module_0 \GEN_SECOND_TIMER.COUNTER_1_I 
-       (.CE(CE),
-        .DI(counterReg_DBus_0[30:28]),
-        .D_1(D_1),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_1 ),
-        .\INFERRED_GEN.icount_out_reg[0] (counterReg_DBus_0[0]),
-        .\INFERRED_GEN.icount_out_reg[0]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_66 ),
-        .\INFERRED_GEN.icount_out_reg[0]_1 (TIMER_CONTROL_I_n_24),
-        .\INFERRED_GEN.icount_out_reg[11] (counterReg_DBus_0[11:8]),
-        .\INFERRED_GEN.icount_out_reg[11]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_57 ),
-        .\INFERRED_GEN.icount_out_reg[12] (\GEN_SECOND_TIMER.COUNTER_1_I_n_56 ),
-        .\INFERRED_GEN.icount_out_reg[13] (\GEN_SECOND_TIMER.COUNTER_1_I_n_55 ),
-        .\INFERRED_GEN.icount_out_reg[14] (\GEN_SECOND_TIMER.COUNTER_1_I_n_38 ),
-        .\INFERRED_GEN.icount_out_reg[15] (counterReg_DBus_0[15:12]),
-        .\INFERRED_GEN.icount_out_reg[15]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_54 ),
-        .\INFERRED_GEN.icount_out_reg[16] (\GEN_SECOND_TIMER.COUNTER_1_I_n_53 ),
-        .\INFERRED_GEN.icount_out_reg[17] (\GEN_SECOND_TIMER.COUNTER_1_I_n_37 ),
-        .\INFERRED_GEN.icount_out_reg[18] (\GEN_SECOND_TIMER.COUNTER_1_I_n_36 ),
-        .\INFERRED_GEN.icount_out_reg[19] (counterReg_DBus_0[19:16]),
-        .\INFERRED_GEN.icount_out_reg[19]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_52 ),
-        .\INFERRED_GEN.icount_out_reg[1] (\GEN_SECOND_TIMER.COUNTER_1_I_n_65 ),
-        .\INFERRED_GEN.icount_out_reg[20] (\GEN_SECOND_TIMER.COUNTER_1_I_n_51 ),
-        .\INFERRED_GEN.icount_out_reg[21] (\GEN_SECOND_TIMER.COUNTER_1_I_n_50 ),
-        .\INFERRED_GEN.icount_out_reg[22] (\GEN_SECOND_TIMER.COUNTER_1_I_n_49 ),
-        .\INFERRED_GEN.icount_out_reg[23] (counterReg_DBus_0[23:20]),
-        .\INFERRED_GEN.icount_out_reg[23]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_35 ),
-        .\INFERRED_GEN.icount_out_reg[24] (\GEN_SECOND_TIMER.COUNTER_1_I_n_48 ),
-        .\INFERRED_GEN.icount_out_reg[25] (\GEN_SECOND_TIMER.COUNTER_1_I_n_47 ),
-        .\INFERRED_GEN.icount_out_reg[27] (counterReg_DBus_0[27:24]),
-        .\INFERRED_GEN.icount_out_reg[27]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_45 ),
-        .\INFERRED_GEN.icount_out_reg[28] (\GEN_SECOND_TIMER.COUNTER_1_I_n_44 ),
-        .\INFERRED_GEN.icount_out_reg[29] (\GEN_SECOND_TIMER.COUNTER_1_I_n_43 ),
-        .\INFERRED_GEN.icount_out_reg[2] (\GEN_SECOND_TIMER.COUNTER_1_I_n_40 ),
-        .\INFERRED_GEN.icount_out_reg[30] (\GEN_SECOND_TIMER.COUNTER_1_I_n_42 ),
-        .\INFERRED_GEN.icount_out_reg[31] (counterReg_DBus_0[31]),
-        .\INFERRED_GEN.icount_out_reg[31]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_41 ),
-        .\INFERRED_GEN.icount_out_reg[31]_1 (TIMER_CONTROL_I_n_26),
-        .\INFERRED_GEN.icount_out_reg[3] (counterReg_DBus_0[3:1]),
-        .\INFERRED_GEN.icount_out_reg[3]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_64 ),
-        .\INFERRED_GEN.icount_out_reg[4] (\GEN_SECOND_TIMER.COUNTER_1_I_n_39 ),
-        .\INFERRED_GEN.icount_out_reg[5] (\GEN_SECOND_TIMER.COUNTER_1_I_n_63 ),
-        .\INFERRED_GEN.icount_out_reg[6] (\GEN_SECOND_TIMER.COUNTER_1_I_n_62 ),
-        .\INFERRED_GEN.icount_out_reg[7] (counterReg_DBus_0[7:4]),
-        .\INFERRED_GEN.icount_out_reg[7]_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_61 ),
-        .\INFERRED_GEN.icount_out_reg[8] (\GEN_SECOND_TIMER.COUNTER_1_I_n_60 ),
-        .\LOAD_REG_GEN[10].LOAD_REG_I_0 (\LOAD_REG_GEN[10].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[11].LOAD_REG_I_0 (\LOAD_REG_GEN[11].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[12].LOAD_REG_I_0 (\LOAD_REG_GEN[12].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[13].LOAD_REG_I_0 (\LOAD_REG_GEN[13].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[14].LOAD_REG_I_0 (\LOAD_REG_GEN[14].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[15].LOAD_REG_I_0 (\LOAD_REG_GEN[15].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[16].LOAD_REG_I_0 (\LOAD_REG_GEN[16].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[17].LOAD_REG_I_0 (\LOAD_REG_GEN[17].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[18].LOAD_REG_I_0 (\LOAD_REG_GEN[18].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[19].LOAD_REG_I_0 (\LOAD_REG_GEN[19].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[1].LOAD_REG_I_0 (\LOAD_REG_GEN[1].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[20].LOAD_REG_I_0 (\LOAD_REG_GEN[20].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[21].LOAD_REG_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_58 ),
-        .\LOAD_REG_GEN[21].LOAD_REG_I_1 (\LOAD_REG_GEN[21].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[22].LOAD_REG_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_59 ),
-        .\LOAD_REG_GEN[22].LOAD_REG_I_1 (\LOAD_REG_GEN[22].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[23].LOAD_REG_I_0 (\LOAD_REG_GEN[23].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[24].LOAD_REG_I_0 (\LOAD_REG_GEN[24].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[25].LOAD_REG_I_0 (\LOAD_REG_GEN[25].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[26].LOAD_REG_I_0 (\LOAD_REG_GEN[26].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[27].LOAD_REG_I_0 (\LOAD_REG_GEN[27].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[28].LOAD_REG_I_0 (\LOAD_REG_GEN[28].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[29].LOAD_REG_I_0 (\LOAD_REG_GEN[29].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[2].LOAD_REG_I_0 (\LOAD_REG_GEN[2].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[30].LOAD_REG_I_0 (\LOAD_REG_GEN[30].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[31].LOAD_REG_I_0 (\LOAD_REG_GEN[31].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[3].LOAD_REG_I_0 (\LOAD_REG_GEN[3].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[4].LOAD_REG_I_0 (\LOAD_REG_GEN[4].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[5].LOAD_REG_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_46 ),
-        .\LOAD_REG_GEN[5].LOAD_REG_I_1 (\LOAD_REG_GEN[5].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[6].LOAD_REG_I_0 (\LOAD_REG_GEN[6].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[7].LOAD_REG_I_0 (\LOAD_REG_GEN[7].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[8].LOAD_REG_I_0 (\LOAD_REG_GEN[8].LOAD_REG_I_0 ),
-        .\LOAD_REG_GEN[9].LOAD_REG_I_0 (\LOAD_REG_GEN[9].LOAD_REG_I_0 ),
-        .Q(TIMER_CONTROL_I_n_4),
-        .S(TIMER_CONTROL_I_n_29),
-        .counterReg_DBus_32(counterReg_DBus_32),
-        .counter_TC(counter_TC[1]),
-        .generateOutPre10(generateOutPre10),
+        .p_0_in(p_0_in),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_aresetn(s_axi_aresetn),
         .s_axi_aresetn_0(bus2ip_reset));
@@ -9097,173 +6544,159 @@ module Task_2_design_axi_timer_0_0_tc_core
     PWM_FF_I
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(TIMER_CONTROL_I_n_28),
+        .D(TIMER_CONTROL_I_n_23),
         .Q(pwm0),
         .R(R));
   Task_2_design_axi_timer_0_0_mux_onehot_f READ_MUX_I
        (.D(D),
         .\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_41 ),
+        .\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_50 ),
+        .\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[10].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_51 ),
+        .\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[11].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_52 ),
+        .\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[12].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_36 ),
+        .\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[13].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_37 ),
+        .\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[14].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_53 ),
+        .\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[15].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_54 ),
+        .\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[16].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_38 ),
+        .\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[17].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_55 ),
+        .\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[18].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_56 ),
+        .\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[19].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_42 ),
+        .\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[1].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_57 ),
-        .\GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_12),
-        .\GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_58 ),
-        .\GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_13),
-        .\GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_59 ),
-        .\GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_14),
-        .\GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_60 ),
-        .\GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_15),
-        .\GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_61 ),
-        .\GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_16),
-        .\GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_62 ),
-        .\GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_17),
-        .\GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_63 ),
-        .\GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_18),
-        .\GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_39 ),
-        .\GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_19),
-        .\GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_64 ),
-        .\GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_20),
-        .\GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_40 ),
+        .\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[20].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_9),
+        .\GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_10),
+        .\GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_11),
+        .\GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_12),
+        .\GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_13),
+        .\GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_14),
+        .\GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_15),
+        .\GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_16),
+        .\GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_17),
+        .\GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_43 ),
-        .\GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_21),
-        .\GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_65 ),
-        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_22),
-        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_66 ),
+        .\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[2].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_18),
+        .\GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
+        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (TIMER_CONTROL_I_n_19),
+        .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_44 ),
+        .\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[3].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_45 ),
+        .\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[4].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_46 ),
+        .\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[5].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_47 ),
+        .\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[6].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_48 ),
+        .\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[7].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_35 ),
+        .\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[8].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN_SECOND_TIMER.COUNTER_1_I_n_49 ));
+        .\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I ));
   Task_2_design_axi_timer_0_0_timer_control TIMER_CONTROL_I
        (.Bus_RNW_reg(Bus_RNW_reg),
-        .CE(CE_0),
-        .CE_0(CE),
+        .CE(CE),
         .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I (\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
         .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 (\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 (\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
+        .\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 (TIMER_CONTROL_I_n_20),
         .\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .GenerateOut0_reg_0(TIMER_CONTROL_I_n_28),
-        .\INFERRED_GEN.icount_out_reg[1] (TIMER_CONTROL_I_n_30),
-        .\LOAD_REG_GEN[23].LOAD_REG_I (TIMER_CONTROL_I_n_14),
-        .\LOAD_REG_GEN[24].LOAD_REG_I (TIMER_CONTROL_I_n_15),
-        .\LOAD_REG_GEN[26].LOAD_REG_I (TIMER_CONTROL_I_n_17),
-        .\LOAD_REG_GEN[27].LOAD_REG_I (TIMER_CONTROL_I_n_18),
-        .\LOAD_REG_GEN[28].LOAD_REG_I (TIMER_CONTROL_I_n_19),
-        .\LOAD_REG_GEN[29].LOAD_REG_I (TIMER_CONTROL_I_n_20),
-        .\LOAD_REG_GEN[30].LOAD_REG_I (TIMER_CONTROL_I_n_21),
-        .\LOAD_REG_GEN[31].LOAD_REG_I (TIMER_CONTROL_I_n_22),
-        .Q({p_0_in,TIMER_CONTROL_I_n_4}),
+        .GenerateOut0_reg_0(TIMER_CONTROL_I_n_23),
+        .\LOAD_REG_GEN[21].LOAD_REG_I (TIMER_CONTROL_I_n_9),
+        .\LOAD_REG_GEN[22].LOAD_REG_I (TIMER_CONTROL_I_n_10),
+        .\LOAD_REG_GEN[24].LOAD_REG_I (TIMER_CONTROL_I_n_12),
+        .\LOAD_REG_GEN[25].LOAD_REG_I (TIMER_CONTROL_I_n_13),
+        .\LOAD_REG_GEN[26].LOAD_REG_I (TIMER_CONTROL_I_n_14),
+        .\LOAD_REG_GEN[28].LOAD_REG_I (TIMER_CONTROL_I_n_16),
+        .\LOAD_REG_GEN[29].LOAD_REG_I (TIMER_CONTROL_I_n_17),
+        .\LOAD_REG_GEN[30].LOAD_REG_I (TIMER_CONTROL_I_n_18),
         .R(R),
         .READ_DONE0_I_0(READ_DONE0_I),
-        .READ_DONE1_I_0(READ_DONE1_I),
-        .S(TIMER_CONTROL_I_n_29),
-        .SR(bus2ip_reset),
+        .S(TIMER_CONTROL_I_n_24),
         .\TCSR0_GENERATE[20].TCSR0_FF_I_0 (\TCSR0_GENERATE[20].TCSR0_FF_I [1]),
-        .\TCSR0_GENERATE[20].TCSR0_FF_I_1 (TIMER_CONTROL_I_n_23),
-        .\TCSR0_GENERATE[21].TCSR0_FF_I_0 (TIMER_CONTROL_I_n_12),
         .\TCSR0_GENERATE[23].TCSR0_FF_I_0 (\TCSR0_GENERATE[23].TCSR0_FF_I ),
         .\TCSR0_GENERATE[24].TCSR0_FF_I_0 (\TCSR0_GENERATE[20].TCSR0_FF_I [0]),
         .\TCSR0_GENERATE[24].TCSR0_FF_I_1 (\TCSR0_GENERATE[24].TCSR0_FF_I ),
-        .\TCSR0_GENERATE[25].TCSR0_FF_I_0 (TIMER_CONTROL_I_n_16),
-        .\TCSR0_GENERATE[27].TCSR0_FF_I_0 (TIMER_CONTROL_I_n_25),
-        .\TCSR0_GENERATE[27].TCSR0_FF_I_1 (TIMER_CONTROL_I_n_26),
-        .\TCSR1_GENERATE[22].TCSR1_FF_I_0 (TIMER_CONTROL_I_n_13),
-        .\TCSR1_GENERATE[23].TCSR1_FF_I_0 (\TCSR1_GENERATE[23].TCSR1_FF_I ),
+        .\TCSR0_GENERATE[26].TCSR0_FF_I_0 (TIMER_CONTROL_I_n_21),
+        .\TCSR1_GENERATE[23].TCSR1_FF_I_0 (TIMER_CONTROL_I_n_11),
+        .\TCSR1_GENERATE[23].TCSR1_FF_I_1 (\TCSR1_GENERATE[23].TCSR1_FF_I ),
         .\TCSR1_GENERATE[24].TCSR1_FF_I_0 (\TCSR1_GENERATE[24].TCSR1_FF_I ),
         .\TCSR1_GENERATE[24].TCSR1_FF_I_1 (\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
+        .\TCSR1_GENERATE[27].TCSR1_FF_I_0 (TIMER_CONTROL_I_n_15),
+        .\TCSR1_GENERATE[31].TCSR1_FF_I_0 (TIMER_CONTROL_I_n_19),
+        .\TCSR1_GENERATE[31].TCSR1_FF_I_1 (bus2ip_reset),
         .bus2ip_wrce(bus2ip_wrce),
         .capturetrig0(capturetrig0),
         .capturetrig1(capturetrig1),
-        .counterReg_DBus_0(counterReg_DBus_0[1]),
         .counterReg_DBus_32(counterReg_DBus_32[1]),
         .counter_TC(counter_TC),
         .freeze(freeze),
         .generateOutPre00(generateOutPre00),
-        .generateOutPre0_reg_0(TIMER_CONTROL_I_n_24),
-        .generateOutPre10(generateOutPre10),
         .generateout0(generateout0),
         .generateout1(generateout1),
         .interrupt(interrupt),
         .loadReg_DBus_32(loadReg_DBus_32),
+        .p_0_in(p_0_in),
         .pair0_Select(pair0_Select),
         .pwm0(pwm0),
         .read_done0(read_done0),
-        .read_done1(read_done1),
         .s_axi_aclk(s_axi_aclk),
         .s_axi_wdata(s_axi_wdata));
 endmodule
 
 (* ORIG_REF_NAME = "timer_control" *) 
 module Task_2_design_axi_timer_0_0_timer_control
-   (generateout0,
+   (p_0_in,
+    generateout0,
     generateout1,
     interrupt,
-    Q,
     \TCSR0_GENERATE[20].TCSR0_FF_I_0 ,
     \TCSR0_GENERATE[24].TCSR0_FF_I_0 ,
     \TCSR1_GENERATE[24].TCSR1_FF_I_0 ,
     read_done0,
-    read_done1,
     CE,
-    CE_0,
-    \TCSR0_GENERATE[21].TCSR0_FF_I_0 ,
-    \TCSR1_GENERATE[22].TCSR1_FF_I_0 ,
-    \LOAD_REG_GEN[23].LOAD_REG_I ,
+    \LOAD_REG_GEN[21].LOAD_REG_I ,
+    \LOAD_REG_GEN[22].LOAD_REG_I ,
+    \TCSR1_GENERATE[23].TCSR1_FF_I_0 ,
     \LOAD_REG_GEN[24].LOAD_REG_I ,
-    \TCSR0_GENERATE[25].TCSR0_FF_I_0 ,
+    \LOAD_REG_GEN[25].LOAD_REG_I ,
     \LOAD_REG_GEN[26].LOAD_REG_I ,
-    \LOAD_REG_GEN[27].LOAD_REG_I ,
+    \TCSR1_GENERATE[27].TCSR1_FF_I_0 ,
     \LOAD_REG_GEN[28].LOAD_REG_I ,
     \LOAD_REG_GEN[29].LOAD_REG_I ,
     \LOAD_REG_GEN[30].LOAD_REG_I ,
-    \LOAD_REG_GEN[31].LOAD_REG_I ,
-    \TCSR0_GENERATE[20].TCSR0_FF_I_1 ,
-    generateOutPre0_reg_0,
-    \TCSR0_GENERATE[27].TCSR0_FF_I_0 ,
-    \TCSR0_GENERATE[27].TCSR0_FF_I_1 ,
+    \TCSR1_GENERATE[31].TCSR1_FF_I_0 ,
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
+    \TCSR0_GENERATE[26].TCSR0_FF_I_0 ,
     R,
     GenerateOut0_reg_0,
     S,
-    \INFERRED_GEN.icount_out_reg[1] ,
     freeze,
     s_axi_aclk,
     capturetrig0,
     capturetrig1,
-    SR,
-    generateOutPre10,
+    \TCSR1_GENERATE[31].TCSR1_FF_I_1 ,
+    counter_TC,
     generateOutPre00,
     bus2ip_wrce,
     s_axi_wdata,
@@ -9271,56 +6704,47 @@ module Task_2_design_axi_timer_0_0_timer_control
     \TCSR0_GENERATE[24].TCSR0_FF_I_1 ,
     \TCSR1_GENERATE[24].TCSR1_FF_I_1 ,
     \TCSR0_GENERATE[23].TCSR0_FF_I_0 ,
-    \TCSR1_GENERATE[23].TCSR1_FF_I_0 ,
+    \TCSR1_GENERATE[23].TCSR1_FF_I_1 ,
     READ_DONE0_I_0,
-    READ_DONE1_I_0,
     Bus_RNW_reg,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
-    counter_TC,
-    \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
-    \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
     loadReg_DBus_32,
+    \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ,
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ,
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ,
     pwm0,
-    counterReg_DBus_0,
     counterReg_DBus_32);
+  output p_0_in;
   output generateout0;
   output generateout1;
   output interrupt;
-  output [1:0]Q;
   output \TCSR0_GENERATE[20].TCSR0_FF_I_0 ;
   output \TCSR0_GENERATE[24].TCSR0_FF_I_0 ;
-  output \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
+  output [0:0]\TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
   output read_done0;
-  output read_done1;
   output CE;
-  output CE_0;
-  output \TCSR0_GENERATE[21].TCSR0_FF_I_0 ;
-  output \TCSR1_GENERATE[22].TCSR1_FF_I_0 ;
-  output \LOAD_REG_GEN[23].LOAD_REG_I ;
+  output \LOAD_REG_GEN[21].LOAD_REG_I ;
+  output \LOAD_REG_GEN[22].LOAD_REG_I ;
+  output \TCSR1_GENERATE[23].TCSR1_FF_I_0 ;
   output \LOAD_REG_GEN[24].LOAD_REG_I ;
-  output \TCSR0_GENERATE[25].TCSR0_FF_I_0 ;
+  output \LOAD_REG_GEN[25].LOAD_REG_I ;
   output \LOAD_REG_GEN[26].LOAD_REG_I ;
-  output \LOAD_REG_GEN[27].LOAD_REG_I ;
+  output \TCSR1_GENERATE[27].TCSR1_FF_I_0 ;
   output \LOAD_REG_GEN[28].LOAD_REG_I ;
   output \LOAD_REG_GEN[29].LOAD_REG_I ;
   output \LOAD_REG_GEN[30].LOAD_REG_I ;
-  output \LOAD_REG_GEN[31].LOAD_REG_I ;
-  output \TCSR0_GENERATE[20].TCSR0_FF_I_1 ;
-  output generateOutPre0_reg_0;
-  output \TCSR0_GENERATE[27].TCSR0_FF_I_0 ;
-  output \TCSR0_GENERATE[27].TCSR0_FF_I_1 ;
+  output \TCSR1_GENERATE[31].TCSR1_FF_I_0 ;
+  output \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
+  output \TCSR0_GENERATE[26].TCSR0_FF_I_0 ;
   output R;
   output GenerateOut0_reg_0;
   output [0:0]S;
-  output [0:0]\INFERRED_GEN.icount_out_reg[1] ;
   input freeze;
   input s_axi_aclk;
   input capturetrig0;
   input capturetrig1;
-  input [0:0]SR;
-  input generateOutPre10;
+  input \TCSR1_GENERATE[31].TCSR1_FF_I_1 ;
+  input [0:0]counter_TC;
   input generateOutPre00;
   input [1:0]bus2ip_wrce;
   input [9:0]s_axi_wdata;
@@ -9328,85 +6752,61 @@ module Task_2_design_axi_timer_0_0_timer_control
   input \TCSR0_GENERATE[24].TCSR0_FF_I_1 ;
   input \TCSR1_GENERATE[24].TCSR1_FF_I_1 ;
   input \TCSR0_GENERATE[23].TCSR0_FF_I_0 ;
-  input \TCSR1_GENERATE[23].TCSR1_FF_I_0 ;
+  input \TCSR1_GENERATE[23].TCSR1_FF_I_1 ;
   input READ_DONE0_I_0;
-  input READ_DONE1_I_0;
   input Bus_RNW_reg;
   input \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  input [0:1]counter_TC;
-  input \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
   input [10:0]loadReg_DBus_32;
+  input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
   input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ;
   input \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ;
   input pwm0;
-  input [0:0]counterReg_DBus_0;
   input [0:0]counterReg_DBus_32;
 
   wire Bus_RNW_reg;
   wire CE;
-  wire CE_0;
   wire CaptureTrig0_int;
   wire CaptureTrig1_int;
   wire Freeze_int;
   wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ;
   wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ;
   wire \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ;
+  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ;
   wire \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
-  wire \GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ;
-  wire GenerateOut00;
+  wire GenerateOut0_i_2_n_0;
   wire GenerateOut0_reg_0;
   wire GenerateOut10;
-  wire \INFERRED_GEN.icount_out0_carry_i_6__0_n_0 ;
   wire \INFERRED_GEN.icount_out0_carry_i_6_n_0 ;
-  wire \INFERRED_GEN.icount_out0_carry_i_7_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_3__0_n_0 ;
   wire \INFERRED_GEN.icount_out[31]_i_3_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_4__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_4_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_5__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_5_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_6__0_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_6_n_0 ;
-  wire \INFERRED_GEN.icount_out[31]_i_7__0_n_0 ;
-  wire [0:0]\INFERRED_GEN.icount_out_reg[1] ;
   wire Interrupt0;
   wire \LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ;
-  wire \LOAD_REG_GEN[0].LOAD_REG_I_i_4_n_0 ;
-  wire \LOAD_REG_GEN[23].LOAD_REG_I ;
+  wire \LOAD_REG_GEN[21].LOAD_REG_I ;
+  wire \LOAD_REG_GEN[22].LOAD_REG_I ;
   wire \LOAD_REG_GEN[24].LOAD_REG_I ;
+  wire \LOAD_REG_GEN[25].LOAD_REG_I ;
   wire \LOAD_REG_GEN[26].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[27].LOAD_REG_I ;
   wire \LOAD_REG_GEN[28].LOAD_REG_I ;
   wire \LOAD_REG_GEN[29].LOAD_REG_I ;
   wire \LOAD_REG_GEN[30].LOAD_REG_I ;
-  wire \LOAD_REG_GEN[31].LOAD_REG_I ;
-  wire [1:0]Q;
   wire R;
   wire READ_DONE0_I_0;
   wire READ_DONE0_I_i_1_n_0;
   wire READ_DONE0_I_i_3_n_0;
-  wire READ_DONE1_I_0;
-  wire READ_DONE1_I_i_1_n_0;
-  wire READ_DONE1_I_i_3_n_0;
   wire [0:0]S;
-  wire [0:0]SR;
   wire \TCSR0_GENERATE[20].TCSR0_FF_I_0 ;
-  wire \TCSR0_GENERATE[20].TCSR0_FF_I_1 ;
-  wire \TCSR0_GENERATE[21].TCSR0_FF_I_0 ;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I_0 ;
   wire \TCSR0_GENERATE[23].TCSR0_FF_I_i_2_n_0 ;
-  wire \TCSR0_GENERATE[23].TCSR0_FF_I_i_3_n_0 ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I_0 ;
   wire \TCSR0_GENERATE[24].TCSR0_FF_I_1 ;
-  wire \TCSR0_GENERATE[25].TCSR0_FF_I_0 ;
-  wire \TCSR0_GENERATE[27].TCSR0_FF_I_0 ;
-  wire \TCSR0_GENERATE[27].TCSR0_FF_I_1 ;
-  wire \TCSR1_GENERATE[22].TCSR1_FF_I_0 ;
+  wire \TCSR0_GENERATE[26].TCSR0_FF_I_0 ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I_0 ;
+  wire \TCSR1_GENERATE[23].TCSR1_FF_I_1 ;
   wire \TCSR1_GENERATE[23].TCSR1_FF_I_i_2_n_0 ;
-  wire \TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
+  wire [0:0]\TCSR1_GENERATE[24].TCSR1_FF_I_0 ;
   wire \TCSR1_GENERATE[24].TCSR1_FF_I_1 ;
+  wire \TCSR1_GENERATE[27].TCSR1_FF_I_0 ;
+  wire \TCSR1_GENERATE[31].TCSR1_FF_I_0 ;
+  wire \TCSR1_GENERATE[31].TCSR1_FF_I_1 ;
   wire [1:0]bus2ip_wrce;
   wire captureTrig0_d;
   wire captureTrig0_d0;
@@ -9418,25 +6818,21 @@ module Task_2_design_axi_timer_0_0_timer_control
   wire captureTrig1_d2;
   wire capturetrig0;
   wire capturetrig1;
-  wire [0:0]counterReg_DBus_0;
   wire [0:0]counterReg_DBus_32;
-  wire [0:1]counter_TC;
+  wire [0:0]counter_TC;
   wire counter_TC_Reg2;
   wire freeze;
   wire generateOutPre0;
   wire generateOutPre00;
-  wire generateOutPre0_reg_0;
-  wire generateOutPre1;
-  wire generateOutPre10;
   wire generateout0;
   wire generateout1;
   wire interrupt;
   wire [10:0]loadReg_DBus_32;
+  wire p_0_in;
   wire p_46_in;
   wire pair0_Select;
   wire pwm0;
   wire read_done0;
-  wire read_done1;
   wire s_axi_aclk;
   wire [9:0]s_axi_wdata;
   wire [21:31]tCSR0_Reg;
@@ -9451,80 +6847,80 @@ module Task_2_design_axi_timer_0_0_timer_control
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[21].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(tCSR0_Reg[21]),
+       (.I0(loadReg_DBus_32[10]),
         .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_32[10]),
+        .I2(tCSR0_Reg[21]),
         .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(tCSR1_Reg[21]),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\TCSR0_GENERATE[21].TCSR0_FF_I_0 ));
+        .O(\LOAD_REG_GEN[21].LOAD_REG_I ));
   LUT6 #(
-    .INIT(64'hD0DD0000D0DDD0DD)) 
+    .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[22].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(tCSR1_Reg[22]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
-        .I2(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
-        .I3(loadReg_DBus_32[9]),
-        .I4(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .I5(tCSR0_Reg[22]),
-        .O(\TCSR1_GENERATE[22].TCSR1_FF_I_0 ));
+       (.I0(loadReg_DBus_32[9]),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I2(tCSR0_Reg[22]),
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I4(tCSR1_Reg[22]),
+        .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
+        .O(\LOAD_REG_GEN[22].LOAD_REG_I ));
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[23].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(loadReg_DBus_32[8]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+       (.I0(tCSR1_Reg[23]),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .I2(tCSR0_Reg[23]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .I4(tCSR1_Reg[23]),
-        .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\LOAD_REG_GEN[23].LOAD_REG_I ));
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I4(loadReg_DBus_32[8]),
+        .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .O(\TCSR1_GENERATE[23].TCSR1_FF_I_0 ));
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[24].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(loadReg_DBus_32[7]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
         .I2(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .O(\LOAD_REG_GEN[24].LOAD_REG_I ));
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[25].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(tCSR0_Reg[25]),
+       (.I0(loadReg_DBus_32[6]),
         .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .I2(loadReg_DBus_32[6]),
+        .I2(tCSR0_Reg[25]),
         .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(tCSR1_Reg[25]),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\TCSR0_GENERATE[25].TCSR0_FF_I_0 ));
+        .O(\LOAD_REG_GEN[25].LOAD_REG_I ));
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[26].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(loadReg_DBus_32[5]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
         .I2(tCSR0_Reg[26]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(tCSR1_Reg[26]),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .O(\LOAD_REG_GEN[26].LOAD_REG_I ));
   LUT6 #(
-    .INIT(64'hDD0DDD0D0000DD0D)) 
+    .INIT(64'hD0DD0000D0DDD0DD)) 
     \GEN.DATA_WIDTH_GEN[27].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(loadReg_DBus_32[4]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
-        .I2(tCSR1_Reg[27]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
-        .I4(tCSR0_Reg[27]),
-        .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .O(\LOAD_REG_GEN[27].LOAD_REG_I ));
+       (.I0(tCSR1_Reg[27]),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
+        .I2(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I3(loadReg_DBus_32[4]),
+        .I4(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I5(tCSR0_Reg[27]),
+        .O(\TCSR1_GENERATE[27].TCSR1_FF_I_0 ));
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[28].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(loadReg_DBus_32[3]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
         .I2(tCSR0_Reg[28]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(tCSR1_Reg[28]),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .O(\LOAD_REG_GEN[28].LOAD_REG_I ));
@@ -9532,9 +6928,9 @@ module Task_2_design_axi_timer_0_0_timer_control
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[29].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(loadReg_DBus_32[2]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
         .I2(tCSR0_Reg[29]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(tCSR1_Reg[29]),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .O(\LOAD_REG_GEN[29].LOAD_REG_I ));
@@ -9542,212 +6938,93 @@ module Task_2_design_axi_timer_0_0_timer_control
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[30].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
        (.I0(loadReg_DBus_32[1]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
         .I2(tCSR0_Reg[30]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
         .I4(tCSR1_Reg[30]),
         .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .O(\LOAD_REG_GEN[30].LOAD_REG_I ));
   LUT6 #(
     .INIT(64'hDD0DDD0D0000DD0D)) 
     \GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_i_1 
-       (.I0(loadReg_DBus_32[0]),
-        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+       (.I0(tCSR1_Reg[31]),
+        .I1(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
         .I2(tCSR0_Reg[31]),
-        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
-        .I4(tCSR1_Reg[31]),
-        .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_1 ),
-        .O(\LOAD_REG_GEN[31].LOAD_REG_I ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT4 #(
-    .INIT(16'hA808)) 
+        .I3(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ),
+        .I4(loadReg_DBus_32[0]),
+        .I5(\GEN.DATA_WIDTH_GEN[31].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I ),
+        .O(\TCSR1_GENERATE[31].TCSR1_FF_I_0 ));
+  LUT3 #(
+    .INIT(8'h40)) 
     GenerateOut0_i_2
-       (.I0(tCSR0_Reg[29]),
+       (.I0(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
         .I1(generateOutPre0),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(generateOutPre1),
-        .O(GenerateOut00));
+        .I2(tCSR0_Reg[29]),
+        .O(GenerateOut0_i_2_n_0));
   FDRE GenerateOut0_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(GenerateOut00),
+        .D(GenerateOut0_i_2_n_0),
         .Q(generateout0),
-        .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
-  LUT5 #(
-    .INIT(32'h8F808080)) 
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     GenerateOut1_i_1
-       (.I0(generateOutPre0),
-        .I1(tCSR0_Reg[29]),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(generateOutPre1),
-        .I4(tCSR1_Reg[29]),
+       (.I0(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I1(generateOutPre0),
+        .I2(tCSR0_Reg[29]),
         .O(GenerateOut10));
   FDRE GenerateOut1_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(GenerateOut10),
         .Q(generateout1),
-        .R(SR));
-  LUT5 #(
-    .INIT(32'h656AAAAA)) 
-    \INFERRED_GEN.icount_out0_carry_i_5 
-       (.I0(counterReg_DBus_0),
-        .I1(tCSR0_Reg[30]),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(tCSR1_Reg[30]),
-        .I4(\INFERRED_GEN.icount_out0_carry_i_6__0_n_0 ),
-        .O(S));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   LUT3 #(
     .INIT(8'h6A)) 
-    \INFERRED_GEN.icount_out0_carry_i_5__0 
+    \INFERRED_GEN.icount_out0_carry_i_5 
        (.I0(counterReg_DBus_32),
         .I1(\INFERRED_GEN.icount_out0_carry_i_6_n_0 ),
         .I2(tCSR0_Reg[30]),
-        .O(\INFERRED_GEN.icount_out_reg[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+        .O(S));
   LUT5 #(
-    .INIT(32'hAABAAAAA)) 
+    .INIT(32'h0000FE00)) 
     \INFERRED_GEN.icount_out0_carry_i_6 
        (.I0(\INFERRED_GEN.icount_out[31]_i_3_n_0 ),
-        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I2(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .I3(Freeze_int),
-        .I4(\INFERRED_GEN.icount_out0_carry_i_7_n_0 ),
+        .I1(tCSR0_Reg[27]),
+        .I2(tCSR0_Reg[22]),
+        .I3(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
+        .I4(Freeze_int),
         .O(\INFERRED_GEN.icount_out0_carry_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFF040004000400)) 
-    \INFERRED_GEN.icount_out0_carry_i_6__0 
-       (.I0(Freeze_int),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(\INFERRED_GEN.icount_out[31]_i_4__0_n_0 ),
-        .I4(\INFERRED_GEN.icount_out[31]_i_3_n_0 ),
-        .I5(generateOutPre0),
-        .O(\INFERRED_GEN.icount_out0_carry_i_6__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    \INFERRED_GEN.icount_out0_carry_i_7 
-       (.I0(tCSR0_Reg[22]),
-        .I1(tCSR0_Reg[27]),
-        .I2(counter_TC[0]),
-        .I3(tCSR0_Reg[31]),
-        .O(\INFERRED_GEN.icount_out0_carry_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hFCFCFDFFFCFCFDFC)) 
+    .INIT(64'hFFFFFFFF4444FFF0)) 
     \INFERRED_GEN.icount_out[31]_i_1 
-       (.I0(\INFERRED_GEN.icount_out[31]_i_3__0_n_0 ),
-        .I1(\INFERRED_GEN.icount_out[31]_i_3_n_0 ),
-        .I2(\INFERRED_GEN.icount_out[31]_i_4_n_0 ),
-        .I3(\INFERRED_GEN.icount_out[31]_i_5__0_n_0 ),
-        .I4(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I5(\INFERRED_GEN.icount_out[31]_i_6__0_n_0 ),
-        .O(\TCSR0_GENERATE[20].TCSR0_FF_I_1 ));
-  LUT6 #(
-    .INIT(64'hFFFF88F8FFFFFFFF)) 
-    \INFERRED_GEN.icount_out[31]_i_1__0 
-       (.I0(generateOutPre0),
-        .I1(\INFERRED_GEN.icount_out[31]_i_3_n_0 ),
-        .I2(\INFERRED_GEN.icount_out[31]_i_4__0_n_0 ),
-        .I3(\INFERRED_GEN.icount_out[31]_i_5_n_0 ),
-        .I4(\INFERRED_GEN.icount_out[31]_i_6_n_0 ),
-        .I5(\INFERRED_GEN.icount_out[31]_i_7__0_n_0 ),
-        .O(generateOutPre0_reg_0));
-  LUT6 #(
-    .INIT(64'h0000FB0000000000)) 
-    \INFERRED_GEN.icount_out[31]_i_3 
-       (.I0(tCSR0_Reg[31]),
-        .I1(counter_TC[1]),
-        .I2(tCSR0_Reg[27]),
-        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I4(Freeze_int),
-        .I5(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .O(\INFERRED_GEN.icount_out[31]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \INFERRED_GEN.icount_out[31]_i_3__0 
        (.I0(Freeze_int),
         .I1(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .O(\INFERRED_GEN.icount_out[31]_i_3__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hBAAAAAAA)) 
+        .I2(tCSR0_Reg[22]),
+        .I3(tCSR0_Reg[27]),
+        .I4(\INFERRED_GEN.icount_out[31]_i_3_n_0 ),
+        .I5(tCSR0_Reg[26]),
+        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  LUT3 #(
+    .INIT(8'hEF)) 
+    \INFERRED_GEN.icount_out[31]_i_3 
+       (.I0(tCSR0_Reg[31]),
+        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I2(counter_TC),
+        .O(\INFERRED_GEN.icount_out[31]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h5455545554555555)) 
     \INFERRED_GEN.icount_out[31]_i_4 
        (.I0(tCSR0_Reg[26]),
         .I1(tCSR0_Reg[31]),
-        .I2(counter_TC[1]),
-        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I3(counter_TC),
         .I4(tCSR0_Reg[27]),
-        .O(\INFERRED_GEN.icount_out[31]_i_4_n_0 ));
-  LUT4 #(
-    .INIT(16'hFFEF)) 
-    \INFERRED_GEN.icount_out[31]_i_4__0 
-       (.I0(tCSR1_Reg[22]),
-        .I1(tCSR1_Reg[31]),
-        .I2(counter_TC[1]),
-        .I3(tCSR1_Reg[27]),
-        .O(\INFERRED_GEN.icount_out[31]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT3 #(
-    .INIT(8'hFB)) 
-    \INFERRED_GEN.icount_out[31]_i_5 
-       (.I0(Freeze_int),
-        .I1(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .O(\INFERRED_GEN.icount_out[31]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \INFERRED_GEN.icount_out[31]_i_5__0 
-       (.I0(tCSR0_Reg[31]),
-        .I1(counter_TC[0]),
-        .O(\INFERRED_GEN.icount_out[31]_i_5__0_n_0 ));
-  LUT5 #(
-    .INIT(32'hBAAAAAAA)) 
-    \INFERRED_GEN.icount_out[31]_i_6 
-       (.I0(tCSR1_Reg[26]),
-        .I1(tCSR0_Reg[31]),
-        .I2(counter_TC[1]),
-        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I4(tCSR0_Reg[27]),
-        .O(\INFERRED_GEN.icount_out[31]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \INFERRED_GEN.icount_out[31]_i_6__0 
-       (.I0(tCSR0_Reg[27]),
-        .I1(tCSR0_Reg[22]),
-        .O(\INFERRED_GEN.icount_out[31]_i_6__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000FFFFF1FF)) 
-    \INFERRED_GEN.icount_out[31]_i_7 
-       (.I0(tCSR0_Reg[27]),
-        .I1(tCSR0_Reg[22]),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(counter_TC[0]),
-        .I4(tCSR0_Reg[31]),
-        .I5(\INFERRED_GEN.icount_out[31]_i_4_n_0 ),
-        .O(\TCSR0_GENERATE[27].TCSR0_FF_I_0 ));
-  LUT6 #(
-    .INIT(64'hBFBABFBFBFBFBFBF)) 
-    \INFERRED_GEN.icount_out[31]_i_7__0 
-       (.I0(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I1(counter_TC[0]),
-        .I2(tCSR1_Reg[22]),
-        .I3(tCSR1_Reg[31]),
-        .I4(tCSR1_Reg[27]),
-        .I5(counter_TC[1]),
-        .O(\INFERRED_GEN.icount_out[31]_i_7__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000AAAA2AAA)) 
-    \INFERRED_GEN.icount_out[31]_i_8 
-       (.I0(\INFERRED_GEN.icount_out[31]_i_7__0_n_0 ),
-        .I1(tCSR0_Reg[27]),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(counter_TC[1]),
-        .I4(tCSR0_Reg[31]),
-        .I5(tCSR1_Reg[26]),
-        .O(\TCSR0_GENERATE[27].TCSR0_FF_I_1 ));
+        .I5(tCSR0_Reg[22]),
+        .O(\TCSR0_GENERATE[26].TCSR0_FF_I_0 ));
   (* C_CDC_TYPE = "1" *) 
   (* C_FLOP_INPUT = "0" *) 
   (* C_MTBF_STAGES = "4" *) 
@@ -9815,50 +7092,32 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(1'b1),
         .D(Interrupt0),
         .Q(interrupt),
-        .R(SR));
-  LUT6 #(
-    .INIT(64'hF444F444F4444444)) 
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
+  LUT5 #(
+    .INIT(32'h4F4F4F44)) 
     \LOAD_REG_GEN[0].LOAD_REG_I_i_1 
        (.I0(Bus_RNW_reg),
         .I1(\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ),
-        .I2(tCSR0_Reg[31]),
-        .I3(READ_DONE0_I_i_1_n_0),
-        .I4(read_done0),
-        .I5(tCSR0_Reg[27]),
+        .I2(\LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ),
+        .I3(read_done0),
+        .I4(tCSR0_Reg[27]),
         .O(CE));
   LUT6 #(
-    .INIT(64'h44F400F0FFFF00F0)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_1__0 
-       (.I0(\LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ),
-        .I1(tCSR1_Reg[31]),
-        .I2(\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ),
-        .I3(Bus_RNW_reg),
-        .I4(READ_DONE1_I_i_1_n_0),
-        .I5(\LOAD_REG_GEN[0].LOAD_REG_I_i_4_n_0 ),
-        .O(CE_0));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT3 #(
-    .INIT(8'hAB)) 
+    .INIT(64'h555DDDDDDDDDDDDD)) 
     \LOAD_REG_GEN[0].LOAD_REG_I_i_3 
-       (.I0(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I1(tCSR1_Reg[27]),
-        .I2(read_done1),
+       (.I0(tCSR0_Reg[31]),
+        .I1(READ_DONE0_I_i_3_n_0),
+        .I2(captureTrig0_pulse_d2),
+        .I3(captureTrig0_pulse_d1),
+        .I4(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I5(counter_TC_Reg2),
         .O(\LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
-  LUT4 #(
-    .INIT(16'h1FFF)) 
-    \LOAD_REG_GEN[0].LOAD_REG_I_i_4 
-       (.I0(read_done1),
-        .I1(tCSR0_Reg[27]),
-        .I2(tCSR0_Reg[31]),
-        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .O(\LOAD_REG_GEN[0].LOAD_REG_I_i_4_n_0 ));
   LUT3 #(
     .INIT(8'hAB)) 
     PWM_FF_I_i_1
        (.I0(generateout1),
-        .I1(tCSR0_Reg[22]),
-        .I2(tCSR1_Reg[22]),
+        .I1(tCSR1_Reg[22]),
+        .I2(tCSR0_Reg[22]),
         .O(R));
   LUT2 #(
     .INIT(4'hE)) 
@@ -9880,55 +7139,25 @@ module Task_2_design_axi_timer_0_0_timer_control
         .D(READ_DONE0_I_0),
         .Q(read_done0),
         .R(READ_DONE0_I_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hAA00AA00ABFFAA00)) 
-    READ_DONE0_I_i_1
-       (.I0(READ_DONE0_I_i_3_n_0),
-        .I1(Q[1]),
-        .I2(counter_TC[0]),
-        .I3(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I4(captureTrig0_d),
-        .I5(captureTrig0_d2),
-        .O(READ_DONE0_I_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hA8)) 
-    READ_DONE0_I_i_3
-       (.I0(counter_TC_Reg2),
-        .I1(captureTrig0_pulse_d2),
-        .I2(captureTrig0_pulse_d1),
-        .O(READ_DONE0_I_i_3_n_0));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  (* IS_CE_INVERTED = "1'b0" *) 
-  (* IS_S_INVERTED = "1'b0" *) 
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b0),
-    .IS_D_INVERTED(1'b0),
-    .IS_R_INVERTED(1'b0)) 
-    READ_DONE1_I
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(READ_DONE1_I_0),
-        .Q(read_done1),
-        .R(READ_DONE1_I_i_1_n_0));
   LUT5 #(
-    .INIT(32'hB0B0BFB0)) 
-    READ_DONE1_I_i_1
-       (.I0(READ_DONE0_I_i_3_n_0),
-        .I1(READ_DONE1_I_i_3_n_0),
+    .INIT(32'h8880FFFF)) 
+    READ_DONE0_I_i_1
+       (.I0(counter_TC_Reg2),
+        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I2(captureTrig0_pulse_d1),
+        .I3(captureTrig0_pulse_d2),
+        .I4(READ_DONE0_I_i_3_n_0),
+        .O(READ_DONE0_I_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT5 #(
+    .INIT(32'hFFE0FFFF)) 
+    READ_DONE0_I_i_3
+       (.I0(counter_TC),
+        .I1(p_0_in),
         .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(captureTrig1_d),
-        .I4(captureTrig1_d2),
-        .O(READ_DONE1_I_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT4 #(
-    .INIT(16'hFEFF)) 
-    READ_DONE1_I_i_3
-       (.I0(counter_TC[0]),
-        .I1(Q[1]),
-        .I2(captureTrig0_d2),
-        .I3(captureTrig0_d),
-        .O(READ_DONE1_I_i_3_n_0));
+        .I3(captureTrig0_d2),
+        .I4(captureTrig0_d),
+        .O(READ_DONE0_I_i_3_n_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -9942,7 +7171,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[9]),
         .Q(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -9956,7 +7185,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(pair0_Select),
         .D(s_axi_wdata[8]),
         .Q(tCSR0_Reg[21]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -9970,7 +7199,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[7]),
         .Q(tCSR0_Reg[22]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -9985,23 +7214,16 @@ module Task_2_design_axi_timer_0_0_timer_control
         .D(\TCSR0_GENERATE[23].TCSR0_FF_I_i_2_n_0 ),
         .Q(tCSR0_Reg[23]),
         .R(\TCSR0_GENERATE[23].TCSR0_FF_I_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFE222)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF0202FF02)) 
     \TCSR0_GENERATE[23].TCSR0_FF_I_i_2 
-       (.I0(\TCSR0_GENERATE[23].TCSR0_FF_I_i_3_n_0 ),
+       (.I0(generateOutPre0),
         .I1(tCSR0_Reg[31]),
-        .I2(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .I3(READ_DONE0_I_i_1_n_0),
-        .I4(tCSR0_Reg[23]),
+        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
+        .I3(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
+        .I4(\LOAD_REG_GEN[0].LOAD_REG_I_i_3_n_0 ),
+        .I5(tCSR0_Reg[23]),
         .O(\TCSR0_GENERATE[23].TCSR0_FF_I_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \TCSR0_GENERATE[23].TCSR0_FF_I_i_3 
-       (.I0(generateOutPre1),
-        .I1(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I2(generateOutPre0),
-        .O(\TCSR0_GENERATE[23].TCSR0_FF_I_i_3_n_0 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10015,7 +7237,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(pair0_Select),
         .D(\TCSR0_GENERATE[24].TCSR0_FF_I_1 ),
         .Q(\TCSR0_GENERATE[24].TCSR0_FF_I_0 ),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10029,7 +7251,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[6]),
         .Q(tCSR0_Reg[25]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10043,7 +7265,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[5]),
         .Q(tCSR0_Reg[26]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10057,7 +7279,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[4]),
         .Q(tCSR0_Reg[27]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10071,7 +7293,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[3]),
         .Q(tCSR0_Reg[28]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10085,7 +7307,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[2]),
         .Q(tCSR0_Reg[29]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10099,7 +7321,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[1]),
         .Q(tCSR0_Reg[30]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10113,7 +7335,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[1]),
         .D(s_axi_wdata[0]),
         .Q(tCSR0_Reg[31]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10127,7 +7349,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(pair0_Select),
         .D(s_axi_wdata[8]),
         .Q(tCSR1_Reg[21]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10141,7 +7363,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[7]),
         .Q(tCSR1_Reg[22]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10155,15 +7377,15 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(1'b1),
         .D(\TCSR1_GENERATE[23].TCSR1_FF_I_i_2_n_0 ),
         .Q(tCSR1_Reg[23]),
-        .R(\TCSR1_GENERATE[23].TCSR1_FF_I_0 ));
+        .R(\TCSR1_GENERATE[23].TCSR1_FF_I_1 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF0E040404)) 
+    .INIT(64'hFFFFFFFF00002000)) 
     \TCSR1_GENERATE[23].TCSR1_FF_I_i_2 
-       (.I0(tCSR1_Reg[31]),
-        .I1(generateOutPre1),
-        .I2(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
-        .I3(READ_DONE1_I_i_1_n_0),
-        .I4(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
+       (.I0(captureTrig1_d),
+        .I1(captureTrig1_d2),
+        .I2(tCSR1_Reg[31]),
+        .I3(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
+        .I4(\TCSR0_GENERATE[20].TCSR0_FF_I_0 ),
         .I5(tCSR1_Reg[23]),
         .O(\TCSR1_GENERATE[23].TCSR1_FF_I_i_2_n_0 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
@@ -10179,7 +7401,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(pair0_Select),
         .D(\TCSR1_GENERATE[24].TCSR1_FF_I_1 ),
         .Q(\TCSR1_GENERATE[24].TCSR1_FF_I_0 ),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10193,7 +7415,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[6]),
         .Q(tCSR1_Reg[25]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10207,7 +7429,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[5]),
         .Q(tCSR1_Reg[26]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10221,7 +7443,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[4]),
         .Q(tCSR1_Reg[27]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10235,7 +7457,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[3]),
         .Q(tCSR1_Reg[28]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10249,7 +7471,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[2]),
         .Q(tCSR1_Reg[29]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10263,7 +7485,7 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[1]),
         .Q(tCSR1_Reg[30]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* IS_CE_INVERTED = "1'b0" *) 
   (* IS_S_INVERTED = "1'b0" *) 
@@ -10277,13 +7499,13 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(bus2ip_wrce[0]),
         .D(s_axi_wdata[0]),
         .Q(tCSR1_Reg[31]),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   FDRE captureTrig0_d2_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(captureTrig0_d),
         .Q(captureTrig0_d2),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   LUT2 #(
     .INIT(4'h8)) 
     captureTrig0_d_i_1
@@ -10295,8 +7517,8 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(1'b1),
         .D(captureTrig0_d0),
         .Q(captureTrig0_d),
-        .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h2)) 
     captureTrig0_pulse_d1_i_1
@@ -10308,19 +7530,19 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(1'b1),
         .D(p_46_in),
         .Q(captureTrig0_pulse_d1),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   FDRE captureTrig0_pulse_d2_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(captureTrig0_pulse_d1),
         .Q(captureTrig0_pulse_d2),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   FDRE captureTrig1_d2_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(captureTrig1_d),
         .Q(captureTrig1_d2),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   LUT2 #(
     .INIT(4'h8)) 
     captureTrig1_d_i_1
@@ -10332,37 +7554,25 @@ module Task_2_design_axi_timer_0_0_timer_control
         .CE(1'b1),
         .D(captureTrig1_d0),
         .Q(captureTrig1_d),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   FDRE counter_TC_Reg2_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(Q[1]),
+        .D(p_0_in),
         .Q(counter_TC_Reg2),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   FDRE \counter_TC_Reg_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(counter_TC[0]),
-        .Q(Q[1]),
-        .R(SR));
-  FDRE \counter_TC_Reg_reg[1] 
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(counter_TC[1]),
-        .Q(Q[0]),
-        .R(SR));
+        .D(counter_TC),
+        .Q(p_0_in),
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
   FDRE generateOutPre0_reg
        (.C(s_axi_aclk),
         .CE(1'b1),
         .D(generateOutPre00),
         .Q(generateOutPre0),
-        .R(SR));
-  FDRE generateOutPre1_reg
-       (.C(s_axi_aclk),
-        .CE(1'b1),
-        .D(generateOutPre10),
-        .Q(generateOutPre1),
-        .R(SR));
+        .R(\TCSR1_GENERATE[31].TCSR1_FF_I_1 ));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -69,7 +69,7 @@ input wire data_in;
 output wire data_out;
 
   sync #(
-    .SYNC_STAGES(8),
+    .SYNC_STAGES(1000000),
     .RESET_VALUE("0")
   ) inst (
     .clk(clk),
