@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sun Jun  5 19:27:14 2022
-# Process ID: 458966
+# Start of session at: Mon Jun  6 20:27:33 2022
+# Process ID: 1093562
 # Current directory: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1
 # Command line: vivado -log Task_1_design_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Task_1_design_wrapper.tcl
 # Log file: /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/Task_1_design_wrapper.vds
@@ -26,52 +26,53 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 459062
+INFO: [Synth 8-7075] Helper process launched with PID 1093652
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 9341 ; free virtual = 29455
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 5176 ; free virtual = 24061
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Task_1_design_wrapper' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/hdl/Task_1_design_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Task_1_design' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:12]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_axi_gpio_0_1' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_axi_gpio_0_1' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_axi_gpio_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_axi_gpio_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_proc_sys_reset_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_proc_sys_reset_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_proc_sys_reset_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_proc_sys_reset_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:209]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:209]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:209]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:209]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'Task_1_design_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:209]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_processing_system7_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_processing_system7_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_processing_system7_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7071] port 'FCLK_RESET0_N' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'Task_1_design_processing_system7_0_0' has 73 connections declared, but only 64 given [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:216]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_ps7_0_axi_periph_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:371]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_WJ6NX7' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:916]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_WJ6NX7' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:916]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1U3C7DB' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1048]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1U3C7DB' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1048]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_TK3VFO' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1180]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_auto_pc_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_auto_pc_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_TK3VFO' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1180]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_xbar_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_xbar_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_xbar_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'Task_1_design_xbar_0' is unconnected for instance 'xbar' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:875]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'Task_1_design_xbar_0' is unconnected for instance 'xbar' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:875]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'Task_1_design_xbar_0' has 40 connections declared, but only 38 given [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:875]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_ps7_0_axi_periph_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:371]
-INFO: [Synth 8-6157] synthesizing module 'Task_1_design_sync_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_sync_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_sync_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-458966-fedora/realtime/Task_1_design_sync_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_axi_gpio_0_1' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_axi_gpio_0_1' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_axi_gpio_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_axi_gpio_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_proc_sys_reset_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_proc_sys_reset_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_proc_sys_reset_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_proc_sys_reset_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:211]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:211]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:211]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'Task_1_design_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:211]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'Task_1_design_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:211]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_processing_system7_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_processing_system7_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_processing_system7_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'Task_1_design_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'Task_1_design_processing_system7_0_0' has 73 connections declared, but only 65 given [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:218]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_ps7_0_axi_periph_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:377]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_WJ6NX7' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:922]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_WJ6NX7' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:922]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1U3C7DB' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1054]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1U3C7DB' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1054]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_TK3VFO' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1186]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_auto_pc_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_auto_pc_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_TK3VFO' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:1186]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_xbar_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_xbar_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'Task_1_design_xbar_0' is unconnected for instance 'xbar' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:881]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'Task_1_design_xbar_0' is unconnected for instance 'xbar' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:881]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'Task_1_design_xbar_0' has 40 connections declared, but only 38 given [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:881]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_ps7_0_axi_periph_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/synth/Task_1_design.v:377]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_sync_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_sync_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_sync_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_sync_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Task_1_design_util_vector_logic_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_util_vector_logic_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Task_1_design_util_vector_logic_0_0' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/.Xil/Vivado-1093562-fedora/realtime/Task_1_design_util_vector_logic_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'Task_1_design_xlconstant_0_0' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_xlconstant_0_0/synth/Task_1_design_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -95,18 +96,18 @@ WARNING: [Synth 8-7129] Port M01_ARESETN in module Task_1_design_ps7_0_axi_perip
 WARNING: [Synth 8-7129] Port S00_ACLK in module Task_1_design_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module Task_1_design_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10436 ; free virtual = 30551
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6273 ; free virtual = 25158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10436 ; free virtual = 30551
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6273 ; free virtual = 25158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10436 ; free virtual = 30551
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6273 ; free virtual = 25158
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10432 ; free virtual = 30547
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6269 ; free virtual = 25155
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -123,8 +124,10 @@ Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/viv
 Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_xbar_0/Task_1_design_xbar_0/Task_1_design_xbar_0_in_context.xdc] for cell 'Task_1_design_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_auto_pc_0/Task_1_design_auto_pc_0/Task_1_design_auto_pc_0_in_context.xdc] for cell 'Task_1_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_auto_pc_0/Task_1_design_auto_pc_0/Task_1_design_auto_pc_0_in_context.xdc] for cell 'Task_1_design_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0/Task_1_design_sync_0_0_in_context.xdc] for cell 'Task_1_design_i/sync_reset'
-Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0/Task_1_design_sync_0_0_in_context.xdc] for cell 'Task_1_design_i/sync_reset'
+Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_util_vector_logic_0_0/Task_1_design_util_vector_logic_0_0/Task_1_design_util_vector_logic_0_0_in_context.xdc] for cell 'Task_1_design_i/util_vector_logic_0'
+Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_util_vector_logic_0_0/Task_1_design_util_vector_logic_0_0/Task_1_design_util_vector_logic_0_0_in_context.xdc] for cell 'Task_1_design_i/util_vector_logic_0'
+Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0/Task_1_design_sync_0_0_in_context.xdc] for cell 'Task_1_design_i/sync_0'
+Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0/Task_1_design_sync_0_0_in_context.xdc] for cell 'Task_1_design_i/sync_0'
 Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/digilent-xdc-master/Zedboard-Master.xdc]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [/home/christophlehr/TUWien/studium/es_fpga/digilent-xdc-master/Zedboard-Master.xdc:364]
 WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [/home/christophlehr/TUWien/studium/es_fpga/digilent-xdc-master/Zedboard-Master.xdc:369]
@@ -137,22 +140,22 @@ Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/viv
 Finished Parsing XDC File [/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10329 ; free virtual = 30446
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6171 ; free virtual = 25059
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10329 ; free virtual = 30446
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6171 ; free virtual = 25059
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10397 ; free virtual = 30512
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6247 ; free virtual = 25133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10397 ; free virtual = 30511
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6247 ; free virtual = 25133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -425,13 +428,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/proc_sys_reset_0.
 Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/sync_reset. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/util_vector_logic_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Task_1_design_i/sync_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10397 ; free virtual = 30511
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6246 ; free virtual = 25132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10395 ; free virtual = 30511
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6244 ; free virtual = 25131
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -460,25 +464,25 @@ WARNING: [Synth 8-7129] Port M01_ARESETN in module Task_1_design_ps7_0_axi_perip
 WARNING: [Synth 8-7129] Port S00_ACLK in module Task_1_design_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S00_ARESETN in module Task_1_design_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10383 ; free virtual = 30505
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6241 ; free virtual = 25132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10279 ; free virtual = 30401
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6126 ; free virtual = 25017
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10279 ; free virtual = 30401
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6126 ; free virtual = 25017
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6121 ; free virtual = 25012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -496,37 +500,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -543,6 +547,7 @@ Report BlackBoxes:
 |5     |Task_1_design_proc_sys_reset_0_0     |         1|
 |6     |Task_1_design_processing_system7_0_0 |         1|
 |7     |Task_1_design_sync_0_0               |         1|
+|8     |Task_1_design_util_vector_logic_0_0  |         1|
 +------+-------------------------------------+----------+
 
 Report Cell Usage: 
@@ -554,29 +559,30 @@ Report Cell Usage:
 |4     |Task_1_design_proc_sys_reset_0     |     1|
 |5     |Task_1_design_processing_system7_0 |     1|
 |6     |Task_1_design_sync_0               |     1|
-|7     |Task_1_design_xbar                 |     1|
-|8     |IBUF                               |     9|
-|9     |OBUF                               |     8|
+|7     |Task_1_design_util_vector_logic_0  |     1|
+|8     |Task_1_design_xbar                 |     1|
+|9     |IBUF                               |     9|
+|10    |OBUF                               |     8|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10273 ; free virtual = 30395
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6112 ; free virtual = 25002
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10330 ; free virtual = 30452
-Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10330 ; free virtual = 30452
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6166 ; free virtual = 25057
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6166 ; free virtual = 25057
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10419 ; free virtual = 30540
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6257 ; free virtual = 25148
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10363 ; free virtual = 30485
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6188 ; free virtual = 25079
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 52cc6b69
+Synth Design complete, checksum: 4f3f8052
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2957.301 ; gain = 0.000 ; free physical = 10561 ; free virtual = 30683
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 2960.969 ; gain = 0.000 ; free physical = 6387 ; free virtual = 25277
 INFO: [Common 17-1381] The checkpoint '/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.runs/synth_1/Task_1_design_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Task_1_design_wrapper_utilization_synth.rpt -pb Task_1_design_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun  5 19:27:36 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  6 20:27:57 2022...

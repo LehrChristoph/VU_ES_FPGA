@@ -23,8 +23,9 @@
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "sync_reset": "",
-      "xlconstant_0": ""
+      "xlconstant_0": "",
+      "util_vector_logic_0": "",
+      "sync_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1450,11 +1451,41 @@
           }
         }
       },
-      "sync_reset": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "Task_1_design_xlconstant_0_0",
+        "xci_path": "ip/Task_1_design_xlconstant_0_0/Task_1_design_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1"
+          }
+        }
+      },
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "Task_1_design_util_vector_logic_0_0",
+        "xci_path": "ip/Task_1_design_util_vector_logic_0_0/Task_1_design_util_vector_logic_0_0.xci",
+        "inst_hier_path": "util_vector_logic_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          },
+          "C_SIZE": {
+            "value": "1"
+          }
+        }
+      },
+      "sync_0": {
         "vlnv": "xilinx.com:module_ref:sync:1.0",
         "xci_name": "Task_1_design_sync_0_0",
         "xci_path": "ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0.xci",
-        "inst_hier_path": "sync_reset",
+        "inst_hier_path": "sync_0",
+        "parameters": {
+          "RESET_VALUE": {
+            "value": "1"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "sync",
@@ -1482,15 +1513,19 @@
             "direction": "I"
           },
           "data_out": {
-            "direction": "O"
+            "direction": "O",
+            "parameters": {
+              "PortType": {
+                "value": "undef",
+                "value_src": "ip_prop"
+              },
+              "PortType.PROP_SRC": {
+                "value": "false",
+                "value_src": "ip_prop"
+              }
+            }
           }
         }
-      },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "Task_1_design_xlconstant_0_0",
-        "xci_path": "ip/Task_1_design_xlconstant_0_0/Task_1_design_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0"
       }
     },
     "interface_nets": {
@@ -1541,7 +1576,7 @@
       "data_in_0_1": {
         "ports": [
           "rst",
-          "sync_reset/data_in"
+          "sync_0/data_in"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -1566,19 +1601,31 @@
           "ps7_0_axi_periph/ACLK",
           "AXI_GPIO_SWITCHES/s_axi_aclk",
           "ps7_0_axi_periph/M01_ACLK",
-          "sync_reset/clk"
+          "sync_0/clk"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "proc_sys_reset_0/ext_reset_in"
         ]
       },
       "sync_0_data_out": {
         "ports": [
-          "sync_reset/data_out",
-          "proc_sys_reset_0/ext_reset_in"
+          "sync_0/data_out",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "util_vector_logic_0_Res": {
+        "ports": [
+          "util_vector_logic_0/Res",
+          "proc_sys_reset_0/aux_reset_in"
         ]
       },
       "xlconstant_0_dout": {
         "ports": [
           "xlconstant_0/dout",
-          "sync_reset/res_n"
+          "sync_0/res_n"
         ]
       }
     },

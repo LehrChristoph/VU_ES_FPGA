@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "sync,Vivado 2022.1" *)
 (* CHECK_LICENSE_TYPE = "Task_1_design_sync_0_0,sync,{}" *)
-(* CORE_GENERATION_INFO = "Task_1_design_sync_0_0,sync,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sync,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,SYNC_STAGES=8,RESET_VALUE=0}" *)
+(* CORE_GENERATION_INFO = "Task_1_design_sync_0_0,sync,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sync,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,SYNC_STAGES=8,RESET_VALUE=1}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Task_1_design_sync_0_0 (
@@ -71,7 +71,7 @@ output wire data_out;
 
   sync #(
     .SYNC_STAGES(8),
-    .RESET_VALUE("0")
+    .RESET_VALUE("1")
   ) inst (
     .clk(clk),
     .res_n(res_n),

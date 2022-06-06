@@ -1,39 +1,44 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.933381",
-   "Default View_TopLeft":"-122,-610",
+   "Default View_ScaleFactor":"0.767385",
+   "Default View_TopLeft":"-296,-629",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 6 -x 1620 -y -200 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 6 -x 1620 -y -170 -defaultsOSRD
-preplace port sws_8bits -pg 1 -lvl 6 -x 1620 -y -390 -defaultsOSRD
-preplace port leds_8bits -pg 1 -lvl 6 -x 1620 -y -360 -defaultsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x -10 -y -260 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1010 -y 30 -defaultsOSRD
-preplace inst AXI_GPIO_SWITCHES -pg 1 -lvl 4 -x 1010 -y -330 -defaultsOSRD
-preplace inst AXI_GPIO_LEDS -pg 1 -lvl 4 -x 1010 -y -190 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 590 -y -510 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 5 -x 1410 -y -460 -defaultsOSRD
-preplace inst sync_0 -pg 1 -lvl 2 -x 290 -y -310 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 1 -x 90 -y -310 -defaultsOSRD
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 2 770 -470 1260
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 4 170 -390 400 -390 780 -420 1250
-preplace netloc sync_0_data_out 1 2 1 410 -530n
-preplace netloc xlconstant_0_dout 1 1 1 N -310
-preplace netloc data_in_0_1 1 0 2 10J -250 170J
-preplace netloc axi_gpio_0_GPIO 1 4 2 1230 -320 1570
-preplace netloc axi_gpio_0_GPIO1 1 4 2 N -190 1580
-preplace netloc processing_system7_0_DDR 1 4 2 NJ -50 1590
-preplace netloc processing_system7_0_FIXED_IO 1 4 2 NJ -30 1600
-preplace netloc processing_system7_0_M_AXI_GP0 1 4 1 1220 -540n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 3 790 -600 NJ -600 1560
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 3 800 -410 1240J -310 1560
-levelinfo -pg 1 -10 90 290 590 1010 1410 1620
-pagesize -pg 1 -db -bbox -sgen -80 -610 1740 200
+preplace port DDR -pg 1 -lvl 7 -x 1890 -y -200 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 1890 -y -170 -defaultsOSRD
+preplace port sws_8bits -pg 1 -lvl 7 -x 1890 -y -390 -defaultsOSRD
+preplace port leds_8bits -pg 1 -lvl 7 -x 1890 -y -360 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -230 -y -470 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1280 -y 60 -defaultsOSRD
+preplace inst AXI_GPIO_SWITCHES -pg 1 -lvl 5 -x 1280 -y -330 -defaultsOSRD
+preplace inst AXI_GPIO_LEDS -pg 1 -lvl 5 -x 1280 -y -160 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 4 -x 860 -y -510 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -x 1690 -y -460 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x -130 -y -540 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -x 460 -y -490 -defaultsOSRD
+preplace inst sync_0 -pg 1 -lvl 2 -x 190 -y -490 -defaultsOSRD
+preplace netloc data_in_0_1 1 0 2 N -470 N
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 4 2 1040 -410 1540
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 5 -40 -570 N -570 620 -610 1050 -420 1530
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 3 3 620 -240 NJ -240 1490
+preplace netloc sync_0_data_out 1 2 1 NJ -490
+preplace netloc util_vector_logic_0_Res 1 3 1 610 -510n
+preplace netloc xlconstant_0_dout 1 1 1 -50 -540n
+preplace netloc axi_gpio_0_GPIO 1 5 2 1490J -610 1870
+preplace netloc axi_gpio_0_GPIO1 1 5 2 1500J -600 1860
+preplace netloc processing_system7_0_DDR 1 5 2 1520J -200 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 5 2 1540J -170 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 1510 -540n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 4 3 1060 -250 NJ -250 1840
+preplace netloc ps7_0_axi_periph_M01_AXI 1 4 3 1060 -620 NJ -620 1850
+levelinfo -pg 1 -230 -130 190 460 860 1280 1690 1890
+pagesize -pg 1 -db -bbox -sgen -300 -890 2010 220
 "
 }
 {
    "da_axi4_cnt":"2",
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1",
    "da_ps7_cnt":"1"
 }

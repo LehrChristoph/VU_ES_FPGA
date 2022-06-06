@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-//Date        : Sun Jun  5 18:12:19 2022
+//Date        : Mon Jun  6 20:27:28 2022
 //Host        : fedora running 64-bit Fedora release 36 (Thirty Six)
 //Command     : generate_target Task_1_design.bd
 //Design      : Task_1_design
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Task_1_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Task_1_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Task_1_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "Task_1_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Task_1_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Task_1_design.hwdef" *) 
 module Task_1_design
    (DDR_addr,
     DDR_ba,
@@ -80,6 +80,7 @@ module Task_1_design
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
   wire processing_system7_0_FCLK_CLK0;
+  wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
   wire [53:0]processing_system7_0_FIXED_IO_MIO;
@@ -159,6 +160,7 @@ module Task_1_design
   wire [3:0]ps7_0_axi_periph_M01_AXI_WSTRB;
   wire [0:0]ps7_0_axi_periph_M01_AXI_WVALID;
   wire sync_0_data_out;
+  wire [0:0]util_vector_logic_0_Res;
   wire [0:0]xlconstant_0_dout;
 
   assign axi_gpio_0_GPIO_TRI_I = sws_8bits_tri_i[7:0];
@@ -207,9 +209,9 @@ module Task_1_design
         .s_axi_wstrb(ps7_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID));
   Task_1_design_proc_sys_reset_0_0 proc_sys_reset_0
-       (.aux_reset_in(1'b1),
+       (.aux_reset_in(util_vector_logic_0_Res),
         .dcm_locked(1'b1),
-        .ext_reset_in(sync_0_data_out),
+        .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
@@ -233,6 +235,7 @@ module Task_1_design
         .DDR_WEB(DDR_we_n),
         .ENET0_MDIO_I(1'b0),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
+        .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .MIO(FIXED_IO_mio[53:0]),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(processing_system7_0_M_AXI_GP0_ARADDR),
@@ -359,11 +362,14 @@ module Task_1_design
         .S00_AXI_wready(processing_system7_0_M_AXI_GP0_WREADY),
         .S00_AXI_wstrb(processing_system7_0_M_AXI_GP0_WSTRB),
         .S00_AXI_wvalid(processing_system7_0_M_AXI_GP0_WVALID));
-  Task_1_design_sync_0_0 sync_reset
+  Task_1_design_sync_0_0 sync_0
        (.clk(processing_system7_0_FCLK_CLK0),
         .data_in(data_in_0_1),
         .data_out(sync_0_data_out),
         .res_n(xlconstant_0_dout));
+  Task_1_design_util_vector_logic_0_0 util_vector_logic_0
+       (.Op1(sync_0_data_out),
+        .Res(util_vector_logic_0_Res));
   Task_1_design_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
 endmodule

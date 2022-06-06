@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity sync is
     generic (
         -- number of stages in the input synchronizer
-        SYNC_STAGES : integer range 2 to 255 := 8;
+        SYNC_STAGES : integer range 2 to 650_000_000 := 8;
         -- reset value of the output signal
         RESET_VALUE : std_logic
     );
@@ -48,21 +48,29 @@ entity sync is
 end sync;
 
 architecture Behavioral of sync is
-    signal sync : std_logic_vector(1 to SYNC_STAGES);
+    signal ffs : std_logic_vector(0 to 1);
+    signal cnt_rst: std_logic;
 begin
+
+    cnt_rst <= ffs(0) xor ffs(1);
     sync_proc : process(clk, res_n)
+        variable count : integer range 0 to SYNC_STAGES;
     begin
         if res_n = '0' then
-            sync <= (others => RESET_VALUE);
+            ffs <= (others => RESET_VALUE);
         elsif rising_edge(clk) then
-            sync(1) <= data_in; -- get new data
+            ffs(0) <= data_in; -- get new data
+            ffs(1) <= ffs(0);
             -- forward data to next synchronizer stage
-            for i in 2 to SYNC_STAGES loop
-                sync(i) <= sync(i - 1);
-            end loop;
+            if cnt_rst = '1' then
+                count := 0;
+            elsif count < SYNC_STAGES then
+                count := count +1;
+            else 
+                data_out<=  ffs(1);
+            end if;
+               
         end if;
     end process sync_proc;
 
-    -- output synchronized data
-    data_out <= sync(SYNC_STAGES);
 end Behavioral;

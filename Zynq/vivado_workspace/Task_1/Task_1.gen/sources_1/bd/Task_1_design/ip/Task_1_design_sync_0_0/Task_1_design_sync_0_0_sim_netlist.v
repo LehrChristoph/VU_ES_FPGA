@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-// Date        : Sun Jun  5 18:08:55 2022
+// Date        : Mon Jun  6 20:14:52 2022
 // Host        : fedora running 64-bit Fedora release 36 (Thirty Six)
 // Command     : write_verilog -force -mode funcsim
 //               /home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1.gen/sources_1/bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0_sim_netlist.v
@@ -40,74 +40,128 @@ endmodule
 (* ORIG_REF_NAME = "sync" *) 
 module Task_1_design_sync_0_0_sync
    (data_out,
+    res_n,
     data_in,
-    clk,
-    res_n);
+    clk);
   output data_out;
+  input res_n;
   input data_in;
   input clk;
-  input res_n;
 
   wire clk;
   wire data_in;
   wire data_out;
-  wire [6:0]p_0_in;
+  wire data_out_i_1_n_0;
+  wire \ffs_reg_n_0_[1] ;
+  wire p_0_in;
+  wire [3:0]p_0_in__0;
+  wire p_1_in;
   wire res_n;
-  wire \sync[8]_i_1_n_0 ;
+  wire \sync_proc.count[3]_i_1_n_0 ;
+  wire \sync_proc.count[3]_i_2_n_0 ;
+  wire [3:3]\sync_proc.count_reg ;
+  wire \sync_proc.count_reg_n_0_[0] ;
+  wire \sync_proc.count_reg_n_0_[1] ;
+  wire \sync_proc.count_reg_n_0_[2] ;
 
+  LUT5 #(
+    .INIT(32'hFDFF8000)) 
+    data_out_i_1
+       (.I0(res_n),
+        .I1(\ffs_reg_n_0_[1] ),
+        .I2(p_1_in),
+        .I3(\sync_proc.count_reg ),
+        .I4(data_out),
+        .O(data_out_i_1_n_0));
+  FDRE data_out_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(data_out_i_1_n_0),
+        .Q(data_out),
+        .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \sync[8]_i_1 
+    \ffs[0]_i_1 
        (.I0(res_n),
-        .O(\sync[8]_i_1_n_0 ));
-  FDCE \sync_reg[1] 
+        .O(p_0_in));
+  FDPE \ffs_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
         .D(data_in),
-        .Q(p_0_in[6]));
-  FDCE \sync_reg[2] 
+        .PRE(p_0_in),
+        .Q(p_1_in));
+  FDPE \ffs_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[6]),
-        .Q(p_0_in[5]));
-  FDCE \sync_reg[3] 
+        .D(p_1_in),
+        .PRE(p_0_in),
+        .Q(\ffs_reg_n_0_[1] ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \sync_proc.count[0]_i_1 
+       (.I0(\sync_proc.count_reg_n_0_[0] ),
+        .O(p_0_in__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \sync_proc.count[1]_i_1 
+       (.I0(\sync_proc.count_reg_n_0_[0] ),
+        .I1(\sync_proc.count_reg_n_0_[1] ),
+        .O(p_0_in__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \sync_proc.count[2]_i_1 
+       (.I0(\sync_proc.count_reg_n_0_[0] ),
+        .I1(\sync_proc.count_reg_n_0_[1] ),
+        .I2(\sync_proc.count_reg_n_0_[2] ),
+        .O(p_0_in__0[2]));
+  LUT3 #(
+    .INIT(8'h28)) 
+    \sync_proc.count[3]_i_1 
+       (.I0(res_n),
+        .I1(p_1_in),
+        .I2(\ffs_reg_n_0_[1] ),
+        .O(\sync_proc.count[3]_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \sync_proc.count[3]_i_2 
+       (.I0(res_n),
+        .I1(\sync_proc.count_reg ),
+        .O(\sync_proc.count[3]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \sync_proc.count[3]_i_3 
+       (.I0(\sync_proc.count_reg_n_0_[1] ),
+        .I1(\sync_proc.count_reg_n_0_[0] ),
+        .I2(\sync_proc.count_reg_n_0_[2] ),
+        .O(p_0_in__0[3]));
+  FDRE \sync_proc.count_reg[0] 
        (.C(clk),
-        .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[5]),
-        .Q(p_0_in[4]));
-  FDCE \sync_reg[4] 
+        .CE(\sync_proc.count[3]_i_2_n_0 ),
+        .D(p_0_in__0[0]),
+        .Q(\sync_proc.count_reg_n_0_[0] ),
+        .R(\sync_proc.count[3]_i_1_n_0 ));
+  FDRE \sync_proc.count_reg[1] 
        (.C(clk),
-        .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[4]),
-        .Q(p_0_in[3]));
-  FDCE \sync_reg[5] 
+        .CE(\sync_proc.count[3]_i_2_n_0 ),
+        .D(p_0_in__0[1]),
+        .Q(\sync_proc.count_reg_n_0_[1] ),
+        .R(\sync_proc.count[3]_i_1_n_0 ));
+  FDRE \sync_proc.count_reg[2] 
        (.C(clk),
-        .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[3]),
-        .Q(p_0_in[2]));
-  FDCE \sync_reg[6] 
+        .CE(\sync_proc.count[3]_i_2_n_0 ),
+        .D(p_0_in__0[2]),
+        .Q(\sync_proc.count_reg_n_0_[2] ),
+        .R(\sync_proc.count[3]_i_1_n_0 ));
+  FDRE \sync_proc.count_reg[3] 
        (.C(clk),
-        .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[2]),
-        .Q(p_0_in[1]));
-  FDCE \sync_reg[7] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[1]),
-        .Q(p_0_in[0]));
-  FDCE \sync_reg[8] 
-       (.C(clk),
-        .CE(1'b1),
-        .CLR(\sync[8]_i_1_n_0 ),
-        .D(p_0_in[0]),
-        .Q(data_out));
+        .CE(\sync_proc.count[3]_i_2_n_0 ),
+        .D(p_0_in__0[3]),
+        .Q(\sync_proc.count_reg ),
+        .R(\sync_proc.count[3]_i_1_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

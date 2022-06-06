@@ -24,11 +24,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_desi
 # IP: bd/Task_1_design/ip/Task_1_design_ps7_0_axi_periph_0/Task_1_design_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_design_ps7_0_axi_periph_0 || ORIG_REF_NAME==Task_1_design_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_design_sync_0_0 || ORIG_REF_NAME==Task_1_design_sync_0_0} -quiet] -quiet
-
 # IP: bd/Task_1_design/ip/Task_1_design_xlconstant_0_0/Task_1_design_xlconstant_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_design_xlconstant_0_0 || ORIG_REF_NAME==Task_1_design_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/Task_1_design/ip/Task_1_design_util_vector_logic_0_0/Task_1_design_util_vector_logic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_design_util_vector_logic_0_0 || ORIG_REF_NAME==Task_1_design_util_vector_logic_0_0} -quiet] -quiet
+
+# IP: bd/Task_1_design/ip/Task_1_design_sync_0_0/Task_1_design_sync_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_design_sync_0_0 || ORIG_REF_NAME==Task_1_design_sync_0_0} -quiet] -quiet
 
 # IP: bd/Task_1_design/ip/Task_1_design_auto_pc_0/Task_1_design_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Task_1_design_auto_pc_0 || ORIG_REF_NAME==Task_1_design_auto_pc_0} -quiet] -quiet

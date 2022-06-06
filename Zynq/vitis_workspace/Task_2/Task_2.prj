@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Task_2" location="/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vitis_workspace/Task_2" platform="/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vitis_workspace/Task_2_platform/export/Task_2_platform/Task_2_platform.xpfm" platformUID="xilinx:zedboard::0.0(custom)" systemProject="Task_2_system" sysConfig="Task_2_platform" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" language="CPP" mssSignature="c310335f1864296e52dffe2851645fcc">
-  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1003550355">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1003550355" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>

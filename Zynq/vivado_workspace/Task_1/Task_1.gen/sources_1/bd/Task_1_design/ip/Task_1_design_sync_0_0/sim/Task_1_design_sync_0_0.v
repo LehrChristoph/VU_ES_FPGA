@@ -70,7 +70,7 @@ output wire data_out;
 
   sync #(
     .SYNC_STAGES(8),
-    .RESET_VALUE("0")
+    .RESET_VALUE("1")
   ) inst (
     .clk(clk),
     .res_n(res_n),

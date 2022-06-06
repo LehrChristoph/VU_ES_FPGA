@@ -9,16 +9,19 @@
 # -out option specifies the output directory of the platform project.
 
 platform create -name {Task_1_platform}\
--hw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1_platform.xsa}\
+-hw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1_design_wrapper.xsa}\
 -out {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vitis_workspace}
 
 platform write
 domain create -name {standalone_ps7_cortexa9_0} -display-name {standalone_ps7_cortexa9_0} -os {standalone} -proc {ps7_cortexa9_0} -runtime {cpp} -arch {32-bit} -support-app {empty_application}
 platform generate -domains 
-platform active {Task_1_platform}
+platform write
 domain active {zynq_fsbl}
 domain active {standalone_ps7_cortexa9_0}
 platform generate -quick
 platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1_design_wrapper.xsa}
 platform clean
 platform clean
+platform clean
+platform generate
