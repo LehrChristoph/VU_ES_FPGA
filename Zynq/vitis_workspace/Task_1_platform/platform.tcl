@@ -25,3 +25,10 @@ platform clean
 platform clean
 platform clean
 platform generate
+platform active {Task_1_platform}
+bsp reload
+bsp config clocking "false"
+bsp reload
+platform generate
+platform clean
+platform clean

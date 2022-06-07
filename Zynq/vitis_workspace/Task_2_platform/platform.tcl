@@ -94,3 +94,8 @@ platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA
 platform generate -domains 
 platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
 platform generate -domains 
+platform clean
+platform clean
+platform generate
+platform clean
+platform clean
