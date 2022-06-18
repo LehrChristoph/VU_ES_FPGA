@@ -32,3 +32,20 @@ bsp reload
 platform generate
 platform clean
 platform clean
+platform active {Task_1_platform}
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1_v2/Task_1_design_wrapper.xsa}
+platform clean
+platform clean
+platform generate
+bsp reload
+platform config -updatehw {/run/media/christophlehr/4D4C-0071/Zynq_Lab/vivado_workspace/Task_1/Task_1_design_wrapper.xsa}
+platform clean
+platform clean
+platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_1/Task_1_design_wrapper.xsa}
+platform clean
+platform clean
+platform generate
+platform active {Task_1_platform}
+platform active {Task_1_platform}
+platform clean

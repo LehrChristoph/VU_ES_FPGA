@@ -1,6 +1,6 @@
-2022-06-07T11:17:47.34144400255-11:17:47 **** Clean-only build of project Task_2_platform ****
-000-buildplatform.sh 41645 Task_2_platform clean 
-000-XSDB Server Channel: tcfchan#11
+2022-06-18T16:39:27.3934300255-16:39:27 **** Clean-only build of project Task_2_platform ****
+000-buildplatform.sh 34857 Task_2_platform clean 
+000-XSDB Server Channel: tcfchan#90
 000-Cleaning the zynq_fsbl application.
 000-rm -rf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o zynq
 000-_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
@@ -33,8 +33,6 @@
 000-make -C ps7_cortexa9_0/libsrc/sdps_v3_14/src -s clean 
 000-
 000-make -C ps7_cortexa9_0/libsrc/standalone_v7_7/src -s clean 
-000-
-000-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_9/src -s clean 
 000-
 000-make -C ps7_cortexa9_0/libsrc/ttcps_v3_15/src -s clean 
 000-
@@ -79,8 +77,6 @@
 000-
 000-make -C ps7_cortexa9_0/libsrc/standalone_v7_7/src -s clean 
 000-
-000-make -C ps7_cortexa9_0/libsrc/tmrctr_v4_9/src -s clean 
-000-
 000-make -C ps7_cortexa9_0/libsrc/ttcps_v3_15/src -s clean 
 000-
 000-make -C ps7_cortexa9_0/libsrc/uartps_v3_11/src -s clean 
@@ -92,5 +88,5 @@
 000-rm -f ps7_cortexa9_0/lib/libxil.a
 000-
 00255-
-11:17:51 Build Finished (took 4s.124ms)
+16:39:31 Build Finished (took 4s.355ms)
 

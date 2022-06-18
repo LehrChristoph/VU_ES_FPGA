@@ -99,3 +99,47 @@ platform clean
 platform generate
 platform clean
 platform clean
+platform generate
+platform generate -domains 
+platform active {Task_2_platform}
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform generate
+platform active {Task_2_platform}
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform clean
+platform clean
+platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform generate -domains 
+platform clean
+platform generate
+platform clean
+platform clean
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform generate
+platform active {Task_2_platform}
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform clean
+platform generate
+platform clean
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform clean
+platform generate
+platform config -updatehw {/home/christophlehr/TUWien/studium/es_fpga/VU_ES_FPGA/Zynq/vivado_workspace/Task_2/Task_2_design_wrapper.xsa}
+platform clean
+platform generate
+platform clean

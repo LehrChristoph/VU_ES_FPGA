@@ -368,8 +368,10 @@
 # Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard.
 
 
-set_property IOSTANDARD LVCMOS33 [get_ports btn]
-set_property IOSTANDARD LVCMOS33 [get_ports rst]
+set_property IOSTANDARD LVCMOS33 [get_ports func_btn]
+set_property IOSTANDARD LVCMOS33 [get_ports rst_btn]
+set_property IOSTANDARD LVCMOS33 [get_ports sw_btn]
 
-set_property PACKAGE_PIN N15 [get_ports btn]
-set_property PACKAGE_PIN R18 [get_ports rst]
+set_property PACKAGE_PIN N15 [get_ports func_btn]
+set_property PACKAGE_PIN R18 [get_ports rst_btn]
+set_property PACKAGE_PIN P16 [get_ports sw_btn]

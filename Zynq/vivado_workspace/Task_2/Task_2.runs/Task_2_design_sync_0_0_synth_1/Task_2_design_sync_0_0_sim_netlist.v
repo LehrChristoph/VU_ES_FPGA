@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-// Date        : Mon Jun  6 19:36:00 2022
+// Date        : Fri Jun 10 19:10:03 2022
 // Host        : fedora running 64-bit Fedora release 36 (Thirty Six)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Task_2_design_sync_0_0_sim_netlist.v
@@ -55,14 +55,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
   wire data_out_i_2_n_0;
   wire data_out_i_3_n_0;
   wire data_out_i_4_n_0;
-  wire data_out_i_5_n_0;
   wire \ffs_reg_n_0_[1] ;
   wire p_0_in;
   wire p_1_in;
   wire res_n;
   wire \sync_proc.count[0]_i_1_n_0 ;
   wire \sync_proc.count[0]_i_4_n_0 ;
-  wire [19:6]\sync_proc.count_reg ;
+  wire [13:4]\sync_proc.count_reg ;
   wire \sync_proc.count_reg[0]_i_3_n_0 ;
   wire \sync_proc.count_reg[0]_i_3_n_1 ;
   wire \sync_proc.count_reg[0]_i_3_n_2 ;
@@ -71,21 +70,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
   wire \sync_proc.count_reg[0]_i_3_n_5 ;
   wire \sync_proc.count_reg[0]_i_3_n_6 ;
   wire \sync_proc.count_reg[0]_i_3_n_7 ;
-  wire \sync_proc.count_reg[12]_i_1_n_0 ;
-  wire \sync_proc.count_reg[12]_i_1_n_1 ;
-  wire \sync_proc.count_reg[12]_i_1_n_2 ;
   wire \sync_proc.count_reg[12]_i_1_n_3 ;
-  wire \sync_proc.count_reg[12]_i_1_n_4 ;
-  wire \sync_proc.count_reg[12]_i_1_n_5 ;
   wire \sync_proc.count_reg[12]_i_1_n_6 ;
   wire \sync_proc.count_reg[12]_i_1_n_7 ;
-  wire \sync_proc.count_reg[16]_i_1_n_1 ;
-  wire \sync_proc.count_reg[16]_i_1_n_2 ;
-  wire \sync_proc.count_reg[16]_i_1_n_3 ;
-  wire \sync_proc.count_reg[16]_i_1_n_4 ;
-  wire \sync_proc.count_reg[16]_i_1_n_5 ;
-  wire \sync_proc.count_reg[16]_i_1_n_6 ;
-  wire \sync_proc.count_reg[16]_i_1_n_7 ;
   wire \sync_proc.count_reg[4]_i_1_n_0 ;
   wire \sync_proc.count_reg[4]_i_1_n_1 ;
   wire \sync_proc.count_reg[4]_i_1_n_2 ;
@@ -106,9 +93,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
   wire \sync_proc.count_reg_n_0_[1] ;
   wire \sync_proc.count_reg_n_0_[2] ;
   wire \sync_proc.count_reg_n_0_[3] ;
-  wire \sync_proc.count_reg_n_0_[4] ;
-  wire \sync_proc.count_reg_n_0_[5] ;
-  wire [3:3]\NLW_sync_proc.count_reg[16]_i_1_CO_UNCONNECTED ;
+  wire [3:1]\NLW_sync_proc.count_reg[12]_i_1_CO_UNCONNECTED ;
+  wire [3:2]\NLW_sync_proc.count_reg[12]_i_1_O_UNCONNECTED ;
 
   LUT5 #(
     .INIT(32'hFFEF0080)) 
@@ -120,39 +106,29 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
         .I4(data_out),
         .O(data_out_i_1_n_0));
   LUT5 #(
-    .INIT(32'hFFFF8FFF)) 
+    .INIT(32'h000BFFFF)) 
     data_out_i_2
        (.I0(data_out_i_3_n_0),
         .I1(data_out_i_4_n_0),
-        .I2(\sync_proc.count_reg [18]),
-        .I3(\sync_proc.count_reg [19]),
-        .I4(data_out_i_5_n_0),
-        .O(data_out_i_2_n_0));
-  LUT5 #(
-    .INIT(32'h00000001)) 
-    data_out_i_3
-       (.I0(\sync_proc.count_reg [15]),
-        .I1(\sync_proc.count_reg [10]),
         .I2(\sync_proc.count_reg [11]),
-        .I3(\sync_proc.count_reg [13]),
-        .I4(\sync_proc.count_reg [12]),
+        .I3(\sync_proc.count_reg [12]),
+        .I4(\sync_proc.count_reg [13]),
+        .O(data_out_i_2_n_0));
+  LUT3 #(
+    .INIT(8'h7F)) 
+    data_out_i_3
+       (.I0(\sync_proc.count_reg [10]),
+        .I1(\sync_proc.count_reg [9]),
+        .I2(\sync_proc.count_reg [8]),
         .O(data_out_i_3_n_0));
   LUT4 #(
-    .INIT(16'h01FF)) 
+    .INIT(16'hFFFE)) 
     data_out_i_4
-       (.I0(\sync_proc.count_reg [6]),
-        .I1(\sync_proc.count_reg [7]),
-        .I2(\sync_proc.count_reg [8]),
-        .I3(\sync_proc.count_reg [9]),
+       (.I0(\sync_proc.count_reg [5]),
+        .I1(\sync_proc.count_reg [4]),
+        .I2(\sync_proc.count_reg [7]),
+        .I3(\sync_proc.count_reg [6]),
         .O(data_out_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h777F)) 
-    data_out_i_5
-       (.I0(\sync_proc.count_reg [17]),
-        .I1(\sync_proc.count_reg [16]),
-        .I2(\sync_proc.count_reg [14]),
-        .I3(\sync_proc.count_reg [15]),
-        .O(data_out_i_5_n_0));
   FDRE data_out_reg
        (.C(clk),
         .CE(1'b1),
@@ -186,8 +162,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
   LUT2 #(
     .INIT(4'h8)) 
     \sync_proc.count[0]_i_2 
-       (.I0(res_n),
-        .I1(data_out_i_2_n_0),
+       (.I0(data_out_i_2_n_0),
+        .I1(res_n),
         .O(count0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -229,60 +205,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \sync_proc.count_reg[12]_i_1 
        (.CI(\sync_proc.count_reg[8]_i_1_n_0 ),
-        .CO({\sync_proc.count_reg[12]_i_1_n_0 ,\sync_proc.count_reg[12]_i_1_n_1 ,\sync_proc.count_reg[12]_i_1_n_2 ,\sync_proc.count_reg[12]_i_1_n_3 }),
+        .CO({\NLW_sync_proc.count_reg[12]_i_1_CO_UNCONNECTED [3:1],\sync_proc.count_reg[12]_i_1_n_3 }),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\sync_proc.count_reg[12]_i_1_n_4 ,\sync_proc.count_reg[12]_i_1_n_5 ,\sync_proc.count_reg[12]_i_1_n_6 ,\sync_proc.count_reg[12]_i_1_n_7 }),
-        .S(\sync_proc.count_reg [15:12]));
+        .O({\NLW_sync_proc.count_reg[12]_i_1_O_UNCONNECTED [3:2],\sync_proc.count_reg[12]_i_1_n_6 ,\sync_proc.count_reg[12]_i_1_n_7 }),
+        .S({1'b0,1'b0,\sync_proc.count_reg [13:12]}));
   FDRE \sync_proc.count_reg[13] 
        (.C(clk),
         .CE(count0),
         .D(\sync_proc.count_reg[12]_i_1_n_6 ),
         .Q(\sync_proc.count_reg [13]),
-        .R(\sync_proc.count[0]_i_1_n_0 ));
-  FDRE \sync_proc.count_reg[14] 
-       (.C(clk),
-        .CE(count0),
-        .D(\sync_proc.count_reg[12]_i_1_n_5 ),
-        .Q(\sync_proc.count_reg [14]),
-        .R(\sync_proc.count[0]_i_1_n_0 ));
-  FDRE \sync_proc.count_reg[15] 
-       (.C(clk),
-        .CE(count0),
-        .D(\sync_proc.count_reg[12]_i_1_n_4 ),
-        .Q(\sync_proc.count_reg [15]),
-        .R(\sync_proc.count[0]_i_1_n_0 ));
-  FDRE \sync_proc.count_reg[16] 
-       (.C(clk),
-        .CE(count0),
-        .D(\sync_proc.count_reg[16]_i_1_n_7 ),
-        .Q(\sync_proc.count_reg [16]),
-        .R(\sync_proc.count[0]_i_1_n_0 ));
-  (* ADDER_THRESHOLD = "11" *) 
-  CARRY4 \sync_proc.count_reg[16]_i_1 
-       (.CI(\sync_proc.count_reg[12]_i_1_n_0 ),
-        .CO({\NLW_sync_proc.count_reg[16]_i_1_CO_UNCONNECTED [3],\sync_proc.count_reg[16]_i_1_n_1 ,\sync_proc.count_reg[16]_i_1_n_2 ,\sync_proc.count_reg[16]_i_1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\sync_proc.count_reg[16]_i_1_n_4 ,\sync_proc.count_reg[16]_i_1_n_5 ,\sync_proc.count_reg[16]_i_1_n_6 ,\sync_proc.count_reg[16]_i_1_n_7 }),
-        .S(\sync_proc.count_reg [19:16]));
-  FDRE \sync_proc.count_reg[17] 
-       (.C(clk),
-        .CE(count0),
-        .D(\sync_proc.count_reg[16]_i_1_n_6 ),
-        .Q(\sync_proc.count_reg [17]),
-        .R(\sync_proc.count[0]_i_1_n_0 ));
-  FDRE \sync_proc.count_reg[18] 
-       (.C(clk),
-        .CE(count0),
-        .D(\sync_proc.count_reg[16]_i_1_n_5 ),
-        .Q(\sync_proc.count_reg [18]),
-        .R(\sync_proc.count[0]_i_1_n_0 ));
-  FDRE \sync_proc.count_reg[19] 
-       (.C(clk),
-        .CE(count0),
-        .D(\sync_proc.count_reg[16]_i_1_n_4 ),
-        .Q(\sync_proc.count_reg [19]),
         .R(\sync_proc.count[0]_i_1_n_0 ));
   FDRE \sync_proc.count_reg[1] 
        (.C(clk),
@@ -306,7 +238,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
        (.C(clk),
         .CE(count0),
         .D(\sync_proc.count_reg[4]_i_1_n_7 ),
-        .Q(\sync_proc.count_reg_n_0_[4] ),
+        .Q(\sync_proc.count_reg [4]),
         .R(\sync_proc.count[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \sync_proc.count_reg[4]_i_1 
@@ -315,12 +247,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_sync
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\sync_proc.count_reg[4]_i_1_n_4 ,\sync_proc.count_reg[4]_i_1_n_5 ,\sync_proc.count_reg[4]_i_1_n_6 ,\sync_proc.count_reg[4]_i_1_n_7 }),
-        .S({\sync_proc.count_reg [7:6],\sync_proc.count_reg_n_0_[5] ,\sync_proc.count_reg_n_0_[4] }));
+        .S(\sync_proc.count_reg [7:4]));
   FDRE \sync_proc.count_reg[5] 
        (.C(clk),
         .CE(count0),
         .D(\sync_proc.count_reg[4]_i_1_n_6 ),
-        .Q(\sync_proc.count_reg_n_0_[5] ),
+        .Q(\sync_proc.count_reg [5]),
         .R(\sync_proc.count[0]_i_1_n_0 ));
   FDRE \sync_proc.count_reg[6] 
        (.C(clk),

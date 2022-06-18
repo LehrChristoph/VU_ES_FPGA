@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2022.1/data/xilinx_vip/include" --include "../../../../Task_2.gen/sources_1/bd/Task_2_design/ipshared/ec67/hdl" --include "../../../../Task_2.gen/sources_1/bd/Task_2_design/ipshared/5765/hdl" \
+"../../../bd/Task_2_design/ip/Task_2_design_processing_system7_0_0/sim/Task_2_design_processing_system7_0_0.v" \
+"../../../bd/Task_2_design/ip/Task_2_design_xbar_0/sim/Task_2_design_xbar_0.v" \
+"../../../bd/Task_2_design/ip/Task_2_design_sync_0_0/sim/Task_2_design_sync_0_0.v" \
+"../../../bd/Task_2_design/ip/Task_2_design_sync_0_1/sim/Task_2_design_sync_0_1.v" \
+"../../../bd/Task_2_design/sim/Task_2_design.v" \
+"../../../bd/Task_2_design/ip/Task_2_design_synch_reset_0/sim/Task_2_design_synch_reset_0.v" \
+"../../../bd/Task_2_design/ip/Task_2_design_xlconcat_0_0/sim/Task_2_design_xlconcat_0_0.v" \
+"../../../bd/Task_2_design/ip/Task_2_design_auto_pc_0/sim/Task_2_design_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

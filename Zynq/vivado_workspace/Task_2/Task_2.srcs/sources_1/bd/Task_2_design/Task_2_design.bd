@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD61A718D1684E69F",
+      "boundary_crc": "0xBF7F0A6142A14AF8",
       "device": "xc7z020clg484-1",
       "gen_directory": "../../../../Task_2.gen/sources_1/bd/Task_2_design",
       "name": "Task_2_design",
@@ -24,14 +24,11 @@
         "m04_couplers": {}
       },
       "rst_ps7_0_100M": "",
-      "AXI_GPIO_BTN": "",
-      "AXI_TIMER": "",
-      "xlconstant_0": "",
-      "AXI_GPIO_LEDS": "",
-      "util_vector_logic_0": "",
-      "xlconcat_0": "",
-      "synch_reset": "",
-      "sync_btn": ""
+      "AXI_GPIO_BTN_LED": "",
+      "synch_reset_btn": "",
+      "sync_btn": "",
+      "synch_switch_btn": "",
+      "xlconcat_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -107,10 +104,13 @@
       }
     },
     "ports": {
-      "rst": {
+      "rst_btn": {
         "direction": "I"
       },
-      "btn": {
+      "func_btn": {
+        "direction": "I"
+      },
+      "sw_btn": {
         "direction": "I"
       }
     },
@@ -1715,55 +1715,22 @@
         "xci_path": "ip/Task_2_design_rst_ps7_0_100M_0/Task_2_design_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
       },
-      "AXI_GPIO_BTN": {
+      "AXI_GPIO_BTN_LED": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "Task_2_design_axi_gpio_0_2",
         "xci_path": "ip/Task_2_design_axi_gpio_0_2/Task_2_design_axi_gpio_0_2.xci",
-        "inst_hier_path": "AXI_GPIO_BTN",
+        "inst_hier_path": "AXI_GPIO_BTN_LED",
         "parameters": {
           "C_ALL_INPUTS": {
             "value": "1"
           },
           "C_GPIO_WIDTH": {
-            "value": "1"
+            "value": "3"
           },
           "C_INTERRUPT_PRESENT": {
             "value": "1"
-          }
-        }
-      },
-      "AXI_TIMER": {
-        "vlnv": "xilinx.com:ip:axi_timer:2.0",
-        "xci_name": "Task_2_design_axi_timer_0_0",
-        "xci_path": "ip/Task_2_design_axi_timer_0_0/Task_2_design_axi_timer_0_0.xci",
-        "inst_hier_path": "AXI_TIMER",
-        "parameters": {
-          "enable_timer2": {
-            "value": "0"
           },
-          "mode_64bit": {
-            "value": "0"
-          }
-        }
-      },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "Task_2_design_xlconstant_0_0",
-        "xci_path": "ip/Task_2_design_xlconstant_0_0/Task_2_design_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "1"
-          }
-        }
-      },
-      "AXI_GPIO_LEDS": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "Task_2_design_axi_gpio_0_3",
-        "xci_path": "ip/Task_2_design_axi_gpio_0_3/Task_2_design_axi_gpio_0_3.xci",
-        "inst_hier_path": "AXI_GPIO_LEDS",
-        "parameters": {
-          "GPIO_BOARD_INTERFACE": {
+          "GPIO2_BOARD_INTERFACE": {
             "value": "leds_8bits"
           },
           "USE_BOARD_FLOW": {
@@ -1771,34 +1738,14 @@
           }
         }
       },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "Task_2_design_util_vector_logic_0_0",
-        "xci_path": "ip/Task_2_design_util_vector_logic_0_0/Task_2_design_util_vector_logic_0_0.xci",
-        "inst_hier_path": "util_vector_logic_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          },
-          "C_SIZE": {
-            "value": "1"
-          }
-        }
-      },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "xci_name": "Task_2_design_xlconcat_0_0",
-        "xci_path": "ip/Task_2_design_xlconcat_0_0/Task_2_design_xlconcat_0_0.xci",
-        "inst_hier_path": "xlconcat_0"
-      },
-      "synch_reset": {
+      "synch_reset_btn": {
         "vlnv": "xilinx.com:module_ref:sync:1.0",
         "xci_name": "Task_2_design_sync_0_0",
         "xci_path": "ip/Task_2_design_sync_0_0/Task_2_design_sync_0_0.xci",
-        "inst_hier_path": "synch_reset",
+        "inst_hier_path": "synch_reset_btn",
         "parameters": {
           "SYNC_STAGES": {
-            "value": "1000000"
+            "value": "10000"
           }
         },
         "reference_info": {
@@ -1822,7 +1769,13 @@
             }
           },
           "res_n": {
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
           },
           "data_in": {
             "direction": "I"
@@ -1852,7 +1805,60 @@
             "value": "0"
           },
           "SYNC_STAGES": {
-            "value": "1000000"
+            "value": "10000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sync",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Task_2_design_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "res_n": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "O",
+            "parameters": {
+              "PortWidth": {
+                "value": "3",
+                "value_src": "ip_prop"
+              }
+            }
+          }
+        }
+      },
+      "synch_switch_btn": {
+        "vlnv": "xilinx.com:module_ref:sync:1.0",
+        "xci_name": "Task_2_design_synch_reset_0",
+        "xci_path": "ip/Task_2_design_synch_reset_0/Task_2_design_synch_reset_0.xci",
+        "inst_hier_path": "synch_switch_btn",
+        "parameters": {
+          "SYNC_STAGES": {
+            "value": "10000"
           }
         },
         "reference_info": {
@@ -1891,13 +1897,27 @@
             "direction": "O"
           }
         }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "Task_2_design_xlconcat_0_0",
+        "xci_path": "ip/Task_2_design_xlconcat_0_0/Task_2_design_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "NUM_PORTS": {
+            "value": "3"
+          }
+        }
       }
     },
     "interface_nets": {
-      "axi_gpio_0_GPIO": {
+      "AXI_GPIO_BTN_GPIO2": {
         "interface_ports": [
           "leds_8bits",
-          "AXI_GPIO_LEDS/GPIO"
+          "AXI_GPIO_BTN_LED/GPIO2"
         ]
       },
       "processing_system7_0_DDR": {
@@ -1921,45 +1941,33 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "AXI_GPIO_BTN/S_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "AXI_TIMER/S_AXI"
-        ]
-      },
-      "ps7_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M02_AXI",
-          "AXI_GPIO_LEDS/S_AXI"
+          "AXI_GPIO_BTN_LED/S_AXI"
         ]
       }
     },
     "nets": {
       "AXI_GPIO_BTN_ip2intc_irpt": {
         "ports": [
-          "AXI_GPIO_BTN/ip2intc_irpt",
-          "xlconcat_0/In1"
-        ]
-      },
-      "AXI_TIMER_interrupt": {
-        "ports": [
-          "AXI_TIMER/interrupt",
-          "xlconcat_0/In0"
+          "AXI_GPIO_BTN_LED/ip2intc_irpt",
+          "processing_system7_0/IRQ_F2P"
         ]
       },
       "btn_1": {
         "ports": [
-          "btn",
+          "func_btn",
           "sync_btn/data_in"
         ]
       },
       "data_in_0_1": {
         "ports": [
-          "rst",
-          "synch_reset/data_in"
+          "rst_btn",
+          "synch_reset_btn/data_in"
+        ]
+      },
+      "data_in_0_2": {
+        "ports": [
+          "sw_btn",
+          "synch_switch_btn/data_in"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1970,15 +1978,14 @@
           "rst_ps7_0_100M/slowest_sync_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "AXI_GPIO_BTN/s_axi_aclk",
-          "AXI_TIMER/s_axi_aclk",
+          "AXI_GPIO_BTN_LED/s_axi_aclk",
           "ps7_0_axi_periph/M01_ACLK",
-          "AXI_GPIO_LEDS/s_axi_aclk",
           "ps7_0_axi_periph/M02_ACLK",
           "ps7_0_axi_periph/M03_ACLK",
           "ps7_0_axi_periph/M04_ACLK",
-          "synch_reset/clk",
-          "sync_btn/clk"
+          "synch_reset_btn/clk",
+          "sync_btn/clk",
+          "synch_switch_btn/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1993,44 +2000,38 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
-          "AXI_GPIO_BTN/s_axi_aresetn",
-          "AXI_TIMER/s_axi_aresetn",
+          "AXI_GPIO_BTN_LED/s_axi_aresetn",
           "ps7_0_axi_periph/M01_ARESETN",
-          "AXI_GPIO_LEDS/s_axi_aresetn",
           "ps7_0_axi_periph/M02_ARESETN",
           "ps7_0_axi_periph/M03_ARESETN",
           "ps7_0_axi_periph/M04_ARESETN",
-          "sync_btn/res_n"
+          "sync_btn/res_n",
+          "synch_reset_btn/res_n",
+          "synch_switch_btn/res_n"
         ]
       },
       "sync_btn_data_out": {
         "ports": [
           "sync_btn/data_out",
-          "AXI_GPIO_BTN/gpio_io_i"
+          "xlconcat_0/In0"
         ]
       },
-      "synch_reset_data_out": {
+      "synch_reset_btn_data_out": {
         "ports": [
-          "synch_reset/data_out",
-          "util_vector_logic_0/Op1"
+          "synch_reset_btn/data_out",
+          "xlconcat_0/In2"
         ]
       },
-      "util_vector_logic_0_Res": {
+      "synch_switch_btn_data_out": {
         "ports": [
-          "util_vector_logic_0/Res",
-          "rst_ps7_0_100M/aux_reset_in"
+          "synch_switch_btn/data_out",
+          "xlconcat_0/In1"
         ]
       },
       "xlconcat_0_dout": {
         "ports": [
           "xlconcat_0/dout",
-          "processing_system7_0/IRQ_F2P"
-        ]
-      },
-      "xlconstant_0_dout": {
-        "ports": [
-          "xlconstant_0/dout",
-          "synch_reset/res_n"
+          "AXI_GPIO_BTN_LED/gpio_io_i"
         ]
       }
     },
@@ -2040,18 +2041,8 @@
           "Data": {
             "segments": {
               "SEG_axi_gpio_0_Reg": {
-                "address_block": "/AXI_GPIO_BTN/S_AXI/Reg",
+                "address_block": "/AXI_GPIO_BTN_LED/S_AXI/Reg",
                 "offset": "0x41200000",
-                "range": "64K"
-              },
-              "SEG_axi_gpio_0_Reg_1": {
-                "address_block": "/AXI_GPIO_LEDS/S_AXI/Reg",
-                "offset": "0x41210000",
-                "range": "64K"
-              },
-              "SEG_axi_timer_0_Reg": {
-                "address_block": "/AXI_TIMER/S_AXI/Reg",
-                "offset": "0x42800000",
                 "range": "64K"
               }
             }

@@ -106,7 +106,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ffbe36af</spirit:value>
+            <spirit:value>9:cf3a050c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -117,7 +117,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ffbe36af</spirit:value>
+            <spirit:value>9:cf3a050c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -133,11 +133,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 06 17:35:32 UTC 2022</spirit:value>
+            <spirit:value>Fri Jun 10 17:09:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ffbe36af</spirit:value>
+            <spirit:value>9:cf3a050c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -149,7 +149,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:15d8143a</spirit:value>
+            <spirit:value>9:02972d2a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -165,11 +165,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 06 17:35:32 UTC 2022</spirit:value>
+            <spirit:value>Fri Jun 10 17:09:35 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:15d8143a</spirit:value>
+            <spirit:value>9:02972d2a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -183,11 +183,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Jun 06 17:36:00 UTC 2022</spirit:value>
+            <spirit:value>Fri Jun 10 17:10:03 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ffbe36af</spirit:value>
+            <spirit:value>9:cf3a050c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -250,7 +250,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>SYNC_STAGES</spirit:name>
         <spirit:displayName>Sync Stages</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SYNC_STAGES" spirit:minimum="2" spirit:maximum="650000000" spirit:rangeType="long">1000000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SYNC_STAGES" spirit:minimum="2" spirit:maximum="650000000" spirit:rangeType="long">10000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="std_logic">
         <spirit:name>RESET_VALUE</spirit:name>
@@ -318,7 +318,7 @@
     <spirit:parameter>
       <spirit:name>SYNC_STAGES</spirit:name>
       <spirit:displayName>Sync Stages</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SYNC_STAGES" spirit:minimum="2" spirit:maximum="650000000" spirit:rangeType="long">1000000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SYNC_STAGES" spirit:minimum="2" spirit:maximum="650000000" spirit:rangeType="long">10000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>RESET_VALUE</spirit:name>

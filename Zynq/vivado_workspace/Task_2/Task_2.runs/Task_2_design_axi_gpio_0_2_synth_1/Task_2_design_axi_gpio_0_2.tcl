@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "Task_2_design_axi_gpio_0_2_synth_1" START { ROLLUP_AUTO }
-set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 4
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run

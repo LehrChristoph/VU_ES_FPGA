@@ -2,14 +2,20 @@
 #include "xil_printf.h"
 #include "xgpio.h"
 #include "xil_types.h"
+#include "xuartps.h"
 
 // Get device IDs from xparameters.h
+
+#define UART_ID XPAR_PS7_UART_1_DEVICE_ID
+
 #define BTN_ID XPAR_AXI_GPIO_SWITCHES_DEVICE_ID
-#define LED_ID XPAR_AXI_GPIO_LEDS_DEVICE_ID
 #define BTN_CHANNEL 1
+
+#define LED_ID XPAR_AXI_GPIO_LEDS_DEVICE_ID
 #define LED_CHANNEL 1
 
 int main() {
+	XUartPs_Config *uart_cfg;
 	XGpio_Config *cfg_ptr;
 	XGpio led_device, sw_device;
 	u32 data, last_data;

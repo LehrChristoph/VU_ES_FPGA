@@ -260,39 +260,24 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 2
+#define XPAR_XGPIO_NUM_INSTANCES 1
 
-/* Definitions for peripheral AXI_GPIO_BTN */
-#define XPAR_AXI_GPIO_BTN_BASEADDR 0x41200000
-#define XPAR_AXI_GPIO_BTN_HIGHADDR 0x4120FFFF
-#define XPAR_AXI_GPIO_BTN_DEVICE_ID 0
-#define XPAR_AXI_GPIO_BTN_INTERRUPT_PRESENT 1
-#define XPAR_AXI_GPIO_BTN_IS_DUAL 0
-
-
-/* Definitions for peripheral AXI_GPIO_LEDS */
-#define XPAR_AXI_GPIO_LEDS_BASEADDR 0x41210000
-#define XPAR_AXI_GPIO_LEDS_HIGHADDR 0x4121FFFF
-#define XPAR_AXI_GPIO_LEDS_DEVICE_ID 1
-#define XPAR_AXI_GPIO_LEDS_INTERRUPT_PRESENT 0
-#define XPAR_AXI_GPIO_LEDS_IS_DUAL 0
+/* Definitions for peripheral AXI_GPIO_BTN_LED */
+#define XPAR_AXI_GPIO_BTN_LED_BASEADDR 0x41200000
+#define XPAR_AXI_GPIO_BTN_LED_HIGHADDR 0x4120FFFF
+#define XPAR_AXI_GPIO_BTN_LED_DEVICE_ID 0
+#define XPAR_AXI_GPIO_BTN_LED_INTERRUPT_PRESENT 1
+#define XPAR_AXI_GPIO_BTN_LED_IS_DUAL 1
 
 
 /******************************************************************/
 
-/* Canonical definitions for peripheral AXI_GPIO_BTN */
+/* Canonical definitions for peripheral AXI_GPIO_BTN_LED */
 #define XPAR_GPIO_0_BASEADDR 0x41200000
 #define XPAR_GPIO_0_HIGHADDR 0x4120FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_BTN_DEVICE_ID
+#define XPAR_GPIO_0_DEVICE_ID XPAR_AXI_GPIO_BTN_LED_DEVICE_ID
 #define XPAR_GPIO_0_INTERRUPT_PRESENT 1
-#define XPAR_GPIO_0_IS_DUAL 0
-
-/* Canonical definitions for peripheral AXI_GPIO_LEDS */
-#define XPAR_GPIO_1_BASEADDR 0x41210000
-#define XPAR_GPIO_1_HIGHADDR 0x4121FFFF
-#define XPAR_GPIO_1_DEVICE_ID XPAR_AXI_GPIO_LEDS_DEVICE_ID
-#define XPAR_GPIO_1_INTERRUPT_PRESENT 0
-#define XPAR_GPIO_1_IS_DUAL 0
+#define XPAR_GPIO_0_IS_DUAL 1
 
 
 /******************************************************************/
@@ -342,14 +327,12 @@
 /******************************************************************/
 
 /* Definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_AXI_TIMER_INTERRUPT_INTR 61U
-#define XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR 62U
+#define XPAR_FABRIC_AXI_GPIO_BTN_LED_IP2INTC_IRPT_INTR 61U
 
 /******************************************************************/
 
 /* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
-#define XPAR_FABRIC_TMRCTR_0_VEC_ID XPAR_FABRIC_AXI_TIMER_INTERRUPT_INTR
-#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR
+#define XPAR_FABRIC_GPIO_0_VEC_ID XPAR_FABRIC_AXI_GPIO_BTN_LED_IP2INTC_IRPT_INTR
 
 /******************************************************************/
 
@@ -444,26 +427,6 @@
 #define XPAR_XSDPS_0_SLOT_TYPE 0
 #define XPAR_XSDPS_0_IS_CACHE_COHERENT 0
 
-
-/******************************************************************/
-
-/* Definitions for driver TMRCTR */
-#define XPAR_XTMRCTR_NUM_INSTANCES 1U
-
-/* Definitions for peripheral AXI_TIMER */
-#define XPAR_AXI_TIMER_DEVICE_ID 0U
-#define XPAR_AXI_TIMER_BASEADDR 0x42800000U
-#define XPAR_AXI_TIMER_HIGHADDR 0x4280FFFFU
-#define XPAR_AXI_TIMER_CLOCK_FREQ_HZ 100000000U
-
-
-/******************************************************************/
-
-/* Canonical definitions for peripheral AXI_TIMER */
-#define XPAR_TMRCTR_0_DEVICE_ID 0U
-#define XPAR_TMRCTR_0_BASEADDR 0x42800000U
-#define XPAR_TMRCTR_0_HIGHADDR 0x4280FFFFU
-#define XPAR_TMRCTR_0_CLOCK_FREQ_HZ XPAR_AXI_TIMER_CLOCK_FREQ_HZ
 
 /******************************************************************/
 

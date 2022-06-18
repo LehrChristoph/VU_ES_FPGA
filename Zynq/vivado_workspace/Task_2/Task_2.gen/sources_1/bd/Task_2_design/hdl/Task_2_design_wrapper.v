@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
-//Date        : Mon Jun  6 19:35:31 2022
+//Date        : Sat Jun 18 16:28:37 2022
 //Host        : fedora running 64-bit Fedora release 36 (Thirty Six)
 //Command     : generate_target Task_2_design_wrapper.bd
 //Design      : Task_2_design_wrapper
@@ -31,9 +31,10 @@ module Task_2_design_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    btn,
+    func_btn,
     leds_8bits_tri_o,
-    rst);
+    rst_btn,
+    sw_btn);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -55,9 +56,10 @@ module Task_2_design_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input btn;
+  input func_btn;
   output [7:0]leds_8bits_tri_o;
-  input rst;
+  input rst_btn;
+  input sw_btn;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -80,9 +82,10 @@ module Task_2_design_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire btn;
+  wire func_btn;
   wire [7:0]leds_8bits_tri_o;
-  wire rst;
+  wire rst_btn;
+  wire sw_btn;
 
   Task_2_design Task_2_design_i
        (.DDR_addr(DDR_addr),
@@ -106,7 +109,8 @@ module Task_2_design_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .btn(btn),
+        .func_btn(func_btn),
         .leds_8bits_tri_o(leds_8bits_tri_o),
-        .rst(rst));
+        .rst_btn(rst_btn),
+        .sw_btn(sw_btn));
 endmodule

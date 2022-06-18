@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/Task_2_design/ip/Task_2_design_rst_ps7_0_100M_0/sim/Task_2_design_rst_ps7_0_100M_0.vhd" \
+"../../../bd/Task_2_design/ip/Task_2_design_axi_gpio_0_2/sim/Task_2_design_axi_gpio_0_2.vhd" \
+"../../../bd/Task_2_design/ip/Task_2_design_axi_gpio_0_3/sim/Task_2_design_axi_gpio_0_3.vhd" \
+
+nosort

@@ -1,6 +1,6 @@
-2022-06-07T11:15:43.65453200255-11:15:43 **** Clean-only build of project Task_1_platform ****
-000-buildplatform.sh 41645 Task_1_platform clean 
-000-XSDB Server Channel: tcfchan#5
+2022-06-18T16:39:22.6531900255-16:39:22 **** Clean-only build of project Task_1_platform ****
+000-buildplatform.sh 34857 Task_1_platform clean 
+000-XSDB Server Channel: tcfchan#89
 000-Cleaning the zynq_fsbl application.
 000-rm -rf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o zynq
 000-_fsbl_bsp/ps7_cortexa9_0/lib/libxil.a fsbl.elf *.o
@@ -88,5 +88,5 @@
 000-rm -f ps7_cortexa9_0/lib/libxil.a
 000-
 00255-
-11:15:47 Build Finished (took 4s.123ms)
+16:39:27 Build Finished (took 4s.436ms)
 
